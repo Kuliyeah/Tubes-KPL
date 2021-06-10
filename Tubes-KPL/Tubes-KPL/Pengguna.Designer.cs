@@ -1,7 +1,7 @@
 ﻿
 namespace Tubes_KPL
 {
-    partial class Form1
+    partial class Pengguna
     {
         /// <summary>
         /// Required designer variable.
