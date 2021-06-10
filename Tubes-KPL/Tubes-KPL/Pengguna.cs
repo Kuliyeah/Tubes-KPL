@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tubes_KPL
 {
-    public partial class Form1 : Form
+    public partial class Pengguna : Form
     {
-        public Form1()
+        public Pengguna()
         {
             InitializeComponent();
         }
