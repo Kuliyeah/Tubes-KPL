@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tubes-KPL")]
+[assembly: AssemblyTitle("HalamanUtama")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Tubes-KPL")]
+[assembly: AssemblyProduct("HalamanUtama")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bfcb9d02-478b-4083-8ce2-a9c199a9daf7")]
+[assembly: Guid("3d908a6f-c233-437d-8258-f8ebf614afd8")]
 
 // Version information for an assembly consists of the following four values:
 //

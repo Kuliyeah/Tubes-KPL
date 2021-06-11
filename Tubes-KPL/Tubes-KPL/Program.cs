@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tubes_KPL
+namespace HalamanUtama
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Tubes_KPL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pengguna());
+            Application.Run(new Form());
         }
     }
 }
