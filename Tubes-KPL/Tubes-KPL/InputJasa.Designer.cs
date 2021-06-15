@@ -197,7 +197,8 @@ namespace Tubes_KPL
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "InputJasa";
-            this.Text = "InputJasa";
+            this.Text = "Input Jasa";
+            this.Load += new System.EventHandler(this.InputJasa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

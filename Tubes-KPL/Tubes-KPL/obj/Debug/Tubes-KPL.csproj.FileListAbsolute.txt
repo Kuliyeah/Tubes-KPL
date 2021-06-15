@@ -1,7 +1,6 @@
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Pengguna.resources
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Properties.Resources.resources
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.GenerateResource.cache
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache

@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>HalamanUtama.Program</StartupObject>
+    <StartupObject>Tubes_KPL.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,35 +64,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-	  <Compile Include="Pengguna.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="Pengguna.Designer.cs">
-		  <DependentUpon>Pengguna.cs</DependentUpon>
-	  </Compile>
-	  <Compile Include="HalamanUtama.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="HalamanUtama.Designer.cs">
-		  <DependentUpon>HalamanUtama.cs</DependentUpon>
-	  </Compile>
-	  <Compile Include="InputJasa.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="InputJasa.Designer.cs">
-		  <DependentUpon>InputJasa.cs</DependentUpon>
-	  </Compile>
+    <Compile Include="Pengguna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengguna.Designer.cs">
+      <DependentUpon>Pengguna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HalamanUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HalamanUtama.Designer.cs">
+      <DependentUpon>HalamanUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputJasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputJasa.Designer.cs">
+      <DependentUpon>InputJasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputTransaksi.Designer.cs">
+      <DependentUpon>InputTransaksi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-	  <EmbeddedResource Include="Pengguna.resx">
-		  <DependentUpon>Pengguna.cs</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="HalamanUtama.resx">
-		  <DependentUpon>HalamanUtama.cs</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="InputJasa.resx">
-		  <DependentUpon>InputJasa.cs</DependentUpon>
-	  </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -99,6 +111,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

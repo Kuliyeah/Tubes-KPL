@@ -16,5 +16,10 @@ namespace Tubes_KPL
         {
             InitializeComponent();
         }
+
+        private void InputJasa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

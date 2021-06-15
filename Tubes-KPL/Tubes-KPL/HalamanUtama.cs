@@ -16,5 +16,28 @@ namespace Tubes_KPL
         {
             InitializeComponent();
         }
+
+        private void btnDataPengguna_Click(object sender, EventArgs e)
+        {
+            Pengguna pengguna = new Pengguna();
+            pengguna.Show();
+        }
+
+        private void btnDataJasa_Click(object sender, EventArgs e)
+        {
+            InputJasa inputJasa = new InputJasa();
+            inputJasa.Show();
+        }
+
+        private void btnDataTransaksi_Click(object sender, EventArgs e)
+        {
+            InputTransaksi inputTransaksi = new InputTransaksi();
+            inputTransaksi.Show();
+        }
+
+        private void HalamanUtama_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

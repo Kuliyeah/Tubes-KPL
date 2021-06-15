@@ -1,7 +1,7 @@
 ﻿
 namespace Tubes_KPL
 {
-    partial class Form1
+    partial class InputTransaksi
     {
         /// <summary>
         /// Required designer variable.
@@ -230,6 +230,7 @@ namespace Tubes_KPL
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Input Transaksi";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
