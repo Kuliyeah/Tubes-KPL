@@ -6,3 +6,4 @@ E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tube
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csprojAssemblyReference.cache
