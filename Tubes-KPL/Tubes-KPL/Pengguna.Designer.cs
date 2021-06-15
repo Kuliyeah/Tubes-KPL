@@ -203,7 +203,7 @@ namespace Tubes_KPL
             this.label1.TabIndex = 21;
             this.label1.Text = "Username";
             // 
-            // Form1
+            // Pengguna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,8 +226,9 @@ namespace Tubes_KPL
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Pengguna";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Pengguna_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPengguna)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
