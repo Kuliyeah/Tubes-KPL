@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tubes_KPL;
 
-namespace Tubes_KPL
+namespace HalamanUtama
 {
     static class Program
     {
@@ -13,7 +17,8 @@ namespace Tubes_KPL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HalamanUtama());
+            //Application.Run(new Form());
+            Application.Run(new InputJasa());
         }
     }
 }

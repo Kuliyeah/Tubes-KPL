@@ -29,14 +29,14 @@ namespace Tubes_KPL
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tgvJasa = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbHarga = new System.Windows.Forms.TextBox();
+            this.tbDeskripsi = new System.Windows.Forms.TextBox();
+            this.tbNamaJasa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNamaToko = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,17 +44,21 @@ namespace Tubes_KPL
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tbJlhPaket = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tgvJasa)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // tgvJasa
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(355, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(313, 183);
-            this.dataGridView1.TabIndex = 22;
+            this.tgvJasa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tgvJasa.BackgroundColor = System.Drawing.Color.White;
+            this.tgvJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tgvJasa.Location = new System.Drawing.Point(318, 64);
+            this.tgvJasa.Name = "tgvJasa";
+            this.tgvJasa.Size = new System.Drawing.Size(467, 183);
+            this.tgvJasa.TabIndex = 22;
+            this.tgvJasa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tgvJasa_CellClick);
             // 
             // button4
             // 
@@ -73,28 +77,29 @@ namespace Tubes_KPL
             this.button3.TabIndex = 21;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox3
+            // tbHarga
             // 
-            this.textBox3.Location = new System.Drawing.Point(100, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 20);
-            this.textBox3.TabIndex = 16;
+            this.tbHarga.Location = new System.Drawing.Point(100, 140);
+            this.tbHarga.Name = "tbHarga";
+            this.tbHarga.Size = new System.Drawing.Size(84, 20);
+            this.tbHarga.TabIndex = 16;
             // 
-            // textBox4
+            // tbDeskripsi
             // 
-            this.textBox4.Location = new System.Drawing.Point(100, 177);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 70);
-            this.textBox4.TabIndex = 17;
+            this.tbDeskripsi.Location = new System.Drawing.Point(100, 177);
+            this.tbDeskripsi.Multiline = true;
+            this.tbDeskripsi.Name = "tbDeskripsi";
+            this.tbDeskripsi.Size = new System.Drawing.Size(212, 70);
+            this.tbDeskripsi.TabIndex = 17;
             // 
-            // textBox2
+            // tbNamaJasa
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
-            this.textBox2.TabIndex = 18;
+            this.tbNamaJasa.Location = new System.Drawing.Point(100, 101);
+            this.tbNamaJasa.Name = "tbNamaJasa";
+            this.tbNamaJasa.Size = new System.Drawing.Size(212, 20);
+            this.tbNamaJasa.TabIndex = 18;
             // 
             // label4
             // 
@@ -105,12 +110,12 @@ namespace Tubes_KPL
             this.label4.TabIndex = 11;
             this.label4.Text = "Harga";
             // 
-            // textBox1
+            // tbNamaToko
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 20);
-            this.textBox1.TabIndex = 19;
+            this.tbNamaToko.Location = new System.Drawing.Point(100, 64);
+            this.tbNamaToko.Name = "tbNamaToko";
+            this.tbNamaToko.Size = new System.Drawing.Size(212, 20);
+            this.tbNamaToko.TabIndex = 19;
             // 
             // label5
             // 
@@ -133,7 +138,7 @@ namespace Tubes_KPL
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(352, 48);
+            this.label6.Location = new System.Drawing.Point(315, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 14;
@@ -156,6 +161,7 @@ namespace Tubes_KPL
             this.button2.TabIndex = 9;
             this.button2.Text = "Simpan";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -176,19 +182,37 @@ namespace Tubes_KPL
             this.label1.TabIndex = 8;
             this.label1.Text = "INPUT JASA";
             // 
+            // tbJlhPaket
+            // 
+            this.tbJlhPaket.Location = new System.Drawing.Point(274, 140);
+            this.tbJlhPaket.Name = "tbJlhPaket";
+            this.tbJlhPaket.Size = new System.Drawing.Size(38, 20);
+            this.tbJlhPaket.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(200, 143);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Jumlah Paket";
+            // 
             // InputJasa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 321);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(821, 321);
+            this.Controls.Add(this.tgvJasa);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbJlhPaket);
+            this.Controls.Add(this.tbHarga);
+            this.Controls.Add(this.tbDeskripsi);
+            this.Controls.Add(this.tbNamaJasa);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbNamaToko);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
@@ -197,9 +221,8 @@ namespace Tubes_KPL
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "InputJasa";
-            this.Text = "Input Jasa";
-            this.Load += new System.EventHandler(this.InputJasa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "InputJasa";
+            ((System.ComponentModel.ISupportInitialize)(this.tgvJasa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,14 +230,14 @@ namespace Tubes_KPL
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tgvJasa;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbHarga;
+        private System.Windows.Forms.TextBox tbDeskripsi;
+        private System.Windows.Forms.TextBox tbNamaJasa;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNamaToko;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
@@ -222,5 +245,7 @@ namespace Tubes_KPL
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbJlhPaket;
+        private System.Windows.Forms.Label label7;
     }
 }
