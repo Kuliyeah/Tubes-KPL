@@ -36,6 +36,9 @@
     <StartupObject>HalamanUtama.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,35 +52,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-	  <Compile Include="Pengguna.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="Pengguna.Designer.cs">
-		  <DependentUpon>Pengguna.cs</DependentUpon>
-	  </Compile>
-	  <Compile Include="HalamanUtama.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="HalamanUtama.Designer.cs">
-		  <DependentUpon>HalamanUtama.cs</DependentUpon>
-	  </Compile>
-	  <Compile Include="InputJasa.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="InputJasa.Designer.cs">
-		  <DependentUpon>InputJasa.cs</DependentUpon>
-	  </Compile>
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="InputJasaModel.cs" />
+    <Compile Include="Pengguna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengguna.Designer.cs">
+      <DependentUpon>Pengguna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HalamanUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HalamanUtama.Designer.cs">
+      <DependentUpon>HalamanUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputJasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputJasa.Designer.cs">
+      <DependentUpon>InputJasa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-	  <EmbeddedResource Include="Pengguna.resx">
-		  <DependentUpon>Pengguna.cs</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="HalamanUtama.resx">
-		  <DependentUpon>HalamanUtama.cs</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="InputJasa.resx">
-		  <DependentUpon>InputJasa.cs</DependentUpon>
-	  </EmbeddedResource>
+    <EmbeddedResource Include="Pengguna.resx">
+      <DependentUpon>Pengguna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HalamanUtama.resx">
+      <DependentUpon>HalamanUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputJasa.resx">
+      <DependentUpon>InputJasa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,6 +92,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
