@@ -67,6 +67,7 @@ namespace Tubes_KPL
             this.btnNew.TabIndex = 37;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnDelete
             // 
@@ -95,6 +96,7 @@ namespace Tubes_KPL
             this.btnCancel.TabIndex = 34;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 

@@ -9,6 +9,15 @@ namespace Tubes_KPL
             InitializeComponent();
         }
 
+        private void ClearTextBox()
+        {
+            txtUsername.Text = null;
+            txtNoHP.Text = null;
+            txtAlamat.Text = null;
+            txtEmail.Text = null;
+            txtKataSandi.Text = null;
+        }
+
         private void SetDisabled()
         {
             txtUsername.Enabled = false;
@@ -47,6 +56,17 @@ namespace Tubes_KPL
         private void btnSave_Click(object sender, System.EventArgs e)
         {
 
+        }
+
+        private void btnNew_Click(object sender, System.EventArgs e)
+        {
+            SetEnabled();
+        }
+
+        private void btnCancel_Click(object sender, System.EventArgs e)
+        {
+            ClearTextBox();
+            SetDisabled();
         }
     }
 }
