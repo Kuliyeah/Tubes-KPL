@@ -17,3 +17,5 @@ D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KP
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.HalamanUtama.resources
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputTransaksi.resources
