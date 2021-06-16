@@ -12,31 +12,59 @@ namespace Tubes_KPL
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DisableButton();
-        }
-
-        private void DisableButton()
-        {
-            btnSimpan.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            btnBatal.Enabled = false;
+            setEditEnabled(false);
             btnNew.Enabled = true;
         }
 
-        private void EnableButton()
+        private void setEditEnabled(bool stat)
         {
-            btnSimpan.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnBatal.Enabled = true;
-            btnNew.Enabled = false;
+            btnSimpan.Enabled = stat;
+            btnBatal.Enabled = stat;
+            btnNew.Enabled = stat;
+            comboBoxIDJasa.Enabled = stat;
+            textBerat.Enabled = stat;
+            textDeskripsi.Enabled = stat;
+            textIDTransaksi.Enabled = stat;
+            textOngkir.Enabled = stat;
+            textTotal.Enabled = stat;
+        }
+
+        private void clearText()
+        {
+            textIDTransaksi.Text = "";
+            textBerat.Text= "";
+            textOngkir.Text = "";
+            textTotal.Text = "";
+            textDeskripsi.Text = "";
+        }
+
+        private int hitungTotal()
+        {
+            int harga = 5000;
+            int total = Int16.Parse(textBerat.Text) * harga + Int16.Parse(textOngkir.Text);
+            return total;
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            EnableButton();
+            clearText();
+            setEditEnabled(true);
+            btnNew.Enabled = false;
+            textTotal.Enabled = false;
         }
 
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            setEditEnabled(false);
+            btnNew.Enabled = true;
+            textTotal.Text = hitungTotal().ToString();
+        }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clearText();
+            setEditEnabled(false);
+            btnNew.Enabled = true;
+        }
     }
 }
