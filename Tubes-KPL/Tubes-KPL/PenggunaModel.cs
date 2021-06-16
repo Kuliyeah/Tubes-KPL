@@ -11,6 +11,8 @@ namespace Tubes_KPL
         private string _email;
         private string _kataSandi;
 
+        public PenggunaModel() { }
+
         // Membuat data pengguna baru dengan data yang berasal dari parameter
         public PenggunaModel(string username, string noHP, string alamatPengguna, string email, string kataSandi)
         {
