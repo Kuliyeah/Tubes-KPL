@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Tubes_KPL
 {
     public partial class Pengguna : Form
     {
-        List<PenggunaModel> listPenggunaModel = new List<PenggunaModel>();
         public Pengguna()
         {
             InitializeComponent();
@@ -59,29 +55,7 @@ namespace Tubes_KPL
 
         private void btnSave_Click(object sender, System.EventArgs e)
         {
-            String username = txtUsername.Text;
-            String noHP = txtNoHP.Text;
-            String alamat= txtAlamat.Text;
-            String email = txtEmail.Text;
-            String kataSandi = txtKataSandi.Text;
 
-            PenggunaModel penggunaModel = new PenggunaModel(username, noHP, alamat, email, kataSandi);
-            listPenggunaModel.Add(penggunaModel);
-
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("Username");
-            dataTable.Columns.Add("No. HP");
-            dataTable.Columns.Add("Alamat");
-            dataTable.Columns.Add("Email");
-
-            for (int i = 0; i < listPenggunaModel.Count; i++)
-            {
-                dataTable.Rows.Add(
-                    listPenggunaModel[i].getUsername().ToString(),
-                    listPenggunaModel[i].getNoHP().ToString(),
-                    listPenggunaModel[i].getAlamatPengguna().ToString(),
-                    listPenggunaModel[i].getEmail().ToString());
-            }
         }
 
         private void btnNew_Click(object sender, System.EventArgs e)
@@ -93,11 +67,6 @@ namespace Tubes_KPL
         {
             ClearTextBox();
             SetDisabled();
-        }
-
-        private void btnDelete_Click(object sender, System.EventArgs e)
-        {
-
         }
     }
 }
