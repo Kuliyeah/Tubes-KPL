@@ -93,6 +93,9 @@
     <EmbeddedResource Include="HalamanUtama.resx">
       <DependentUpon>HalamanUtama.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InputTransaksi.resx">
+      <DependentUpon>InputTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
