@@ -1,7 +1,7 @@
 ﻿
 namespace Tubes_KPL
 {
-    partial class Form1
+    partial class InputTransaksi
     {
         /// <summary>
         /// Required designer variable.
@@ -30,23 +30,23 @@ namespace Tubes_KPL
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textOngkir = new System.Windows.Forms.TextBox();
+            this.textDeskripsi = new System.Windows.Forms.TextBox();
+            this.textBerat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textIDTransaksi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSimpan = new System.Windows.Forms.Button();
+            this.btnBatal = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxIDJasa = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.textTotal = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,45 +59,27 @@ namespace Tubes_KPL
             this.dataGridView1.Size = new System.Drawing.Size(377, 308);
             this.dataGridView1.TabIndex = 37;
             // 
-            // button4
+            // textOngkir
             // 
-            this.button4.Location = new System.Drawing.Point(144, 359);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 35;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
+            this.textOngkir.Location = new System.Drawing.Point(110, 185);
+            this.textOngkir.Name = "textOngkir";
+            this.textOngkir.Size = new System.Drawing.Size(212, 20);
+            this.textOngkir.TabIndex = 31;
             // 
-            // button3
+            // textDeskripsi
             // 
-            this.button3.Location = new System.Drawing.Point(247, 318);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.textDeskripsi.Location = new System.Drawing.Point(110, 261);
+            this.textDeskripsi.Multiline = true;
+            this.textDeskripsi.Name = "textDeskripsi";
+            this.textDeskripsi.Size = new System.Drawing.Size(212, 70);
+            this.textDeskripsi.TabIndex = 32;
             // 
-            // textBox3
+            // textBerat
             // 
-            this.textBox3.Location = new System.Drawing.Point(110, 185);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 20);
-            this.textBox3.TabIndex = 31;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(110, 222);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 70);
-            this.textBox4.TabIndex = 32;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(110, 146);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 20);
-            this.textBox2.TabIndex = 33;
+            this.textBerat.Location = new System.Drawing.Point(110, 146);
+            this.textBerat.Name = "textBerat";
+            this.textBerat.Size = new System.Drawing.Size(212, 20);
+            this.textBerat.TabIndex = 33;
             // 
             // label4
             // 
@@ -108,17 +90,17 @@ namespace Tubes_KPL
             this.label4.TabIndex = 26;
             this.label4.Text = "Ongkir";
             // 
-            // textBox1
+            // textIDTransaksi
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 20);
-            this.textBox1.TabIndex = 34;
+            this.textIDTransaksi.Location = new System.Drawing.Point(110, 74);
+            this.textIDTransaksi.Name = "textIDTransaksi";
+            this.textIDTransaksi.Size = new System.Drawing.Size(212, 20);
+            this.textIDTransaksi.TabIndex = 34;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 225);
+            this.label5.Location = new System.Drawing.Point(36, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 27;
@@ -151,23 +133,25 @@ namespace Tubes_KPL
             this.label2.TabIndex = 30;
             this.label2.Text = "ID Transaksi";
             // 
-            // button2
+            // btnSimpan
             // 
-            this.button2.Location = new System.Drawing.Point(144, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Simpan";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSimpan.Location = new System.Drawing.Point(144, 357);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(75, 23);
+            this.btnSimpan.TabIndex = 24;
+            this.btnSimpan.Text = "Simpan";
+            this.btnSimpan.UseVisualStyleBackColor = true;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
-            // button1
+            // btnBatal
             // 
-            this.button1.Location = new System.Drawing.Point(247, 359);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Batal";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBatal.Location = new System.Drawing.Point(247, 357);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(75, 23);
+            this.btnBatal.TabIndex = 25;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.UseVisualStyleBackColor = true;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // label1
             // 
@@ -179,13 +163,13 @@ namespace Tubes_KPL
             this.label1.TabIndex = 23;
             this.label1.Text = "INPUT TRANSAKSI";
             // 
-            // comboBox1
+            // comboBoxIDJasa
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 109);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 21);
-            this.comboBox1.TabIndex = 38;
+            this.comboBoxIDJasa.FormattingEnabled = true;
+            this.comboBoxIDJasa.Location = new System.Drawing.Point(110, 109);
+            this.comboBoxIDJasa.Name = "comboBoxIDJasa";
+            this.comboBoxIDJasa.Size = new System.Drawing.Size(210, 21);
+            this.comboBoxIDJasa.TabIndex = 38;
             // 
             // label7
             // 
@@ -196,40 +180,58 @@ namespace Tubes_KPL
             this.label7.TabIndex = 39;
             this.label7.Text = "ID Jasa";
             // 
-            // button5
+            // btnNew
             // 
-            this.button5.Location = new System.Drawing.Point(39, 318);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 40;
-            this.button5.Text = "New";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnNew.Location = new System.Drawing.Point(39, 357);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 40;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // Form1
+            // textTotal
+            // 
+            this.textTotal.Location = new System.Drawing.Point(110, 223);
+            this.textTotal.Name = "textTotal";
+            this.textTotal.Size = new System.Drawing.Size(212, 20);
+            this.textTotal.TabIndex = 42;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(36, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Total Bayar";
+            // 
+            // InputTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textTotal);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxIDJasa);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textOngkir);
+            this.Controls.Add(this.textDeskripsi);
+            this.Controls.Add(this.textBerat);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textIDTransaksi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSimpan);
+            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "InputTransaksi";
             this.Text = "Input Transaksi";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,22 +241,22 @@ namespace Tubes_KPL
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textOngkir;
+        private System.Windows.Forms.TextBox textDeskripsi;
+        private System.Windows.Forms.TextBox textBerat;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textIDTransaksi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSimpan;
+        private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxIDJasa;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.TextBox textTotal;
+        private System.Windows.Forms.Label label8;
     }
 }

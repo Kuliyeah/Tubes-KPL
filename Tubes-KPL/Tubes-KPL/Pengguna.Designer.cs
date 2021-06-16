@@ -67,6 +67,7 @@ namespace Tubes_KPL
             this.btnNew.TabIndex = 37;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnDelete
             // 
@@ -85,6 +86,7 @@ namespace Tubes_KPL
             this.btnSave.TabIndex = 35;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -94,6 +96,7 @@ namespace Tubes_KPL
             this.btnCancel.TabIndex = 34;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -227,7 +230,7 @@ namespace Tubes_KPL
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
             this.Name = "Pengguna";
-            this.Text = "Form1";
+            this.Text = "Form Pengguna";
             this.Load += new System.EventHandler(this.Pengguna_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPengguna)).EndInit();
             this.ResumeLayout(false);
