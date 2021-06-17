@@ -16,8 +16,8 @@ namespace Tubes_KPL
         public Login()
         {
             InitializeComponent();
-            tbUsername = "root";
-            tbPassword = "password";
+            tbUsername.Text = "root";
+            tbPassword.Text = "password";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
