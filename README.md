@@ -11,13 +11,13 @@
 1. Menggunakan IDE dan GUI builder untuk konstruksi
 2. Menggunakan github atau version control lainnya untuk konstruksi (dibuktikan dengan adanya branch pribadi dan commit ke branch utama)
 3. Menerapkan setidaknya tiga teknik konstruksi di bawah ini pada unit yang dibuat secara individu:
--	Automata (Dashboard)
--	Table-driven construction (Dashboard, Login)
--	Parameterization/generics (Input Jasa, Input Pengguna, Input Transaksi)
--	Defensive programming/design by contract (Input Jasa, Input Transaksi, Input Pengguna)
--	Parsing (Input Jasa, Input Transaksi, Input Pengguna)
+-	Automata
+-	Table-driven construction
+-	Parameterization/generics
+-	Defensive programming/design by contract
+-	Parsing
 -	Runtime configuration
--	API beserta designnya.
+-	API beserta designnya
 -	Design pattern
 4. Menerapkan unit testing dan performance analysis pada unit yang dibuat
 #### Catatan: Hanya boleh maksimal 1 teknik yang sama dipakai oleh semua anggota kelompok yang dikerjakan pada unit yang berbeda-beda
