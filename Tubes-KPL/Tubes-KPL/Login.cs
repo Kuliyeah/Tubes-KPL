@@ -12,20 +12,20 @@ namespace Tubes_KPL
 {
     public partial class Login : Form
     {
+        string user, pass;
+        
         Double count = 0;
         public Login()
         {
             InitializeComponent();
-            tbUsername.Text = "root";
-            tbPassword.Text = "password";
+            user = "ALPUKAT";
+            pass = TableDriven.getKodeUser(TableDriven.Username.ALPUKAT);
+            tbUsername.Text = user;
+            tbPassword.Text = pass;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string user, pass;
-            user = "root";
-            pass = "password";
-
             if ((tbUsername.Text == user) && (tbPassword.Text == pass))
             {
                 MessageBox.Show("Welcome User");
