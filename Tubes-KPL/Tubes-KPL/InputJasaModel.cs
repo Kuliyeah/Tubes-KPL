@@ -67,20 +67,5 @@ namespace Tubes_KPL
         {
             return this.jumlahPaket;
         }
-
-        public int getTotalMinimalHarga(int jumlahPaket, int hargaPaket)
-        {
-            // Post Condition (DESIGN BY CONTRACT)
-            jumlahPaket = getJumlahPaket();
-            hargaPaket = getHarga();
-            Debug.Assert(jumlahPaket <= int.MaxValue && jumlahPaket>= int.MinValue);
-            Debug.Assert(hargaPaket <= int.MaxValue && hargaPaket >= int.MinValue);
-
-            // Exception Handling (DESIGN BY CONTRACT)
-            int mimimumHarga = checked(jumlahPaket * hargaPaket);
-
-            // past Condition (DESIGN BY CONTRACT)
-            return mimimumHarga;
-        }
     }
 }
