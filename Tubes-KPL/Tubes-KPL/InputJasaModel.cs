@@ -14,6 +14,9 @@ namespace Tubes_KPL
 
         public InputJasaModel(string namaToko, string namaJasa, int hargaPerPaket, int jumlahPaket, string deskripsi)
         {
+
+            Debug.Assert(jumlahPaket >= 2, "Jumlah Paket harus lebih dari 2");
+            Debug.Assert(hargaPerPaket >= 5000, "Harga barang harus lebih dari 5000");
             this.namaToko = namaToko;
             this.namaJasa = namaJasa;
             this.deskripsi = deskripsi;

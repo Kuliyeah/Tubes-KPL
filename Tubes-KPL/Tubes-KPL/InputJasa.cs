@@ -25,45 +25,51 @@ namespace Tubes_KPL
             String namaJasa = tbNamaJasa.Text;
             int harga = Int32.Parse(tbHarga.Text);
             int jumlahPaket = Int32.Parse(tbJlhPaket.Text);
-            Debug.Assert(jumlahPaket <= int.MaxValue && jumlahPaket >= int.MinValue);
-            Debug.Assert(harga <= int.MaxValue && harga >= int.MinValue);
-
-            int hargaTotal = harga * jumlahPaket;
-            String deskripsi = tbDeskripsi.Text;
-
-            InputJasaModel dataJasa = new InputJasaModel(namaToko, namaJasa, harga, jumlahPaket, deskripsi);
-            jasa.Add(dataJasa);
-
-            DataTable dtJasa = new DataTable();
-            dtJasa.Columns.Add("Nama Toko");
-            dtJasa.Columns.Add("Nama Jasa");
-            dtJasa.Columns.Add("Harga");
-            dtJasa.Columns.Add("Jumlah Paket");
-            dtJasa.Columns.Add("Total Harga");
-            dtJasa.Columns.Add("Deskripsi Jasa");
-
-            for (int i = 0; i<jasa.Count; i++)
+            if(jumlahPaket<2 || harga < 5000)
             {
-                dtJasa.Rows.Add(
-                    jasa[i].getNamaToko().ToString(),
-                    jasa[i].getNamaJasa().ToString(),
-                    "Rp. "+ jasa[i].getHarga().ToString(),
-                    jasa[i].getJumlahPaket().ToString(),
-                    "Rp. "+(hargaTotal).ToString(),
-                    jasa[i].getDeskripsi().ToString()
-                    );
-
-                
+                tbHarga.Text = String.Empty;
+                tbJlhPaket.Text = String.Empty;
+                tbHarga.Focus();
             }
+            else
+            {
+                int hargaTotal = harga * jumlahPaket;
+                String deskripsi = tbDeskripsi.Text;
 
-            ConfigManager.SaveToJson<Object>(jasa, @"\cofig.json");
+                InputJasaModel dataJasa = new InputJasaModel(namaToko, namaJasa, harga, jumlahPaket, deskripsi);
+                jasa.Add(dataJasa);
 
-            tgvJasa.DataSource = dtJasa;
+                DataTable dtJasa = new DataTable();
+                dtJasa.Columns.Add("Nama Toko");
+                dtJasa.Columns.Add("Nama Jasa");
+                dtJasa.Columns.Add("Harga");
+                dtJasa.Columns.Add("Jumlah Paket");
+                dtJasa.Columns.Add("Total Harga");
+                dtJasa.Columns.Add("Deskripsi Jasa");
+
+                for (int i = 0; i < jasa.Count; i++)
+                {
+                    dtJasa.Rows.Add(
+                        jasa[i].getNamaToko().ToString(),
+                        jasa[i].getNamaJasa().ToString(),
+                        "Rp. " + jasa[i].getHarga().ToString(),
+                        jasa[i].getJumlahPaket().ToString(),
+                        "Rp. " + (hargaTotal).ToString(),
+                        jasa[i].getDeskripsi().ToString()
+                        );
+                }
+
+                ConfigManager.SaveToJson<InputJasaModel>(dataJasa, Environment.CurrentDirectory + @"\apaHayo.json");
+
+                tgvJasa.DataSource = dtJasa;
+            }
+            
+            /*
             tbNamaToko.Text = String.Empty;
             tbNamaJasa.Text = String.Empty;
             tbHarga.Text = String.Empty;
             tbJlhPaket.Text = String.Empty;
-            tbDeskripsi.Text = String.Empty;
+            tbDeskripsi.Text = String.Empty;*/
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
