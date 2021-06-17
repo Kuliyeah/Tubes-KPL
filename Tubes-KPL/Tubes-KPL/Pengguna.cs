@@ -1,9 +1,14 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Data;
+using System.Diagnostics;
+using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace Tubes_KPL
 {
     public partial class Pengguna : Form
     {
+        List<PenggunaModel> listPenggunaModel = new List<PenggunaModel>();
         public Pengguna()
         {
             InitializeComponent();
@@ -27,8 +32,6 @@ namespace Tubes_KPL
             txtKataSandi.Enabled = false;
 
             btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
             btnCancel.Enabled = false;
             btnNew.Enabled = true;
         }
@@ -42,8 +45,6 @@ namespace Tubes_KPL
             txtKataSandi.Enabled = true;
 
             btnSave.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
             btnCancel.Enabled = true;
             btnNew.Enabled = false;
         }
@@ -55,7 +56,35 @@ namespace Tubes_KPL
 
         private void btnSave_Click(object sender, System.EventArgs e)
         {
+            String username = txtUsername.Text;
+            String noHP = txtNoHP.Text;
+            String alamat = txtAlamat.Text;
+            String email = txtEmail.Text;
+            String kataSandi = txtKataSandi.Text;
 
+            Debug.Assert(noHP.Length == 12 || noHP.Length == 13, "Nomor telp minimal 12 digit dan maksimal 13 digit.");
+            Debug.Assert(email.Contains("@") && email.Contains("."), "Email harus mengandung karakter @ dan .");
+
+            PenggunaModel penggunaModel = new PenggunaModel(username, noHP, alamat, email, kataSandi);
+            listPenggunaModel.Add(penggunaModel);
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Username");
+            dataTable.Columns.Add("No HP");
+            dataTable.Columns.Add("Alamat");
+            dataTable.Columns.Add("Email");
+
+            for (int i = 0; i < listPenggunaModel.Count; i++)
+            {
+                dataTable.Rows.Add(
+                    listPenggunaModel[i].getUsername().ToString(),
+                    listPenggunaModel[i].getNoHP().ToString(),
+                    listPenggunaModel[i].getAlamatPengguna().ToString(),
+                    listPenggunaModel[i].getEmail().ToString()
+                );
+            }
+            dgvPengguna.DataSource = dataTable;
+            ClearTextBox();
         }
 
         private void btnNew_Click(object sender, System.EventArgs e)
@@ -67,8 +96,6 @@ namespace Tubes_KPL
         {
             ClearTextBox();
             SetDisabled();
-            this.Hide();
-            new Dashboard().Show();
         }
     }
 }

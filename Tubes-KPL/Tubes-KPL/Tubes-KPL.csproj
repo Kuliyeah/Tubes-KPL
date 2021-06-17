@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PenggunaModel.cs" />
     <Compile Include="TableDriven.cs" />
     <Compile Include="ConfigManager.cs" />
     <Compile Include="Dashboard.cs">

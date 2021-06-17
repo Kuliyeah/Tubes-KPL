@@ -31,10 +31,8 @@ namespace Tubes_KPL
         {
             this.dgvPengguna = new System.Windows.Forms.DataGridView();
             this.btnNew = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtKataSandi = new System.Windows.Forms.TextBox();
@@ -56,7 +54,7 @@ namespace Tubes_KPL
             this.dgvPengguna.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPengguna.Location = new System.Drawing.Point(321, 33);
             this.dgvPengguna.Name = "dgvPengguna";
-            this.dgvPengguna.Size = new System.Drawing.Size(448, 299);
+            this.dgvPengguna.Size = new System.Drawing.Size(448, 266);
             this.dgvPengguna.TabIndex = 38;
             // 
             // btnNew
@@ -68,15 +66,6 @@ namespace Tubes_KPL
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(123, 309);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 36;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -90,22 +79,13 @@ namespace Tubes_KPL
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(218, 309);
+            this.btnCancel.Location = new System.Drawing.Point(218, 276);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 34;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(218, 276);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 33;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -210,13 +190,11 @@ namespace Tubes_KPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 359);
+            this.ClientSize = new System.Drawing.Size(800, 325);
             this.Controls.Add(this.dgvPengguna);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.txtKataSandi);
@@ -242,10 +220,8 @@ namespace Tubes_KPL
 
         private System.Windows.Forms.DataGridView dgvPengguna;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAlamat;
         private System.Windows.Forms.TextBox txtKataSandi;
