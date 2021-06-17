@@ -9,8 +9,8 @@ namespace Tubes_KPL
 {
     class InputJasaModel
     {
-        String namaToko, namaJasa, deskripsi;
-        int hargaPerPaket, jumlahPaket;
+        public String namaToko, namaJasa, deskripsi;
+        public int hargaPerPaket, jumlahPaket;
 
         public InputJasaModel(string namaToko, string namaJasa, int hargaPerPaket, int jumlahPaket, string deskripsi)
         {

@@ -91,6 +91,7 @@ namespace Tubes_KPL
                     transaksi[i].getTotalBayar().ToString()
                     );
             }
+
         }
 
         private void btnBatal_Click(object sender, EventArgs e)

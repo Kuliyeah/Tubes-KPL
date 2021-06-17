@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +16,18 @@ namespace Tubes_KPL
     public partial class InputJasa : Form
     {
         List<InputJasaModel> jasa = new List<InputJasaModel>();
+        private string path = Environment.CurrentDirectory;
+        private string pathJSON = @"\InputJasa.json";
         public InputJasa()
         {
             InitializeComponent();
         }
 
+        public static void SaveToJSON<T>(T obj, string path)
+        {
+            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            File.WriteAllText(path, json);
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             String namaToko = tbNamaToko.Text;
@@ -59,17 +68,17 @@ namespace Tubes_KPL
                         );
                 }
 
-                ConfigManager.SaveToJson<InputJasaModel>(dataJasa, Environment.CurrentDirectory + @"\apaHayo.json");
-
+                SaveToJSON<Object>(dataJasa, this.path + this.pathJSON);
                 tgvJasa.DataSource = dtJasa;
+                
+                tbNamaToko.Text = String.Empty;
+                tbNamaJasa.Text = String.Empty;
+                tbHarga.Text = String.Empty;
+                tbJlhPaket.Text = String.Empty;
+                tbDeskripsi.Text = String.Empty;
             }
-            
-            /*
-            tbNamaToko.Text = String.Empty;
-            tbNamaJasa.Text = String.Empty;
-            tbHarga.Text = String.Empty;
-            tbJlhPaket.Text = String.Empty;
-            tbDeskripsi.Text = String.Empty;*/
+
+
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
