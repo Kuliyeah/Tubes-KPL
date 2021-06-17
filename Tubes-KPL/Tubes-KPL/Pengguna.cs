@@ -79,6 +79,7 @@ namespace Tubes_KPL
             dataTable.Columns.Add("No HP");
             dataTable.Columns.Add("Alamat");
             dataTable.Columns.Add("Email");
+            dataTable.Columns.Add("Password");
 
             for (int i = 0; i < listPenggunaModel.Count; i++)
             {
@@ -86,7 +87,8 @@ namespace Tubes_KPL
                     listPenggunaModel[i].getUsername().ToString(),
                     listPenggunaModel[i].getNoHP().ToString(),
                     listPenggunaModel[i].getAlamatPengguna().ToString(),
-                    listPenggunaModel[i].getEmail().ToString()
+                    listPenggunaModel[i].getEmail().ToString(),
+                    listPenggunaModel[i].getKataSandi().ToString()
                 );
             }
             dgvPengguna.DataSource = dataTable;
