@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,10 @@ namespace Tubes_KPL
             String namaJasa = tbNamaJasa.Text;
             int harga = Int32.Parse(tbHarga.Text);
             int jumlahPaket = Int32.Parse(tbJlhPaket.Text);
+            Debug.Assert(jumlahPaket <= int.MaxValue && jumlahPaket >= int.MinValue);
+            Debug.Assert(harga <= int.MaxValue && harga >= int.MinValue);
+
+            int hargaTotal = harga * jumlahPaket;
             String deskripsi = tbDeskripsi.Text;
 
             InputJasaModel dataJasa = new InputJasaModel(namaToko, namaJasa, harga, jumlahPaket, deskripsi);
@@ -42,9 +47,9 @@ namespace Tubes_KPL
                 dtJasa.Rows.Add(
                     jasa[i].getNamaToko().ToString(),
                     jasa[i].getNamaJasa().ToString(),
-                    jasa[i].getHarga().ToString(),
+                    "Rp. "+ jasa[i].getHarga().ToString(),
                     jasa[i].getJumlahPaket().ToString(),
-                    jasa[i].getTotalMinimalHarga(jasa[i].getJumlahPaket(), jasa[i].getHarga()).ToString(),
+                    "Rp. "+(hargaTotal).ToString(),
                     jasa[i].getDeskripsi().ToString()
                     );
 
@@ -69,8 +74,25 @@ namespace Tubes_KPL
 
         private void InputJasa_Load(object sender, EventArgs e)
         {
-            /*btnBatal.Enabled(false);
-            btnSimpan.Enabled(false);*/
+            btnBatal.Enabled = false;
+            btnSimpan.Enabled = false;
+            tbNamaToko.Enabled = false;
+            tbNamaJasa.Enabled = false;
+            tbHarga.Enabled = false;
+            tbJlhPaket.Enabled = false;
+            tbDeskripsi.Enabled = false;
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            btnBatal.Enabled = true;
+            btnSimpan.Enabled = true;
+            tbNamaToko.Enabled = true;
+            tbNamaJasa.Enabled = true;
+            tbHarga.Enabled = true;
+            tbJlhPaket.Enabled = true;
+            tbDeskripsi.Enabled = true;
+            btnNew.Enabled = false;
         }
     }
 }

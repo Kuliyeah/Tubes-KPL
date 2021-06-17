@@ -40,3 +40,4 @@ D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KP
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
