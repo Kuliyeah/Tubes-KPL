@@ -43,5 +43,10 @@ namespace Tubes_KPL
             new Login().Show();
             this.Hide();
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

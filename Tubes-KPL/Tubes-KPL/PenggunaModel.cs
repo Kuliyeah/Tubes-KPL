@@ -5,22 +5,24 @@ namespace Tubes_KPL
     class PenggunaModel
     {
         // Init Variables
-        private string _username;
-        private string _noHP;
-        private string _alamatPengguna;
-        private string _email;
-        private string _kataSandi;
+        public string username;
+        public string noHP;
+        public string alamatPengguna;
+        public string email;
+        public string kataSandi;
+
+        public PenggunaModel(){}
 
         // Membuat data pengguna baru dengan data yang berasal dari parameter
         public PenggunaModel(string username, string noHP, string alamatPengguna, string email, string kataSandi)
         {
             try
             {
-                _username = username;
-                _noHP = noHP;
-                _alamatPengguna = alamatPengguna;
-                _email = email;
-                _kataSandi = kataSandi;
+                this.username = username;
+                this.noHP = noHP;
+                this.alamatPengguna = alamatPengguna;
+                this.email = email;
+                this.kataSandi = kataSandi;
             }
             catch (Exception e)
             {
@@ -28,64 +30,64 @@ namespace Tubes_KPL
             }
         }
 
-        // Mengembalikan data _username
+        // Mengembalikan data username
         public String getUsername()
         {
-            return _username;
+            return username;
         }
 
-        // Menyimpan data _username dengan data data parameter
+        // Menyimpan data username dengan data data parameter
         public void setUsername(String username)
         {
-            this._username = username;
+            this.username = username;
         }
 
-        // Mengembalikan data _noHP
+        // Mengembalikan data noHP
         public String getNoHP()
         {
-            return _noHP;
+            return noHP;
         }
 
-        // Menyimpan data _noHP dengan data data parameter
+        // Menyimpan data noHP dengan data data parameter
         public void setNoHP(String noHP)
         {
-            this._noHP = noHP;
+            this.noHP = noHP;
         }
 
-        // Mengembalikan data _alamatPengguna
+        // Mengembalikan data alamatPengguna
         public String getAlamatPengguna()
         {
-            return _alamatPengguna;
+            return alamatPengguna;
         }
 
-        // Menyimpan data _alamatPengguna dengan data data parameter
+        // Menyimpan data alamatPengguna dengan data data parameter
         public void setAlamatPengguna(String alamatPengguna)
         {
-            this._alamatPengguna = alamatPengguna;
+            this.alamatPengguna = alamatPengguna;
         }
 
-        // Mengembalikan data _email
+        // Mengembalikan data email
         public String getEmail()
         {
-            return _email;
+            return email;
         }
 
-        // Menyimpan data _email dengan data data parameter
+        // Menyimpan data email dengan data data parameter
         public void setEmail(String email)
         {
-            this._email = email;
+            this.email = email;
         }
 
-        // Mengembalikan data _kataSandi
+        // Mengembalikan data kataSandi
         public String getKataSandi()
         {
-            return _kataSandi;
+            return kataSandi;
         }
 
-        // Menyimpan data _kataSandi dengan data data parameter
+        // Menyimpan data kataSandi dengan data data parameter
         public void setKataSandi(String kataSandi)
         {
-            this._kataSandi = kataSandi;
+            this.kataSandi = kataSandi;
         }
     }
 }

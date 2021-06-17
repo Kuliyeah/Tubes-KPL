@@ -27,6 +27,11 @@ namespace Tubes_KPL
             tbPassword.PasswordChar = '●';
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             user = "adam";
