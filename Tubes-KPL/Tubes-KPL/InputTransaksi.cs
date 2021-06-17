@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 //Gilang
@@ -24,7 +26,7 @@ namespace Tubes_KPL
         private void setEditEnabled(bool stat)
         {
             btnSimpan.Enabled = stat;
-            btnBatal.Enabled = stat;
+            btnBatal.Enabled = true;
             btnNew.Enabled = stat;
             comboBoxIDJasa.Enabled = stat;
             textBerat.Enabled = stat;
@@ -43,9 +45,18 @@ namespace Tubes_KPL
             textDeskripsi.Text = "";
             comboBoxIDJasa.Text = "";
         }
+
+        private int cariHargaJasa()
+        {
+            int harga;
+            return 1000;
+        }
+
+        p
+
         private int hitungTotal()
         {
-            int harga = 5000;
+            int harga = cariHargaJasa();
             int total = Int16.Parse(textBerat.Text) * harga + Int16.Parse(textOngkir.Text);
             return total;
         }
