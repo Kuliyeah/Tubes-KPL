@@ -10,6 +10,7 @@ namespace Tubes_KPL
     public partial class InputTransaksi : Form
     {
         List<InputTransaksiModel> transaksi = new List<InputTransaksiModel>();
+        DateTime tglSekarang = DateTime.Now;
         public InputTransaksi()
         {
             InitializeComponent();
@@ -18,6 +19,7 @@ namespace Tubes_KPL
         {
             setEditEnabled(false);
             btnNew.Enabled = true;
+            textTanggal.Text = tglSekarang.ToString();
         }
         private void setEditEnabled(bool stat)
         {
@@ -30,6 +32,7 @@ namespace Tubes_KPL
             textIDTransaksi.Enabled = stat;
             textOngkir.Enabled = stat;
             textTotal.Enabled = stat;
+            textTanggal.Enabled = false;
         }
         private void clearText()
         {
@@ -68,11 +71,12 @@ namespace Tubes_KPL
             textTotal.Text = hitungTotal().ToString();
 
 
-            InputTransaksiModel dataTransaksi = new InputTransaksiModel(idTransaksi, idJasa, deskripsi,
+            InputTransaksiModel dataTransaksi = new InputTransaksiModel(tglSekarang, idTransaksi, idJasa, deskripsi,
                 berat, ongkir, totalBayar);
             transaksi.Add(dataTransaksi);
 
             DataTable dtTransaski = new DataTable();
+            dtTransaski.Columns.Add("Tanggal");
             dtTransaski.Columns.Add("ID Transaksi");
             dtTransaski.Columns.Add("ID Jasa");
             dtTransaski.Columns.Add("Deskripsi");
@@ -83,6 +87,7 @@ namespace Tubes_KPL
             for (int i = 0; i < transaksi.Count; i++)
             {
                 dtTransaski.Rows.Add(
+                    transaksi[i].getTanggal().ToString(),
                     transaksi[i].getIdTransaksi().ToString(),
                     transaksi[i].getIdJasa().ToString(),
                     transaksi[i].getDeskripsiCucian().ToString(),
@@ -91,6 +96,8 @@ namespace Tubes_KPL
                     transaksi[i].getTotalBayar().ToString()
                     );
             }
+
+            dataGridTransaksi.DataSource = dtTransaski;
 
         }
 

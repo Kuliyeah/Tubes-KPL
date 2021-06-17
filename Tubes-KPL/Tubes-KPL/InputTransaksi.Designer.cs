@@ -29,7 +29,7 @@ namespace Tubes_KPL
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridTransaksi = new System.Windows.Forms.DataGridView();
             this.textOngkir = new System.Windows.Forms.TextBox();
             this.textDeskripsi = new System.Windows.Forms.TextBox();
             this.textBerat = new System.Windows.Forms.TextBox();
@@ -47,17 +47,19 @@ namespace Tubes_KPL
             this.btnNew = new System.Windows.Forms.Button();
             this.textTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textTanggal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaksi)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridTransaksi
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(365, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(377, 308);
-            this.dataGridView1.TabIndex = 37;
+            this.dataGridTransaksi.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTransaksi.Location = new System.Drawing.Point(365, 37);
+            this.dataGridTransaksi.Name = "dataGridTransaksi";
+            this.dataGridTransaksi.Size = new System.Drawing.Size(774, 345);
+            this.dataGridTransaksi.TabIndex = 37;
             // 
             // textOngkir
             // 
@@ -94,7 +96,7 @@ namespace Tubes_KPL
             // 
             this.textIDTransaksi.Location = new System.Drawing.Point(110, 74);
             this.textIDTransaksi.Name = "textIDTransaksi";
-            this.textIDTransaksi.Size = new System.Drawing.Size(212, 20);
+            this.textIDTransaksi.Size = new System.Drawing.Size(61, 20);
             this.textIDTransaksi.TabIndex = 34;
             // 
             // label5
@@ -118,7 +120,7 @@ namespace Tubes_KPL
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(362, 58);
+            this.label6.Location = new System.Drawing.Point(362, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 29;
@@ -192,9 +194,9 @@ namespace Tubes_KPL
             // 
             // textTotal
             // 
-            this.textTotal.Location = new System.Drawing.Point(110, 223);
+            this.textTotal.Location = new System.Drawing.Point(129, 223);
             this.textTotal.Name = "textTotal";
-            this.textTotal.Size = new System.Drawing.Size(212, 20);
+            this.textTotal.Size = new System.Drawing.Size(193, 20);
             this.textTotal.TabIndex = 42;
             // 
             // label8
@@ -202,21 +204,39 @@ namespace Tubes_KPL
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(36, 226);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.Size = new System.Drawing.Size(96, 13);
             this.label8.TabIndex = 41;
-            this.label8.Text = "Total Bayar";
+            this.label8.Text = "Total Bayar      Rp.";
+            // 
+            // textTanggal
+            // 
+            this.textTanggal.Location = new System.Drawing.Point(190, 74);
+            this.textTanggal.Name = "textTanggal";
+            this.textTanggal.Size = new System.Drawing.Size(130, 20);
+            this.textTanggal.TabIndex = 43;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(270, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Tanggal :";
             // 
             // InputTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1177, 450);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textTanggal);
             this.Controls.Add(this.textTotal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxIDJasa);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridTransaksi);
             this.Controls.Add(this.textOngkir);
             this.Controls.Add(this.textDeskripsi);
             this.Controls.Add(this.textBerat);
@@ -232,7 +252,7 @@ namespace Tubes_KPL
             this.Name = "InputTransaksi";
             this.Text = "Input Transaksi";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaksi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +260,7 @@ namespace Tubes_KPL
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridTransaksi;
         private System.Windows.Forms.TextBox textOngkir;
         private System.Windows.Forms.TextBox textDeskripsi;
         private System.Windows.Forms.TextBox textBerat;
@@ -258,5 +278,7 @@ namespace Tubes_KPL
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TextBox textTotal;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textTanggal;
+        private System.Windows.Forms.Label label9;
     }
 }
