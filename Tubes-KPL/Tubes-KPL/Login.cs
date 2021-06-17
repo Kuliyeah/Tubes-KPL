@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,7 +34,7 @@ namespace Tubes_KPL
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Sure?", " ", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Sure?", "Alert", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 Application.Exit();
@@ -45,13 +46,20 @@ namespace Tubes_KPL
             }
         }
 
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Enum nm1 = TableDriven.Username.user;
             user = nm1.ToString();
             pass = TableDriven.getKodeUser(TableDriven.Username.user);
-            
-            //tbPassword.Text = pass;
+
+            // Untuk cek bahwa username yang dimasukkan tidak boleh lebih kecil sama dengan 3.
+            Debug.Assert(tbUsername.Text.Length > 3, "Username terlalu pendek");
+
             if ((tbUsername.Text == user) && (tbPassword.Text == pass))
             {
                 
