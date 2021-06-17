@@ -37,5 +37,11 @@ namespace Tubes_KPL
             pengguna.Show();
             this.Hide();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
     }
 }
