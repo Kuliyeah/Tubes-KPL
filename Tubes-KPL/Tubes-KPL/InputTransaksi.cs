@@ -5,14 +5,17 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 
-//Gilang
-
 namespace Tubes_KPL
 {
     public partial class InputTransaksi : Form
     {
         List<InputTransaksiModel> transaksi = new List<InputTransaksiModel>();
+        InputTransaksiModel dataTransaksi;
+        DataTable dtTransaski;
         DateTime tglSekarang = DateTime.Now;
+        private string path = Environment.CurrentDirectory;
+        private string pathJSON = @"\InputTransaksi.json";
+
         public InputTransaksi()
         {
             InitializeComponent();
@@ -22,6 +25,7 @@ namespace Tubes_KPL
             setEditEnabled(false);
             btnNew.Enabled = true;
             textTanggal.Text = tglSekarang.ToString();
+            dataGridTransaksi.DataSource = dtTransaski;
         }
         private void setEditEnabled(bool stat)
         {
@@ -48,11 +52,22 @@ namespace Tubes_KPL
 
         private int cariHargaJasa()
         {
-            int harga;
-            return 1000;
+            int harga = 1000;
+            return harga;
         }
 
-        p
+        public static T ReadFromJson<T>(string path)
+        {
+            string json = File.ReadAllText(path);
+            T obj = JsonConvert.DeserializeObject<T>(json);
+            return obj;
+        }
+
+        public static void SaveToJson<T>(T obj, string path)
+        {
+            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            File.WriteAllText(path, json);
+        }
 
         private int hitungTotal()
         {
@@ -60,6 +75,7 @@ namespace Tubes_KPL
             int total = Int16.Parse(textBerat.Text) * harga + Int16.Parse(textOngkir.Text);
             return total;
         }
+        
         private void btnNew_Click(object sender, EventArgs e)
         {
             clearText();
@@ -82,11 +98,11 @@ namespace Tubes_KPL
             textTotal.Text = hitungTotal().ToString();
 
 
-            InputTransaksiModel dataTransaksi = new InputTransaksiModel(tglSekarang, idTransaksi, idJasa, deskripsi,
+            dataTransaksi = new InputTransaksiModel(tglSekarang, idTransaksi, idJasa, deskripsi,
                 berat, ongkir, totalBayar);
             transaksi.Add(dataTransaksi);
 
-            DataTable dtTransaski = new DataTable();
+            dtTransaski = new DataTable();
             dtTransaski.Columns.Add("Tanggal");
             dtTransaski.Columns.Add("ID Transaksi");
             dtTransaski.Columns.Add("ID Jasa");
@@ -119,6 +135,11 @@ namespace Tubes_KPL
             btnNew.Enabled = true;
             this.Hide();
             new Dashboard().Show();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveToJson<Object>(dataTransaksi, path + pathJSON);
         }
     }
 }

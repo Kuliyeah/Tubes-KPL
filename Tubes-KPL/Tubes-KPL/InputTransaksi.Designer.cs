@@ -49,6 +49,9 @@ namespace Tubes_KPL
             this.label8 = new System.Windows.Forms.Label();
             this.textTanggal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaksi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,16 +59,16 @@ namespace Tubes_KPL
             // 
             this.dataGridTransaksi.BackgroundColor = System.Drawing.Color.White;
             this.dataGridTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTransaksi.Location = new System.Drawing.Point(365, 37);
+            this.dataGridTransaksi.Location = new System.Drawing.Point(350, 37);
             this.dataGridTransaksi.Name = "dataGridTransaksi";
-            this.dataGridTransaksi.Size = new System.Drawing.Size(774, 345);
+            this.dataGridTransaksi.Size = new System.Drawing.Size(763, 382);
             this.dataGridTransaksi.TabIndex = 37;
             // 
             // textOngkir
             // 
-            this.textOngkir.Location = new System.Drawing.Point(110, 185);
+            this.textOngkir.Location = new System.Drawing.Point(129, 185);
             this.textOngkir.Name = "textOngkir";
-            this.textOngkir.Size = new System.Drawing.Size(212, 20);
+            this.textOngkir.Size = new System.Drawing.Size(193, 20);
             this.textOngkir.TabIndex = 31;
             // 
             // textDeskripsi
@@ -120,7 +123,7 @@ namespace Tubes_KPL
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(362, 21);
+            this.label6.Location = new System.Drawing.Point(347, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 29;
@@ -137,9 +140,9 @@ namespace Tubes_KPL
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(144, 357);
+            this.btnSimpan.Location = new System.Drawing.Point(143, 357);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(75, 23);
+            this.btnSimpan.Size = new System.Drawing.Size(79, 23);
             this.btnSimpan.TabIndex = 24;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = true;
@@ -147,9 +150,9 @@ namespace Tubes_KPL
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(247, 357);
+            this.btnBatal.Location = new System.Drawing.Point(241, 357);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(75, 23);
+            this.btnBatal.Size = new System.Drawing.Size(79, 23);
             this.btnBatal.TabIndex = 25;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
@@ -186,7 +189,7 @@ namespace Tubes_KPL
             // 
             this.btnNew.Location = new System.Drawing.Point(39, 357);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.Size = new System.Drawing.Size(79, 23);
             this.btnNew.TabIndex = 40;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -204,9 +207,9 @@ namespace Tubes_KPL
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(36, 226);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 41;
-            this.label8.Text = "Total Bayar      Rp.";
+            this.label8.Text = "Total Bayar";
             // 
             // textTanggal
             // 
@@ -224,11 +227,42 @@ namespace Tubes_KPL
             this.label9.TabIndex = 44;
             this.label9.Text = "Tanggal :";
             // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(190, 396);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(132, 23);
+            this.btnExport.TabIndex = 45;
+            this.btnExport.Text = "Export Data to File";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(107, 188);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(24, 13);
+            this.label10.TabIndex = 46;
+            this.label10.Text = "Rp.";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(107, 226);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(24, 13);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Rp.";
+            // 
             // InputTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 450);
+            this.ClientSize = new System.Drawing.Size(1151, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textTanggal);
             this.Controls.Add(this.textTotal);
@@ -280,5 +314,8 @@ namespace Tubes_KPL
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textTanggal;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

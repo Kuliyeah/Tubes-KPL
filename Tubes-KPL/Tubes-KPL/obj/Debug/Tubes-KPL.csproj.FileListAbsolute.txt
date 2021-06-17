@@ -65,3 +65,4 @@ C:\Users\gilan\Documents\TUBES KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes
 C:\Users\gilan\Documents\TUBES KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
 C:\Users\gilan\Documents\TUBES KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 C:\Users\gilan\Documents\TUBES KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
+C:\Users\gilan\Documents\TUBES KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csprojAssemblyReference.cache
