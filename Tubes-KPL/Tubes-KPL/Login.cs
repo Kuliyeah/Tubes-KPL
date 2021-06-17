@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tubes_KPL
-{
+{//dz
     public partial class Login : Form
     {
         string user, pass;
@@ -29,19 +29,33 @@ namespace Tubes_KPL
 
         private void Login_Load(object sender, EventArgs e)
         {
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Sure?", " ", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                new Dashboard().Show();
+                this.Hide();
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            user = "adam";
-            pass = TableDriven.getKodeUser(TableDriven.Username.adam);
+            Enum nm1 = TableDriven.Username.user;
+            user = nm1.ToString();
+            pass = TableDriven.getKodeUser(TableDriven.Username.user);
             
             //tbPassword.Text = pass;
             if ((tbUsername.Text == user) && (tbPassword.Text == pass))
             {
                 
-                MessageBox.Show("Welcome User");
+                MessageBox.Show("Welcome User", "Hi");
                 new Dashboard().Show();
                 this.Hide();
             }
@@ -51,13 +65,13 @@ namespace Tubes_KPL
                 double maxcount = 3;
                 double remain;
                 remain = maxcount - count;
-                MessageBox.Show("Wrong user name or password" + "\t" + remain + "" + " tries left");
+                MessageBox.Show("Wrong user name or password "+ remain + " tries left", "Alert");
                 tbPassword.Clear();
                 tbUsername.Clear();
                 tbUsername.Focus();
                 if (count == maxcount)
                 {
-                    MessageBox.Show("Max try exceeded.");
+                    MessageBox.Show("Max try exceeded.", "Warning");
                     Application.Exit();
                 }
             }

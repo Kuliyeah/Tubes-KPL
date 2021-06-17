@@ -48,5 +48,19 @@ namespace Tubes_KPL
         {
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Sure?", " ", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                new Dashboard().Show();
+            }
+            this.Hide();
+        }
     }
 }
