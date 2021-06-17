@@ -64,6 +64,7 @@ namespace Tubes_KPL
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
+            /*HalamanUtama().Show();*/
         }
     }
 }

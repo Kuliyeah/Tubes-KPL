@@ -10,34 +10,32 @@ using System.Windows.Forms;
 
 namespace Tubes_KPL
 {
-    public partial class HalamanUtama : Form
+    public partial class Dashboard : Form
     {
-        public HalamanUtama()
+        public Dashboard()
         {
             InitializeComponent();
         }
 
-        private void btnDataPengguna_Click(object sender, EventArgs e)
+        private void btnDataTransaksi_Click(object sender, EventArgs e)
         {
-            Pengguna pengguna = new Pengguna();
-            pengguna.Show();
+            InputTransaksi inputTransaksi = new InputTransaksi();
+            inputTransaksi.Show();
+            this.Hide();
         }
 
         private void btnDataJasa_Click(object sender, EventArgs e)
         {
             InputJasa inputJasa = new InputJasa();
             inputJasa.Show();
+            this.Hide();
         }
 
-        private void btnDataTransaksi_Click(object sender, EventArgs e)
+        private void btnDataPengguna_Click(object sender, EventArgs e)
         {
-            /*InputTransaksi inputTransaksi = new InputTransaksi();
-            inputTransaksi.Show();*/
-        }
-
-        private void HalamanUtama_Load(object sender, EventArgs e)
-        {
-
+            Pengguna pengguna = new Pengguna();
+            pengguna.Show();
+            this.Hide();
         }
     }
 }

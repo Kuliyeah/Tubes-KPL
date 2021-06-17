@@ -18,7 +18,7 @@ namespace HalamanUtama
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form());
-            Application.Run(new HalamanUtama());
+            Application.Run(new Dashboard());
         }
     }
 }

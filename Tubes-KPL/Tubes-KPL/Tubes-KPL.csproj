@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigManager.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputJasaModel.cs" />
     <Compile Include="InputTransaksi.cs">
       <SubType>Form</SubType>
@@ -66,12 +72,6 @@
     <Compile Include="Pengguna.Designer.cs">
       <DependentUpon>Pengguna.cs</DependentUpon>
     </Compile>
-    <Compile Include="HalamanUtama.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HalamanUtama.Designer.cs">
-      <DependentUpon>HalamanUtama.cs</DependentUpon>
-    </Compile>
     <Compile Include="InputJasa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,14 +80,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputTransaksi.resx">
       <DependentUpon>InputTransaksi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pengguna.resx">
       <DependentUpon>Pengguna.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HalamanUtama.resx">
-      <DependentUpon>HalamanUtama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InputJasa.resx">
       <DependentUpon>InputJasa.cs</DependentUpon>
