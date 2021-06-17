@@ -54,6 +54,12 @@
   <ItemGroup>
     <Compile Include="ConfigManager.cs" />
     <Compile Include="InputJasaModel.cs" />
+    <Compile Include="InputTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputTransaksi.Designer.cs">
+      <DependentUpon>InputTransaksi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pengguna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InputTransaksi.resx">
+      <DependentUpon>InputTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pengguna.resx">
       <DependentUpon>Pengguna.cs</DependentUpon>
     </EmbeddedResource>

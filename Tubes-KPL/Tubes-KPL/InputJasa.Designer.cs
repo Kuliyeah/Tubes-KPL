@@ -30,8 +30,6 @@ namespace Tubes_KPL
         private void InitializeComponent()
         {
             this.tgvJasa = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tbHarga = new System.Windows.Forms.TextBox();
             this.tbDeskripsi = new System.Windows.Forms.TextBox();
             this.tbNamaJasa = new System.Windows.Forms.TextBox();
@@ -41,11 +39,11 @@ namespace Tubes_KPL
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSimpan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbJlhPaket = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnBatal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tgvJasa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,26 +56,6 @@ namespace Tubes_KPL
             this.tgvJasa.Name = "tgvJasa";
             this.tgvJasa.Size = new System.Drawing.Size(467, 183);
             this.tgvJasa.TabIndex = 22;
-            this.tgvJasa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tgvJasa_CellClick);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(500, 273);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(593, 273);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tbHarga
             // 
@@ -91,14 +69,14 @@ namespace Tubes_KPL
             this.tbDeskripsi.Location = new System.Drawing.Point(100, 177);
             this.tbDeskripsi.Multiline = true;
             this.tbDeskripsi.Name = "tbDeskripsi";
-            this.tbDeskripsi.Size = new System.Drawing.Size(212, 70);
+            this.tbDeskripsi.Size = new System.Drawing.Size(199, 70);
             this.tbDeskripsi.TabIndex = 17;
             // 
             // tbNamaJasa
             // 
             this.tbNamaJasa.Location = new System.Drawing.Point(100, 101);
             this.tbNamaJasa.Name = "tbNamaJasa";
-            this.tbNamaJasa.Size = new System.Drawing.Size(212, 20);
+            this.tbNamaJasa.Size = new System.Drawing.Size(199, 20);
             this.tbNamaJasa.TabIndex = 18;
             // 
             // label4
@@ -114,7 +92,7 @@ namespace Tubes_KPL
             // 
             this.tbNamaToko.Location = new System.Drawing.Point(100, 64);
             this.tbNamaToko.Name = "tbNamaToko";
-            this.tbNamaToko.Size = new System.Drawing.Size(212, 20);
+            this.tbNamaToko.Size = new System.Drawing.Size(199, 20);
             this.tbNamaToko.TabIndex = 19;
             // 
             // label5
@@ -153,24 +131,15 @@ namespace Tubes_KPL
             this.label2.TabIndex = 15;
             this.label2.Text = "Nama Toko";
             // 
-            // button2
+            // btnSimpan
             // 
-            this.button2.Location = new System.Drawing.Point(237, 273);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Simpan";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(100, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Batal";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSimpan.Location = new System.Drawing.Point(224, 273);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(75, 23);
+            this.btnSimpan.TabIndex = 9;
+            this.btnSimpan.Text = "Simpan";
+            this.btnSimpan.UseVisualStyleBackColor = true;
+            this.btnSimpan.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -184,7 +153,7 @@ namespace Tubes_KPL
             // 
             // tbJlhPaket
             // 
-            this.tbJlhPaket.Location = new System.Drawing.Point(274, 140);
+            this.tbJlhPaket.Location = new System.Drawing.Point(261, 140);
             this.tbJlhPaket.Name = "tbJlhPaket";
             this.tbJlhPaket.Size = new System.Drawing.Size(38, 20);
             this.tbJlhPaket.TabIndex = 16;
@@ -192,11 +161,21 @@ namespace Tubes_KPL
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(200, 143);
+            this.label7.Location = new System.Drawing.Point(187, 143);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 11;
             this.label7.Text = "Jumlah Paket";
+            // 
+            // btnBatal
+            // 
+            this.btnBatal.Location = new System.Drawing.Point(100, 273);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(75, 23);
+            this.btnBatal.TabIndex = 10;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.UseVisualStyleBackColor = true;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // InputJasa
             // 
@@ -204,8 +183,6 @@ namespace Tubes_KPL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 321);
             this.Controls.Add(this.tgvJasa);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.tbJlhPaket);
             this.Controls.Add(this.tbHarga);
             this.Controls.Add(this.tbDeskripsi);
@@ -217,8 +194,8 @@ namespace Tubes_KPL
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSimpan);
+            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label1);
             this.Name = "InputJasa";
             this.Text = "InputJasa";
@@ -231,8 +208,6 @@ namespace Tubes_KPL
         #endregion
 
         private System.Windows.Forms.DataGridView tgvJasa;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox tbHarga;
         private System.Windows.Forms.TextBox tbDeskripsi;
         private System.Windows.Forms.TextBox tbNamaJasa;
@@ -242,10 +217,10 @@ namespace Tubes_KPL
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbJlhPaket;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnBatal;
     }
 }

@@ -22,3 +22,4 @@ F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj
 F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.dll
 F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.xml
 F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputTransaksi.resources

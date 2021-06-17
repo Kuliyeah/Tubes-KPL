@@ -13,7 +13,6 @@ namespace Tubes_KPL
     public partial class InputJasa : Form
     {
         List<InputJasaModel> jasa = new List<InputJasaModel>();
-        int index;
         public InputJasa()
         {
             InitializeComponent();
@@ -62,25 +61,9 @@ namespace Tubes_KPL
             tbDeskripsi.Text = String.Empty;
         }
 
-        private void tgvJasa_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnBatal_Click(object sender, EventArgs e)
         {
-            index = e.RowIndex;
-            DataGridViewRow row = tgvJasa.Rows[index];
-            tbNamaToko.Text = row.Cells[0].Value.ToString();
-            tbNamaJasa.Text = row.Cells[1].Value.ToString();
-            tbHarga.Text = row.Cells[2].Value.ToString();
-            tbJlhPaket.Text = row.Cells[3].Value.ToString();
-            tbDeskripsi.Text = row.Cells[4].Value.ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow newData = tgvJasa.Rows[index];
-            newData.Cells[0].Value = tbNamaToko.Text;
-            newData.Cells[1].Value = tbNamaJasa.Text;
-            newData.Cells[2].Value = tbHarga.Text;
-            newData.Cells[3].Value = tbJlhPaket.Text;
-            newData.Cells[4].Value = tbDeskripsi.Text;
+            this.Hide();
         }
     }
 }

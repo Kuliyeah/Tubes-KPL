@@ -31,8 +31,8 @@ namespace Tubes_KPL
 
         private void btnDataTransaksi_Click(object sender, EventArgs e)
         {
-            InputTransaksi inputTransaksi = new InputTransaksi();
-            inputTransaksi.Show();
+            /*InputTransaksi inputTransaksi = new InputTransaksi();
+            inputTransaksi.Show();*/
         }
 
         private void HalamanUtama_Load(object sender, EventArgs e)
