@@ -58,7 +58,7 @@ namespace Tubes_KPL
             }
             else if (dialogResult == DialogResult.No)
             {
-                new Dashboard().Show();
+                new Login().Show();
             }
             this.Hide();
         }
