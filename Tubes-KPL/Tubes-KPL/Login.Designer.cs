@@ -65,6 +65,7 @@ namespace Tubes_KPL
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(161, 22);
             this.tbPassword.TabIndex = 14;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // tbUsername
             // 

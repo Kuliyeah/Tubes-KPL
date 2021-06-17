@@ -18,16 +18,24 @@ namespace Tubes_KPL
         public Login()
         {
             InitializeComponent();
-            user = "ALPUKAT";
-            pass = TableDriven.getKodeUser(TableDriven.Username.ALPUKAT);
-            tbUsername.Text = user;
-            tbPassword.Text = pass;
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+            // Set hiden password.
+            tbPassword.ForeColor = Color.Black;
+            tbPassword.PasswordChar = '●';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            user = "adam";
+            pass = TableDriven.getKodeUser(TableDriven.Username.adam);
+            
+            //tbPassword.Text = pass;
             if ((tbUsername.Text == user) && (tbPassword.Text == pass))
             {
+                
                 MessageBox.Show("Welcome User");
                 new Dashboard().Show();
                 this.Hide();
@@ -38,7 +46,7 @@ namespace Tubes_KPL
                 double maxcount = 3;
                 double remain;
                 remain = maxcount - count;
-                MessageBox.Show("Wrong user name or password" + "\t" + remain + "" + "tries left");
+                MessageBox.Show("Wrong user name or password" + "\t" + remain + "" + " tries left");
                 tbPassword.Clear();
                 tbUsername.Clear();
                 tbUsername.Focus();
