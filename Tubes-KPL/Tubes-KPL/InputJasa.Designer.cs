@@ -183,16 +183,17 @@ namespace Tubes_KPL
             this.btnNew.Location = new System.Drawing.Point(100, 273);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 9;
+            this.btnNew.TabIndex = 23;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.button2_Click);
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // InputJasa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 321);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.tgvJasa);
             this.Controls.Add(this.tbJlhPaket);
             this.Controls.Add(this.tbHarga);
@@ -205,7 +206,6 @@ namespace Tubes_KPL
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label1);
