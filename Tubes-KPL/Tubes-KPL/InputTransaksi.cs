@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 
+//Gilang
+
 namespace Tubes_KPL
 {
     public partial class InputTransaksi : Form
