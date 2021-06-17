@@ -67,6 +67,8 @@ namespace Tubes_KPL
         {
             ClearTextBox();
             SetDisabled();
+            this.Hide();
+            new Dashboard().Show();
         }
     }
 }

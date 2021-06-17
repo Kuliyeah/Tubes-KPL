@@ -44,6 +44,7 @@ namespace Tubes_KPL
             this.tbJlhPaket = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnBatal = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tgvJasa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +134,7 @@ namespace Tubes_KPL
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(224, 273);
+            this.btnSimpan.Location = new System.Drawing.Point(209, 273);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(75, 23);
             this.btnSimpan.TabIndex = 9;
@@ -169,13 +170,23 @@ namespace Tubes_KPL
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(100, 273);
+            this.btnBatal.Location = new System.Drawing.Point(318, 273);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(75, 23);
             this.btnBatal.TabIndex = 10;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(100, 273);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 9;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.button2_Click);
             // 
             // InputJasa
             // 
@@ -194,11 +205,13 @@ namespace Tubes_KPL
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label1);
             this.Name = "InputJasa";
             this.Text = "InputJasa";
+            this.Load += new System.EventHandler(this.InputJasa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tgvJasa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -222,5 +235,6 @@ namespace Tubes_KPL
         private System.Windows.Forms.TextBox tbJlhPaket;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBatal;
+        private System.Windows.Forms.Button btnNew;
     }
 }

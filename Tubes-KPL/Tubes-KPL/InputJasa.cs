@@ -64,7 +64,13 @@ namespace Tubes_KPL
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
-            /*HalamanUtama().Show();*/
+            new Dashboard().Show();
+        }
+
+        private void InputJasa_Load(object sender, EventArgs e)
+        {
+            /*btnBatal.Enabled(false);
+            btnSimpan.Enabled(false);*/
         }
     }
 }

@@ -67,6 +67,8 @@ namespace Tubes_KPL
             clearText();
             setEditEnabled(false);
             btnNew.Enabled = true;
+            this.Hide();
+            new Dashboard().Show();
         }
     }
 }
