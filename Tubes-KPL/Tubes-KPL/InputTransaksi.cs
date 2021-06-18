@@ -19,8 +19,16 @@ namespace Tubes_KPL
         {
             InitializeComponent();
 
-            //baca dan tampilkan data dari InputTransaksi.json
-            dtTransaksi = ReadFromJson<DataTable>(path + pathJSON);
+            try //jika file JSON sudah ada maka akan membaca data tersebut
+            {
+                dtTransaksi = ReadFromJson<DataTable>(path + pathJSON);
+            }
+            catch //jika file JSON belum ada maka akan membuat file JSON
+            {
+                SaveToJson<DataTable>(dtTransaksi, path + pathJSON);
+            }
+
+            //tampilkan data dari InputTransaksi.json
             dataGridTransaksi.DataSource = dtTransaksi;
         }
         private void Form1_Load(object sender, EventArgs e)
