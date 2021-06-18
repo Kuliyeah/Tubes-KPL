@@ -10,8 +10,7 @@ namespace Tubes_KPL
     public partial class InputTransaksi : Form
     {
         List<InputTransaksiModel> transaksi = new List<InputTransaksiModel>();
-        InputTransaksiModel dataTransaksi;
-        DataTable dtTransaski;
+        DataTable dtTransaksi;
         DateTime tglSekarang = DateTime.Now;
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"\InputTransaksi.json";
@@ -19,13 +18,16 @@ namespace Tubes_KPL
         public InputTransaksi()
         {
             InitializeComponent();
+
+            //baca dan tampilkan data dari InputTransaksi.json
+            dtTransaksi = ReadFromJson<DataTable>(path + pathJSON);
+            dataGridTransaksi.DataSource = dtTransaksi;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             setEditEnabled(false);
             btnNew.Enabled = true;
             textTanggal.Text = tglSekarang.ToString();
-            dataGridTransaksi.DataSource = dtTransaski;
         }
         private void setEditEnabled(bool stat)
         {
@@ -86,9 +88,11 @@ namespace Tubes_KPL
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            //set button
             setEditEnabled(false);
             btnNew.Enabled = true;
 
+            //set dan ambil nilai dari input user
             int idTransaksi = Int16.Parse(textIDTransaksi.Text);
             int idJasa = Int16.Parse(comboBoxIDJasa.Text);
             String deskripsi = textDeskripsi.Text;
@@ -97,23 +101,24 @@ namespace Tubes_KPL
             int totalBayar = hitungTotal();
             textTotal.Text = hitungTotal().ToString();
 
+            //masukan data kedalam list
+            transaksi.Add(new InputTransaksiModel(tglSekarang, idTransaksi, idJasa, deskripsi,
+                berat, ongkir, totalBayar));
 
-            dataTransaksi = new InputTransaksiModel(tglSekarang, idTransaksi, idJasa, deskripsi,
-                berat, ongkir, totalBayar);
-            transaksi.Add(dataTransaksi);
+            //membuat tabel data
+            DataTable dtTransaksi = new DataTable();
+            dtTransaksi.Columns.Add("Tanggal");
+            dtTransaksi.Columns.Add("ID Transaksi");
+            dtTransaksi.Columns.Add("ID Jasa");
+            dtTransaksi.Columns.Add("Deskripsi");
+            dtTransaksi.Columns.Add("Berat");
+            dtTransaksi.Columns.Add("Ongkir");
+            dtTransaksi.Columns.Add("Total Bayar");
 
-            dtTransaski = new DataTable();
-            dtTransaski.Columns.Add("Tanggal");
-            dtTransaski.Columns.Add("ID Transaksi");
-            dtTransaski.Columns.Add("ID Jasa");
-            dtTransaski.Columns.Add("Deskripsi");
-            dtTransaski.Columns.Add("Berat");
-            dtTransaski.Columns.Add("Ongkir");
-            dtTransaski.Columns.Add("Total Bayar");
-
+            //isi tabel data dengan data dari list
             for (int i = 0; i < transaksi.Count; i++)
             {
-                dtTransaski.Rows.Add(
+                dtTransaksi.Rows.Add(
                     transaksi[i].getTanggal().ToString(),
                     transaksi[i].getIdTransaksi().ToString(),
                     transaksi[i].getIdJasa().ToString(),
@@ -124,22 +129,21 @@ namespace Tubes_KPL
                     );
             }
 
-            dataGridTransaksi.DataSource = dtTransaski;
+            //tampilkan data ke UI
+            dataGridTransaksi.DataSource = dtTransaksi;
 
+            //simpan data ke JSON
+            SaveToJson<DataTable>(dtTransaksi, path + pathJSON);
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            clearText();
+            clearText(); 
             setEditEnabled(false);
             btnNew.Enabled = true;
             this.Hide();
             new Dashboard().Show();
         }
 
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-            SaveToJson<Object>(dataTransaksi, path + pathJSON);
-        }
     }
 }

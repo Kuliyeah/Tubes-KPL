@@ -19,6 +19,10 @@ namespace Tubes_KPL
         public Login()
         {
             InitializeComponent();
+
+            //Buat cek biar cepet, malas ngetik, ntar kalo udh jadi hapus aja (gilang)
+            tbUsername.Text = "user";
+            tbPassword.Text = "user123";
         }
 
         private void tbPassword_TextChanged(object sender, EventArgs e)

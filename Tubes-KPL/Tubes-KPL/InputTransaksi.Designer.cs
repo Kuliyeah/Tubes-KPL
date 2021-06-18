@@ -49,7 +49,6 @@ namespace Tubes_KPL
             this.label8 = new System.Windows.Forms.Label();
             this.textTanggal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnExport = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaksi)).BeginInit();
@@ -61,7 +60,7 @@ namespace Tubes_KPL
             this.dataGridTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridTransaksi.Location = new System.Drawing.Point(350, 37);
             this.dataGridTransaksi.Name = "dataGridTransaksi";
-            this.dataGridTransaksi.Size = new System.Drawing.Size(763, 382);
+            this.dataGridTransaksi.Size = new System.Drawing.Size(763, 343);
             this.dataGridTransaksi.TabIndex = 37;
             // 
             // textOngkir
@@ -227,16 +226,6 @@ namespace Tubes_KPL
             this.label9.TabIndex = 44;
             this.label9.Text = "Tanggal :";
             // 
-            // btnExport
-            // 
-            this.btnExport.Location = new System.Drawing.Point(190, 396);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(132, 23);
-            this.btnExport.TabIndex = 45;
-            this.btnExport.Text = "Export Data to File";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -262,7 +251,6 @@ namespace Tubes_KPL
             this.ClientSize = new System.Drawing.Size(1151, 450);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textTanggal);
             this.Controls.Add(this.textTotal);
@@ -314,7 +302,6 @@ namespace Tubes_KPL
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textTanggal;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
     }
