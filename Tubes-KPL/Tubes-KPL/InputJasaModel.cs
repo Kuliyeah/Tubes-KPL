@@ -9,26 +9,21 @@ namespace Tubes_KPL
 {
     class InputJasaModel
     {
-        public String namaToko, namaJasa, deskripsi;
-        public int hargaPerPaket, jumlahPaket;
+        private String mataUang;
+        private String namaToko;
+        private String namaJasa;
+        private String deskripsi;
+        private double hargaPerPaket;
+        private int jumlahPaket;
 
-        public InputJasaModel(string namaToko, string namaJasa, int hargaPerPaket, int jumlahPaket, string deskripsi)
+        public void setMataUang(string mataUang)
         {
-
-            Debug.Assert(jumlahPaket >= 2, "Jumlah Paket harus lebih dari 2");
-            Debug.Assert(hargaPerPaket >= 5000, "Harga barang harus lebih dari 5000");
-            this.namaToko = namaToko;
-            this.namaJasa = namaJasa;
-            this.deskripsi = deskripsi;
-            this.hargaPerPaket = hargaPerPaket;
-            this.jumlahPaket = jumlahPaket;
+            this.mataUang = mataUang;
         }
-
-        public InputJasaModel()
+        public String getMataUang()
         {
-
+            return this.mataUang;
         }
-
         public void setNamaToko(string namaToko)
         {
             this.namaToko = namaToko;
@@ -45,15 +40,7 @@ namespace Tubes_KPL
         {
             return this.namaJasa;
         }
-        public void setHarga(int hargaPerPaket)
-        {
-            this.hargaPerPaket = hargaPerPaket;
-        }
-        public int getHarga()
-        {
-            return this.hargaPerPaket;
-        }
-        public void setDeskripsi(String deskripsi)
+        public void setDeskripsi(string deskripsi)
         {
             this.deskripsi = deskripsi;
         }
@@ -61,7 +48,14 @@ namespace Tubes_KPL
         {
             return this.deskripsi;
         }
-
+        public void setHargaPerPaket(double hargaPerPaket)
+        {
+            this.hargaPerPaket = hargaPerPaket;
+        }
+        public double getHargaPerPaket()
+        {
+            return this.hargaPerPaket;
+        }
         public void setJumlahPaket(int jumlahPaket)
         {
             this.jumlahPaket = jumlahPaket;
@@ -70,5 +64,22 @@ namespace Tubes_KPL
         {
             return this.jumlahPaket;
         }
+        public InputJasaModel(string mataUang, string namaToko, string namaJasa, double hargaPerPaket, int jumlahPaket, string deskripsi)
+        {
+            this.mataUang = mataUang;
+            Debug.Assert(jumlahPaket >= 2, "Jumlah Paket harus lebih dari 2");
+            Debug.Assert(hargaPerPaket >= 5000, "Harga barang harus lebih dari 5000");
+            this.namaToko = namaToko;
+            this.namaJasa = namaJasa;
+            this.deskripsi = deskripsi;
+            this.hargaPerPaket = hargaPerPaket;
+            this.jumlahPaket = jumlahPaket;
+        }
+
+        public InputJasaModel()
+        {
+
+        }
+
     }
 }

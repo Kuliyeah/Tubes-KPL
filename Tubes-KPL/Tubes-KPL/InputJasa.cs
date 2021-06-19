@@ -18,69 +18,44 @@ namespace Tubes_KPL
         List<InputJasaModel> jasa = new List<InputJasaModel>();
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"\InputJasa.json";
+        DataTable dtJasa;
+
         public InputJasa()
         {
             InitializeComponent();
+
+            try
+            {
+                dtJasa = ReadFromJson<DataTable>(path + pathJSON);
+            }
+            catch
+            {
+                SaveToJson<DataTable>(dtJasa, path + pathJSON);
+            }
+
+            dataGridJasa.DataSource = dtJasa;
+        }
+        public static T ReadFromJson<T>(string path)
+        {
+            string json = File.ReadAllText(path);
+            T obj = JsonConvert.DeserializeObject<T>(json);
+            return obj;
         }
 
-        public static void SaveToJSON<T>(T obj, string path)
+        public static void SaveToJson<T>(T obj, string path)
         {
             string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
             File.WriteAllText(path, json);
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void cleartTextBox()
         {
-            String namaToko = tbNamaToko.Text;
-            String namaJasa = tbNamaJasa.Text;
-            int harga = Int32.Parse(tbHarga.Text);
-            int jumlahPaket = Int32.Parse(tbJlhPaket.Text);
-            if(jumlahPaket<2 || harga < 5000)
-            {
-                tbHarga.Text = String.Empty;
-                tbJlhPaket.Text = String.Empty;
-                tbHarga.Focus();
-            }
-            else
-            {
-                int hargaTotal = harga * jumlahPaket;
-                String deskripsi = tbDeskripsi.Text;
-
-                InputJasaModel dataJasa = new InputJasaModel(namaToko, namaJasa, harga, jumlahPaket, deskripsi);
-                jasa.Add(dataJasa);
-
-                DataTable dtJasa = new DataTable();
-                dtJasa.Columns.Add("Nama Toko");
-                dtJasa.Columns.Add("Nama Jasa");
-                dtJasa.Columns.Add("Harga");
-                dtJasa.Columns.Add("Jumlah Paket");
-                dtJasa.Columns.Add("Total Harga");
-                dtJasa.Columns.Add("Deskripsi Jasa");
-
-                for (int i = 0; i < jasa.Count; i++)
-                {
-                    dtJasa.Rows.Add(
-                        jasa[i].getNamaToko().ToString(),
-                        jasa[i].getNamaJasa().ToString(),
-                        "Rp. " + jasa[i].getHarga().ToString(),
-                        jasa[i].getJumlahPaket().ToString(),
-                        "Rp. " + (hargaTotal).ToString(),
-                        jasa[i].getDeskripsi().ToString()
-                        );
-                }
-
-                SaveToJSON<Object>(dataJasa, this.path + this.pathJSON);
-                tgvJasa.DataSource = dtJasa;
-                
-                tbNamaToko.Text = String.Empty;
-                tbNamaJasa.Text = String.Empty;
-                tbHarga.Text = String.Empty;
-                tbJlhPaket.Text = String.Empty;
-                tbDeskripsi.Text = String.Empty;
-            }
-
-
+            tbNamaToko.Text = String.Empty;
+            tbNamaJasa.Text = String.Empty;
+            tbHarga.Text = String.Empty;
+            tbJlhPaket.Text = String.Empty;
+            tbDeskripsi.Text = String.Empty;
         }
-
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -89,7 +64,7 @@ namespace Tubes_KPL
 
         private void InputJasa_Load(object sender, EventArgs e)
         {
-            btnBatal.Enabled = false;
+            btnBatal.Enabled = true;
             btnSimpan.Enabled = false;
             tbNamaToko.Enabled = false;
             tbNamaJasa.Enabled = false;
@@ -108,6 +83,51 @@ namespace Tubes_KPL
             tbJlhPaket.Enabled = true;
             tbDeskripsi.Enabled = true;
             btnNew.Enabled = false;
+        }
+
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            // Menyimpan isi dari textbox ke dalam variabel baru
+            String namaToko = tbNamaToko.Text;
+            String namaJasa = tbNamaJasa.Text;
+            int harga = Int32.Parse(tbHarga.Text);
+            int jumlahPaket = Int32.Parse(tbJlhPaket.Text);
+            String deskripsi = tbDeskripsi.Text;
+            if (jumlahPaket < 2 || harga < 5000)
+            {
+                tbHarga.Text = String.Empty;
+                tbJlhPaket.Text = String.Empty;
+                tbHarga.Focus();
+            }
+            else
+            {
+                // Masukan data kedalam list
+                jasa.Add(new InputJasaModel("Rupiah", namaToko, namaJasa, harga, jumlahPaket, deskripsi));
+
+                dtJasa = new DataTable();
+                dtJasa.Columns.Add("Nama Toko");
+                dtJasa.Columns.Add("Nama Jasa");
+                dtJasa.Columns.Add("Harga");
+                dtJasa.Columns.Add("Jumlah Paket");
+                dtJasa.Columns.Add("Deskripsi Jasa");
+
+                for (int i = 0; i < jasa.Count; i++)
+                {
+
+                    dtJasa.Rows.Add(
+                        jasa[i].getNamaToko().ToString(),
+                        jasa[i].getNamaJasa().ToString(),
+                        "Rp. " + jasa[i].getHargaPerPaket().ToString(),
+                        jasa[i].getJumlahPaket().ToString(),
+                        jasa[i].getDeskripsi().ToString()
+                        );
+
+                }
+
+                dataGridJasa.DataSource = dtJasa;
+
+                SaveToJson<DataTable>(dtJasa, path + pathJSON);
+            }
         }
     }
 }

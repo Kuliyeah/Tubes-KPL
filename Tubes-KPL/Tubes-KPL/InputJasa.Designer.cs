@@ -29,7 +29,7 @@ namespace Tubes_KPL
         /// </summary>
         private void InitializeComponent()
         {
-            this.tgvJasa = new System.Windows.Forms.DataGridView();
+            this.dataGridJasa = new System.Windows.Forms.DataGridView();
             this.tbHarga = new System.Windows.Forms.TextBox();
             this.tbDeskripsi = new System.Windows.Forms.TextBox();
             this.tbNamaJasa = new System.Windows.Forms.TextBox();
@@ -45,18 +45,18 @@ namespace Tubes_KPL
             this.label7 = new System.Windows.Forms.Label();
             this.btnBatal = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tgvJasa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJasa)).BeginInit();
             this.SuspendLayout();
             // 
-            // tgvJasa
+            // dataGridJasa
             // 
-            this.tgvJasa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tgvJasa.BackgroundColor = System.Drawing.Color.White;
-            this.tgvJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tgvJasa.Location = new System.Drawing.Point(318, 64);
-            this.tgvJasa.Name = "tgvJasa";
-            this.tgvJasa.Size = new System.Drawing.Size(467, 183);
-            this.tgvJasa.TabIndex = 22;
+            this.dataGridJasa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridJasa.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridJasa.Location = new System.Drawing.Point(318, 64);
+            this.dataGridJasa.Name = "dataGridJasa";
+            this.dataGridJasa.Size = new System.Drawing.Size(467, 183);
+            this.dataGridJasa.TabIndex = 22;
             // 
             // tbHarga
             // 
@@ -140,7 +140,7 @@ namespace Tubes_KPL
             this.btnSimpan.TabIndex = 9;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = true;
-            this.btnSimpan.Click += new System.EventHandler(this.button2_Click);
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // label1
             // 
@@ -194,7 +194,7 @@ namespace Tubes_KPL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 321);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.tgvJasa);
+            this.Controls.Add(this.dataGridJasa);
             this.Controls.Add(this.tbJlhPaket);
             this.Controls.Add(this.tbHarga);
             this.Controls.Add(this.tbDeskripsi);
@@ -212,7 +212,7 @@ namespace Tubes_KPL
             this.Name = "InputJasa";
             this.Text = "InputJasa";
             this.Load += new System.EventHandler(this.InputJasa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tgvJasa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJasa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +220,7 @@ namespace Tubes_KPL
 
         #endregion
 
-        private System.Windows.Forms.DataGridView tgvJasa;
+        private System.Windows.Forms.DataGridView dataGridJasa;
         private System.Windows.Forms.TextBox tbHarga;
         private System.Windows.Forms.TextBox tbDeskripsi;
         private System.Windows.Forms.TextBox tbNamaJasa;
