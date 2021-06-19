@@ -25,6 +25,16 @@ namespace Tubes_KPL
             }
             catch //jika file JSON belum ada maka akan membuat file JSON
             {
+                //membuat tabel data
+                DataTable dtTransaksi = new DataTable();
+                dtTransaksi.Columns.Add("Tanggal");
+                dtTransaksi.Columns.Add("ID Transaksi");
+                dtTransaksi.Columns.Add("ID Jasa");
+                dtTransaksi.Columns.Add("Deskripsi");
+                dtTransaksi.Columns.Add("Berat");
+                dtTransaksi.Columns.Add("Ongkir");
+                dtTransaksi.Columns.Add("Total Bayar");
+
                 SaveToJson<DataTable>(dtTransaksi, path + pathJSON);
             }
 
@@ -113,16 +123,6 @@ namespace Tubes_KPL
             transaksi.Add(new InputTransaksiModel(tglSekarang, idTransaksi, idJasa, deskripsi,
                 berat, ongkir, totalBayar));
 
-            //membuat tabel data
-            DataTable dtTransaksi = new DataTable();
-            dtTransaksi.Columns.Add("Tanggal");
-            dtTransaksi.Columns.Add("ID Transaksi");
-            dtTransaksi.Columns.Add("ID Jasa");
-            dtTransaksi.Columns.Add("Deskripsi");
-            dtTransaksi.Columns.Add("Berat");
-            dtTransaksi.Columns.Add("Ongkir");
-            dtTransaksi.Columns.Add("Total Bayar");
-
             //isi tabel data dengan data dari list
             for (int i = 0; i < transaksi.Count; i++)
             {
@@ -140,7 +140,7 @@ namespace Tubes_KPL
             //tampilkan data ke UI
             dataGridTransaksi.DataSource = dtTransaksi;
 
-            //simpan data ke JSON
+            //simpan dan update data ke JSON
             SaveToJson<DataTable>(dtTransaksi, path + pathJSON);
         }
 

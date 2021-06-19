@@ -30,6 +30,13 @@ namespace Tubes_KPL
             }
             catch
             {
+                dtJasa = new DataTable();
+                dtJasa.Columns.Add("Nama Toko");
+                dtJasa.Columns.Add("Nama Jasa");
+                dtJasa.Columns.Add("Harga");
+                dtJasa.Columns.Add("Jumlah Paket");
+                dtJasa.Columns.Add("Deskripsi Jasa");
+
                 SaveToJson<DataTable>(dtJasa, path + pathJSON);
             }
 
@@ -103,13 +110,6 @@ namespace Tubes_KPL
             {
                 // Masukan data kedalam list
                 jasa.Add(new InputJasaModel("Rupiah", namaToko, namaJasa, harga, jumlahPaket, deskripsi));
-
-                dtJasa = new DataTable();
-                dtJasa.Columns.Add("Nama Toko");
-                dtJasa.Columns.Add("Nama Jasa");
-                dtJasa.Columns.Add("Harga");
-                dtJasa.Columns.Add("Jumlah Paket");
-                dtJasa.Columns.Add("Deskripsi Jasa");
 
                 for (int i = 0; i < jasa.Count; i++)
                 {
