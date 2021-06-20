@@ -117,7 +117,7 @@ namespace Tubes_KPL
                     dtJasa.Rows.Add(
                         jasa[i].getNamaToko().ToString(),
                         jasa[i].getNamaJasa().ToString(),
-                        "Rp. " + jasa[i].getHargaPerPaket().ToString(),
+                        jasa[i].getHargaPerPaket().ToString(),
                         jasa[i].getJumlahPaket().ToString(),
                         jasa[i].getDeskripsi().ToString()
                         );

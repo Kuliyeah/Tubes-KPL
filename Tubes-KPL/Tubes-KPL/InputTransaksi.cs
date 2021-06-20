@@ -73,7 +73,16 @@ namespace Tubes_KPL
 
         private int cariHargaJasa()
         {
-            int harga = 1000;
+            dtJasa = ReadFromJson<DataTable>(pathDir + pathJasa);
+            int harga = Int32.Parse(dtJasa.Rows[comboBoxNamaJasa.SelectedIndex][2].ToString());
+            /*
+            for (int i = 0; i < dtJasa.Rows.Count; i++) {
+                if(dtJasa.Rows[i][2].ToString() == comboBoxNamaJasa.Text)
+                {
+                    harga = Int32.Parse(dtJasa.Rows[i][3].ToString());
+                }
+            }*/
+
             return harga;
         }
 
