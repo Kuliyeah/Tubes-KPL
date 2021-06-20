@@ -150,5 +150,11 @@ namespace Tubes_KPL
         {
             SaveToJSON<Object>(listPenggunaModel, this.path + this.pathJSON);
         }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Dashboard().Show();
+        }
     }
 }

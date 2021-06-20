@@ -46,6 +46,7 @@ namespace Tubes_KPL
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExportToJSON = new System.Windows.Forms.Button();
+            this.btnBatal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPengguna)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,17 +191,28 @@ namespace Tubes_KPL
             // 
             this.btnExportToJSON.Location = new System.Drawing.Point(30, 315);
             this.btnExportToJSON.Name = "btnExportToJSON";
-            this.btnExportToJSON.Size = new System.Drawing.Size(263, 23);
+            this.btnExportToJSON.Size = new System.Drawing.Size(168, 23);
             this.btnExportToJSON.TabIndex = 39;
             this.btnExportToJSON.Text = "Export to JSON";
             this.btnExportToJSON.UseVisualStyleBackColor = true;
             this.btnExportToJSON.Click += new System.EventHandler(this.btnExportToJSON_Click);
+            // 
+            // btnBatal
+            // 
+            this.btnBatal.Location = new System.Drawing.Point(218, 315);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(75, 23);
+            this.btnBatal.TabIndex = 40;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.UseVisualStyleBackColor = true;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // Pengguna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 363);
+            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnExportToJSON);
             this.Controls.Add(this.dgvPengguna);
             this.Controls.Add(this.btnNew);
@@ -246,6 +258,7 @@ namespace Tubes_KPL
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExportToJSON;
+        private System.Windows.Forms.Button btnBatal;
     }
 }
 

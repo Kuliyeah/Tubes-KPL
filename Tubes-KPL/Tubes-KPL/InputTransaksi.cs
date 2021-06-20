@@ -31,9 +31,9 @@ namespace Tubes_KPL
                 dtTransaksi.Columns.Add("ID Transaksi");
                 dtTransaksi.Columns.Add("ID Jasa");
                 dtTransaksi.Columns.Add("Deskripsi");
-                dtTransaksi.Columns.Add("Berat");
-                dtTransaksi.Columns.Add("Ongkir");
-                dtTransaksi.Columns.Add("Total Bayar");
+                dtTransaksi.Columns.Add("Berat (Kg)");
+                dtTransaksi.Columns.Add("Ongkir (Rp)");
+                dtTransaksi.Columns.Add("Total Bayar (Rp)");
 
                 SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
             }
@@ -75,13 +75,6 @@ namespace Tubes_KPL
         {
             dtJasa = ReadFromJson<DataTable>(pathDir + pathJasa);
             int harga = Int32.Parse(dtJasa.Rows[comboBoxNamaJasa.SelectedIndex][2].ToString());
-            /*
-            for (int i = 0; i < dtJasa.Rows.Count; i++) {
-                if(dtJasa.Rows[i][2].ToString() == comboBoxNamaJasa.Text)
-                {
-                    harga = Int32.Parse(dtJasa.Rows[i][3].ToString());
-                }
-            }*/
 
             return harga;
         }
@@ -117,7 +110,7 @@ namespace Tubes_KPL
                 dtJasa = new DataTable();
                 dtJasa.Columns.Add("Nama Toko");
                 dtJasa.Columns.Add("Nama Jasa");
-                dtJasa.Columns.Add("Harga");
+                dtJasa.Columns.Add("Harga (Rp)");
                 dtJasa.Columns.Add("Jumlah Paket");
                 dtJasa.Columns.Add("Deskripsi Jasa");
 

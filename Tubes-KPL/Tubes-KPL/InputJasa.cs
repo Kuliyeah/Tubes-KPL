@@ -15,7 +15,6 @@ namespace Tubes_KPL
 {
     public partial class InputJasa : Form
     {
-        List<InputJasaModel> jasa = new List<InputJasaModel>();
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"\InputJasa.json";
         DataTable dtJasa;
@@ -33,7 +32,7 @@ namespace Tubes_KPL
                 dtJasa = new DataTable();
                 dtJasa.Columns.Add("Nama Toko");
                 dtJasa.Columns.Add("Nama Jasa");
-                dtJasa.Columns.Add("Harga");
+                dtJasa.Columns.Add("Harga (Rp)");
                 dtJasa.Columns.Add("Jumlah Paket");
                 dtJasa.Columns.Add("Deskripsi Jasa");
 
@@ -94,6 +93,8 @@ namespace Tubes_KPL
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            List<InputJasaModel> jasa = new List<InputJasaModel>();
+
             // Menyimpan isi dari textbox ke dalam variabel baru
             String namaToko = tbNamaToko.Text;
             String namaJasa = tbNamaJasa.Text;
@@ -127,6 +128,8 @@ namespace Tubes_KPL
                 dataGridJasa.DataSource = dtJasa;
 
                 SaveToJson<DataTable>(dtJasa, path + pathJSON);
+                btnNew.Enabled = true;
+                btnSimpan.Enabled = false;
             }
         }
     }
