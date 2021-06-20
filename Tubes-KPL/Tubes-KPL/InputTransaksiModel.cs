@@ -8,17 +8,17 @@ namespace Tubes_KPL
 {
     class InputTransaksiModel
     {//deklarasi variable
-        private String _deskripsiCucian;
-        private int _idTransaksi, _idJasa, _totalBayar, _beratCucian, _ongkir;
+        private String _deskripsiCucian, _namaJasa;
+        private int _idTransaksi, _totalBayar, _beratCucian, _ongkir;
         private DateTime _tanggal;
 
         //constructor: membuat data transaksi baru
-        public InputTransaksiModel(DateTime tanggal, int idTransaksi, int idJasa,
+        public InputTransaksiModel(DateTime tanggal, int idTransaksi, String namaJasa,
             String deskripsiCucian, int beratCucian, int ongkir, int totalBayar)
         {
             this._tanggal = tanggal;
             this._idTransaksi = idTransaksi;
-            this._idJasa = idJasa;
+            this._namaJasa = namaJasa;
             this._deskripsiCucian = deskripsiCucian;
             this._beratCucian = beratCucian;
             this._ongkir = ongkir;
@@ -38,9 +38,9 @@ namespace Tubes_KPL
         }
 
         //(getter) ambil value dari idJasa
-        public int getIdJasa()
+        public String getNamaJasa()
         {
-            return _idJasa;
+            return _namaJasa;
         }
 
         //(getter) ambil value dari deskripsiCucian
@@ -80,12 +80,11 @@ namespace Tubes_KPL
         }
 
         //(setter) setting idJasa
-        public void setIdJasa(int idJasa)
+        public void setNamaJasa(String namaJasa)
         {
-            this._idJasa = idJasa;
+            this._namaJasa = namaJasa;
         }
 
-        //Dzakwan Daffa Hidayatullah - 1302194008
         //(setter) setting deskripsiCucian
         public void setDeskripsiCucian(String deskripsiCucian)
         {

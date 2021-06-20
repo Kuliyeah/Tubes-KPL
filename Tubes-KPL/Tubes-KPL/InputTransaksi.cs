@@ -8,12 +8,12 @@ using System.Windows.Forms;
 namespace Tubes_KPL
 {
     public partial class InputTransaksi : Form
-    {
-        List<InputTransaksiModel> transaksi = new List<InputTransaksiModel>();
-        DataTable dtTransaksi;
+    {       
+        DataTable dtTransaksi, dtJasa;
         DateTime tglSekarang = DateTime.Now;
-        private string path = Environment.CurrentDirectory;
-        private string pathJSON = @"\InputTransaksi.json";
+        private string pathDir = Environment.CurrentDirectory;
+        private string pathTransaksi = @"\InputTransaksi.json";
+        private string pathJasa= @"\InputJasa.json";
 
         public InputTransaksi()
         {
@@ -21,12 +21,12 @@ namespace Tubes_KPL
 
             try //jika file JSON sudah ada maka akan membaca data tersebut
             {
-                dtTransaksi = ReadFromJson<DataTable>(path + pathJSON);
+                dtTransaksi = ReadFromJson<DataTable>(pathDir + pathTransaksi);
             }
             catch //jika file JSON belum ada maka akan membuat file JSON
             {
                 //membuat tabel data
-                DataTable dtTransaksi = new DataTable();
+                dtTransaksi = new DataTable();
                 dtTransaksi.Columns.Add("Tanggal");
                 dtTransaksi.Columns.Add("ID Transaksi");
                 dtTransaksi.Columns.Add("ID Jasa");
@@ -35,7 +35,7 @@ namespace Tubes_KPL
                 dtTransaksi.Columns.Add("Ongkir");
                 dtTransaksi.Columns.Add("Total Bayar");
 
-                SaveToJson<DataTable>(dtTransaksi, path + pathJSON);
+                SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
             }
 
             //tampilkan data dari InputTransaksi.json
@@ -46,13 +46,14 @@ namespace Tubes_KPL
             setEditEnabled(false);
             btnNew.Enabled = true;
             textTanggal.Text = tglSekarang.ToString();
+            setComboboxNamaJasa();
         }
         private void setEditEnabled(bool stat)
         {
             btnSimpan.Enabled = stat;
             btnBatal.Enabled = true;
             btnNew.Enabled = stat;
-            comboBoxIDJasa.Enabled = stat;
+            comboBoxNamaJasa.Enabled = stat;
             textBerat.Enabled = stat;
             textDeskripsi.Enabled = stat;
             textIDTransaksi.Enabled = stat;
@@ -67,7 +68,7 @@ namespace Tubes_KPL
             textOngkir.Text = "";
             textTotal.Text = "";
             textDeskripsi.Text = "";
-            comboBoxIDJasa.Text = "";
+            comboBoxNamaJasa.Text = "";
         }
 
         private int cariHargaJasa()
@@ -89,13 +90,35 @@ namespace Tubes_KPL
             File.WriteAllText(path, json);
         }
 
-        private int hitungTotal()
+        private int hitungTotal(int berat, int harga, int ongkir)
         {
-            int harga = cariHargaJasa();
-            int total = Int16.Parse(textBerat.Text) * harga + Int16.Parse(textOngkir.Text);
+            int total = berat * harga + ongkir;
             return total;
         }
-        
+
+        private void setComboboxNamaJasa()
+        {
+            try //jika file JSON sudah ada maka akan membaca data tersebut
+            {
+                dtJasa = ReadFromJson<DataTable>(pathDir + pathJasa);
+            }
+            catch //jika file JSON belum ada maka akan membuat file JSON
+            {
+                //membuat tabel data
+                dtJasa = new DataTable();
+                dtJasa.Columns.Add("Nama Toko");
+                dtJasa.Columns.Add("Nama Jasa");
+                dtJasa.Columns.Add("Harga");
+                dtJasa.Columns.Add("Jumlah Paket");
+                dtJasa.Columns.Add("Deskripsi Jasa");
+
+                SaveToJson<DataTable>(dtJasa, pathDir + pathJasa);
+            }
+
+            comboBoxNamaJasa.DataSource = dtJasa;
+            comboBoxNamaJasa.DisplayMember = "Nama Jasa";
+        }
+
         private void btnNew_Click(object sender, EventArgs e)
         {
             clearText();
@@ -106,21 +129,23 @@ namespace Tubes_KPL
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            List<InputTransaksiModel> transaksi = new List<InputTransaksiModel>();
+
             //set button
             setEditEnabled(false);
             btnNew.Enabled = true;
 
             //set dan ambil nilai dari input user
-            int idTransaksi = Int16.Parse(textIDTransaksi.Text);
-            int idJasa = Int16.Parse(comboBoxIDJasa.Text);
+            int idTransaksi = Int32.Parse(textIDTransaksi.Text);
+            String namaJasa = comboBoxNamaJasa.Text;
             String deskripsi = textDeskripsi.Text;
-            int berat = Int16.Parse(textBerat.Text);
-            int ongkir = Int16.Parse(textOngkir.Text);
-            int totalBayar = hitungTotal();
-            textTotal.Text = hitungTotal().ToString();
+            int berat = Int32.Parse(textBerat.Text);
+            int ongkir = Int32.Parse(textOngkir.Text);
+            int totalBayar = hitungTotal(berat, cariHargaJasa(), ongkir);
+            textTotal.Text = totalBayar.ToString();
 
             //masukan data kedalam list
-            transaksi.Add(new InputTransaksiModel(tglSekarang, idTransaksi, idJasa, deskripsi,
+            transaksi.Add(new InputTransaksiModel(tglSekarang, idTransaksi, namaJasa, deskripsi,
                 berat, ongkir, totalBayar));
 
             //isi tabel data dengan data dari list
@@ -129,7 +154,7 @@ namespace Tubes_KPL
                 dtTransaksi.Rows.Add(
                     transaksi[i].getTanggal().ToString(),
                     transaksi[i].getIdTransaksi().ToString(),
-                    transaksi[i].getIdJasa().ToString(),
+                    transaksi[i].getNamaJasa().ToString(),
                     transaksi[i].getDeskripsiCucian().ToString(),
                     transaksi[i].getBeratCucian().ToString(),
                     transaksi[i].getOngkir().ToString(),
@@ -141,7 +166,7 @@ namespace Tubes_KPL
             dataGridTransaksi.DataSource = dtTransaksi;
 
             //simpan dan update data ke JSON
-            SaveToJson<DataTable>(dtTransaksi, path + pathJSON);
+            SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
