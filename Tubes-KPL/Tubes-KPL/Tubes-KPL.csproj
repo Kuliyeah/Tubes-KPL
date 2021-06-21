@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Automata.cs" />
     <Compile Include="PenggunaModel.cs" />
     <Compile Include="TableDriven.cs" />
     <Compile Include="Dashboard.cs">
