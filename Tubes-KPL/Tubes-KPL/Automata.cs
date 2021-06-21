@@ -7,6 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Tubes_KPL
 {
+    //Adamnn
     class Automata
     {
         string[] State = { "Login", "Dashboard", "InputPengguna", "InputJasa", "InputTransaksi", "Logout" };
