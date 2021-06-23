@@ -1,0 +1,37 @@
+[
+  {
+    "Username": "Lovanto",
+    "No Telp": "087823837566",
+    "Alamat": "Bandung",
+    "Email": "Lovanto@gmail.com",
+    "Password": "Lovanto"
+  },
+  {
+    "Username": "Gilang",
+    "No Telp": "087823837566",
+    "Alamat": "Sukabumi",
+    "Email": "Gilang@gmail.com",
+    "Password": "Gilang123"
+  },
+  {
+    "Username": "Adam",
+    "No Telp": "087823837566",
+    "Alamat": "Sumedang",
+    "Email": "Adam@gmail.com",
+    "Password": "Adam123"
+  },
+  {
+    "Username": "Ramadhan",
+    "No Telp": "087823837566",
+    "Alamat": "Lombok",
+    "Email": "Ramadhan@gmail.com",
+    "Password": "Ramadhan123"
+  },
+  {
+    "Username": "Dzakwan",
+    "No Telp": "087823837566",
+    "Alamat": "Lampung",
+    "Email": "Dzakwan@gmail.com",
+    "Password": "Dzakwan123"
+  }
+]

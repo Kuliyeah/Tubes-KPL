@@ -15,23 +15,6 @@ D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KP
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
 D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.dll
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.xml
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Dashboard.resources
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputTransaksi.resources
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Pengguna.resources
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputJasa.resources
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Properties.Resources.resources
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.GenerateResource.cache
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
-E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csprojAssemblyReference.cache
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb
@@ -66,3 +49,19 @@ F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj
 F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
 F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.dll
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.xml
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Dashboard.resources
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputTransaksi.resources
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Pengguna.resources
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputJasa.resources
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Properties.Resources.resources
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.GenerateResource.cache
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
+E:\Kuliah\KONSTRUKSI PERANGKAT LUNAK\TubesKPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb

@@ -57,8 +57,9 @@ namespace Tubes_KPL
 
 
             
+            moneyConfig money;
             String path = Environment.CurrentDirectory;
-            String pathMoney = @"\MoneyConfig.json";
+            String pathMoney = @"../../../json/MoneyConfig.json";
 
             try
             {

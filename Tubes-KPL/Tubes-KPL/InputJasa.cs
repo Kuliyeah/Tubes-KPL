@@ -16,10 +16,10 @@ namespace Tubes_KPL
     public partial class InputJasa : Form
     {
         private string path = Environment.CurrentDirectory;
-        private string pathJSON = @"\InputJasa.json";
-        private string pathMoney = @"\MoneyConfig.json";
+        private string pathJSON = @"../../../json/InputJasa.json";
+        private string pathMoney = @"../../../json/MoneyConfig.json";
         private moneyConfig money;
-        DataTable dtJasa;
+        DataTable dtJasa = new DataTable();
 
         public InputJasa()
         {
@@ -31,18 +31,25 @@ namespace Tubes_KPL
             }
             catch
             {
-                dtJasa = new DataTable();
-                dtJasa.Columns.Add("Nama Toko");
-                dtJasa.Columns.Add("Nama Jasa");
-                dtJasa.Columns.Add("Harga");
-                dtJasa.Columns.Add("Jumlah Paket");
-                dtJasa.Columns.Add("Deskripsi Jasa");
-
+                DummyData();
                 Config.SaveToJson<DataTable>(dtJasa, path + pathJSON);
             }
             
             dataGridJasa.DataSource = dtJasa;
             convertMataUang();
+        }
+
+        private void DummyData()
+        {
+            dtJasa.Columns.Add("Nama Toko");
+            dtJasa.Columns.Add("Nama Jasa");
+            dtJasa.Columns.Add("Harga");
+            dtJasa.Columns.Add("Jumlah Paket");
+            dtJasa.Columns.Add("Deskripsi Jasa");
+
+
+
+            dtJasa.Rows.Add("Toko Sukses", "Test Jasa", "5500", "1", "Deskripsi Test");
         }
 
         private void cleartTextBox()

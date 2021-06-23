@@ -1,0 +1,20 @@
+[
+  {
+    "Tanggal": "6/23/2021 9:05:48 PM",
+    "ID Transaksi": "1234",
+    "Nama Jasa": "Test Jasa",
+    "Deskripsi": "Deskripsi Test Jasa",
+    "Berat (Kg)": "2",
+    "Ongkir": "5000",
+    "Total Bayar": "15000"
+  },
+  {
+    "Tanggal": "6/23/2021 9:05:48 PM",
+    "ID Transaksi": "334",
+    "Nama Jasa": "Test Jasa",
+    "Deskripsi": "fsfsefsef",
+    "Berat (Kg)": "4",
+    "Ongkir": "2000",
+    "Total Bayar": "24000"
+  }
+]

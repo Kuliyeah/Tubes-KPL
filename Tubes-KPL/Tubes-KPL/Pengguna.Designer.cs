@@ -43,7 +43,6 @@ namespace Tubes_KPL
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExportToJSON = new System.Windows.Forms.Button();
             this.btnBatal = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPengguna)).BeginInit();
@@ -55,7 +54,7 @@ namespace Tubes_KPL
             this.dgvPengguna.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPengguna.Location = new System.Drawing.Point(321, 33);
             this.dgvPengguna.Name = "dgvPengguna";
-            this.dgvPengguna.Size = new System.Drawing.Size(448, 305);
+            this.dgvPengguna.Size = new System.Drawing.Size(448, 266);
             this.dgvPengguna.TabIndex = 38;
             // 
             // btnNew
@@ -167,16 +166,6 @@ namespace Tubes_KPL
             this.label1.TabIndex = 21;
             this.label1.Text = "Username";
             // 
-            // btnExportToJSON
-            // 
-            this.btnExportToJSON.Location = new System.Drawing.Point(30, 315);
-            this.btnExportToJSON.Name = "btnExportToJSON";
-            this.btnExportToJSON.Size = new System.Drawing.Size(263, 23);
-            this.btnExportToJSON.TabIndex = 39;
-            this.btnExportToJSON.Text = "Export to JSON";
-            this.btnExportToJSON.UseVisualStyleBackColor = true;
-            this.btnExportToJSON.Click += new System.EventHandler(this.btnExportToJSON_Click);
-            // 
             // btnBatal
             // 
             this.btnBatal.Location = new System.Drawing.Point(218, 276);
@@ -201,10 +190,9 @@ namespace Tubes_KPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 363);
+            this.ClientSize = new System.Drawing.Size(800, 329);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBatal);
-            this.Controls.Add(this.btnExportToJSON);
             this.Controls.Add(this.dgvPengguna);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.label7);
@@ -244,7 +232,6 @@ namespace Tubes_KPL
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExportToJSON;
         private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Button btnSave;
     }

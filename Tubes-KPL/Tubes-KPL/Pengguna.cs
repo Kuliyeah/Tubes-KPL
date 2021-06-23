@@ -10,18 +10,27 @@ namespace Tubes_KPL
 {
     public partial class Pengguna : Form
     {
-        List<PenggunaModel> listPenggunaModel = new List<PenggunaModel>();
         PenggunaModel penggunaModel = new PenggunaModel();
         DataTable dataTable = new DataTable();
 
         private string path = Environment.CurrentDirectory;
-        private string pathJSON = @"\Pengguna.json";
+        private string pathJSON = @"../../../json/Pengguna.json";
 
         public Pengguna()
         {
             InitializeComponent();
-            DummyData();
-            showTable();
+
+            try
+            {
+                dataTable = Config.ReadFromJson<DataTable>(path + pathJSON);
+            }
+            catch
+            {
+                DummyData();
+                Config.SaveToJson<DataTable>(dataTable, path + pathJSON);
+            }
+
+            dgvPengguna.DataSource = dataTable;
         }
 
         private void ClearTextBox()
@@ -56,46 +65,21 @@ namespace Tubes_KPL
             btnSave.Enabled = true;
             btnNew.Enabled = false;
         }
+
         private void DummyData()
         {
-            penggunaModel = new PenggunaModel("Lovanto", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
-            listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Gilang", "087823837566", "Sukabumi", "Gilang@gmail.com", "Gilang123");
-            listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Adam", "087823837566", "Sumedang", "Adam@gmail.com", "Adam123");
-            listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Ramadhan", "087823837566", "Lombok", "Ramadhan@gmail.com", "Ramadhan123");
-            listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Dzakwan", "087823837566", "Lampung", "Dzakwan@gmail.com", "Dzakwan123");
-            listPenggunaModel.Add(penggunaModel);
-        }
-
-        private void showTable()
-        {
-            dataTable = new DataTable();
             dataTable.Columns.Add("Username");
-            dataTable.Columns.Add("No HP");
+            dataTable.Columns.Add("No Telp");
             dataTable.Columns.Add("Alamat");
             dataTable.Columns.Add("Email");
             dataTable.Columns.Add("Password");
 
-            for (int i = 0; i < listPenggunaModel.Count; i++)
-            {
-                dataTable.Rows.Add(
-                    listPenggunaModel[i].getUsername().ToString(),
-                    listPenggunaModel[i].getNoHP().ToString(),
-                    listPenggunaModel[i].getAlamatPengguna().ToString(),
-                    listPenggunaModel[i].getEmail().ToString(),
-                    listPenggunaModel[i].getKataSandi().ToString()
-                );
-            }
-            dgvPengguna.DataSource = dataTable;
-        }
 
-        public static void SaveToJSON<T>(T obj, string path)
-        {
-            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-            File.WriteAllText(path, json);
+            dataTable.Rows.Add("Lovanto", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            dataTable.Rows.Add("Gilang", "087823837566", "Sukabumi", "Gilang@gmail.com", "Gilang123");
+            dataTable.Rows.Add("Adam", "087823837566", "Sumedang", "Adam@gmail.com", "Adam123");
+            dataTable.Rows.Add("Ramadhan", "087823837566", "Lombok", "Ramadhan@gmail.com", "Ramadhan123");
+            dataTable.Rows.Add("Dzakwan", "087823837566", "Lampung", "Dzakwan@gmail.com", "Dzakwan123");
         }
 
         private void Pengguna_Load(object sender, System.EventArgs e)
@@ -116,11 +100,6 @@ namespace Tubes_KPL
             new Dashboard().Show();
         }
 
-        private void btnExportToJSON_Click(object sender, EventArgs e)
-        {
-            SaveToJSON<Object>(listPenggunaModel, this.path + this.pathJSON);
-        }
-
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -129,6 +108,8 @@ namespace Tubes_KPL
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
+            List<PenggunaModel> listPenggunaModel = new List<PenggunaModel>();
+
             String username = txtUsername.Text;
             String noHP = txtNoHP.Text;
             String alamat = txtAlamat.Text;
@@ -143,15 +124,18 @@ namespace Tubes_KPL
                 penggunaModel = new PenggunaModel(username, noHP, alamat, email, kataSandi);
                 listPenggunaModel.Add(penggunaModel);
 
-                dataTable.Rows.Add(
-                    listPenggunaModel[listPenggunaModel.Count - 1].getUsername().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getNoHP().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getAlamatPengguna().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getEmail().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getKataSandi().ToString()
-                );
+                for (int i = 0; i < listPenggunaModel.Count; i++)
+                {
+                    dataTable.Rows.Add(
+                        listPenggunaModel[i].getUsername().ToString(),
+                        listPenggunaModel[i].getNoHP().ToString(),
+                        listPenggunaModel[i].getAlamatPengguna().ToString(),
+                        listPenggunaModel[i].getEmail().ToString(),
+                        listPenggunaModel[i].getKataSandi().ToString()
+                        );
+                }
 
-                listPenggunaModel.Clear();
+                Config.SaveToJson<DataTable>(dataTable, path + pathJSON);
                 dgvPengguna.DataSource = dataTable;
             }
         }
