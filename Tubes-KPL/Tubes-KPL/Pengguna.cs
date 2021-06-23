@@ -40,9 +40,6 @@ namespace Tubes_KPL
             txtAlamat.Enabled = false;
             txtEmail.Enabled = false;
             txtKataSandi.Enabled = false;
-
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
             btnNew.Enabled = true;
         }
 
@@ -53,9 +50,6 @@ namespace Tubes_KPL
             txtAlamat.Enabled = true;
             txtEmail.Enabled = true;
             txtKataSandi.Enabled = true;
-
-            btnSave.Enabled = true;
-            btnUpdate.Enabled = true;
             btnNew.Enabled = false;
         }
         private void DummyData()
