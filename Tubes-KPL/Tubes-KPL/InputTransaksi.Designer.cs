@@ -51,6 +51,7 @@ namespace Tubes_KPL
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.LbMoney = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaksi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -244,11 +245,21 @@ namespace Tubes_KPL
             this.label11.TabIndex = 47;
             this.label11.Text = "Rp.";
             // 
+            // LbMoney
+            // 
+            this.LbMoney.AutoSize = true;
+            this.LbMoney.Location = new System.Drawing.Point(996, 21);
+            this.LbMoney.Name = "LbMoney";
+            this.LbMoney.Size = new System.Drawing.Size(69, 13);
+            this.LbMoney.TabIndex = 48;
+            this.LbMoney.Text = "Mata Uang : ";
+            // 
             // InputTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1151, 450);
+            this.Controls.Add(this.LbMoney);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -304,5 +315,6 @@ namespace Tubes_KPL
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label LbMoney;
     }
 }

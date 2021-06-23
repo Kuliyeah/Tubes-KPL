@@ -14,6 +14,8 @@ namespace Tubes_KPL
         private string pathDir = Environment.CurrentDirectory;
         private string pathTransaksi = @"\InputTransaksi.json";
         private string pathJasa= @"\InputJasa.json";
+        private string pathMoney = @"\MoneyConfig.json";
+        private moneyConfig money;
 
         public InputTransaksi()
         {
@@ -32,8 +34,8 @@ namespace Tubes_KPL
                 dtTransaksi.Columns.Add("ID Jasa");
                 dtTransaksi.Columns.Add("Deskripsi");
                 dtTransaksi.Columns.Add("Berat (Kg)");
-                dtTransaksi.Columns.Add("Ongkir (Rp)");
-                dtTransaksi.Columns.Add("Total Bayar (Rp)");
+                dtTransaksi.Columns.Add("Ongkir");
+                dtTransaksi.Columns.Add("Total Bayar");
 
                 Config.SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
             }
@@ -47,6 +49,16 @@ namespace Tubes_KPL
             btnNew.Enabled = true;
             textTanggal.Text = tglSekarang.ToString();
             setComboboxNamaJasa();
+
+            money = Config.ReadFromJson<moneyConfig>(pathDir + pathMoney);
+            if (money.getMoneyConfig() == "Rupiah")
+            {
+                LbMoney.Text = "Mata Uang : Rupiah";
+            }
+            else
+            {
+                LbMoney.Text = "Mata Uang : USD";
+            }
         }
         private void setEditEnabled(bool stat)
         {
@@ -97,7 +109,7 @@ namespace Tubes_KPL
                 dtJasa = new DataTable();
                 dtJasa.Columns.Add("Nama Toko");
                 dtJasa.Columns.Add("Nama Jasa");
-                dtJasa.Columns.Add("Harga (Rp)");
+                dtJasa.Columns.Add("Harga");
                 dtJasa.Columns.Add("Jumlah Paket");
                 dtJasa.Columns.Add("Deskripsi Jasa");
 

@@ -17,6 +17,8 @@ namespace Tubes_KPL
     {
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"\InputJasa.json";
+        private string pathMoney = @"\MoneyConfig.json";
+        private moneyConfig money;
         DataTable dtJasa;
 
         public InputJasa()
@@ -32,7 +34,7 @@ namespace Tubes_KPL
                 dtJasa = new DataTable();
                 dtJasa.Columns.Add("Nama Toko");
                 dtJasa.Columns.Add("Nama Jasa");
-                dtJasa.Columns.Add("Harga (Rp)");
+                dtJasa.Columns.Add("Harga");
                 dtJasa.Columns.Add("Jumlah Paket");
                 dtJasa.Columns.Add("Deskripsi Jasa");
 
@@ -65,6 +67,16 @@ namespace Tubes_KPL
             tbHarga.Enabled = false;
             tbJlhPaket.Enabled = false;
             tbDeskripsi.Enabled = false;
+
+            money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
+            if (money.getMoneyConfig() == "Rupiah")
+            {
+                LbMoney.Text = "Mata Uang : Rupiah";
+            }
+            else
+            {
+                LbMoney.Text = "Mata Uang : USD";
+            }
         }
 
         private void btnNew_Click(object sender, EventArgs e)

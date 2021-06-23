@@ -45,6 +45,7 @@ namespace Tubes_KPL
             this.label7 = new System.Windows.Forms.Label();
             this.btnBatal = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
+            this.LbMoney = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridJasa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,11 +189,21 @@ namespace Tubes_KPL
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
+            // LbMoney
+            // 
+            this.LbMoney.AutoSize = true;
+            this.LbMoney.Location = new System.Drawing.Point(669, 48);
+            this.LbMoney.Name = "LbMoney";
+            this.LbMoney.Size = new System.Drawing.Size(69, 13);
+            this.LbMoney.TabIndex = 24;
+            this.LbMoney.Text = "Mata Uang : ";
+            // 
             // InputJasa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 321);
+            this.Controls.Add(this.LbMoney);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.dataGridJasa);
             this.Controls.Add(this.tbJlhPaket);
@@ -236,5 +247,6 @@ namespace Tubes_KPL
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Label LbMoney;
     }
 }
