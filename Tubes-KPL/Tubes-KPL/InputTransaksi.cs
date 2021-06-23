@@ -9,7 +9,7 @@ namespace Tubes_KPL
 {
     public partial class InputTransaksi : Form
     {       
-        DataTable dtTransaksi, dtJasa;
+        DataTable dtTransaksi = new DataTable(), dtJasa;
         DateTime tglSekarang = DateTime.Now;
         private string pathDir = Environment.CurrentDirectory;
         private string pathTransaksi = @"../../../json/InputTransaksi.json";
@@ -28,20 +28,26 @@ namespace Tubes_KPL
             catch //jika file JSON belum ada maka akan membuat file JSON
             {
                 //membuat tabel data
-                dtTransaksi = new DataTable();
-                dtTransaksi.Columns.Add("Tanggal");
-                dtTransaksi.Columns.Add("ID Transaksi");
-                dtTransaksi.Columns.Add("ID Jasa");
-                dtTransaksi.Columns.Add("Deskripsi");
-                dtTransaksi.Columns.Add("Berat (Kg)");
-                dtTransaksi.Columns.Add("Ongkir");
-                dtTransaksi.Columns.Add("Total Bayar");
+                DummyData();
 
                 Config.SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
             }
 
             //tampilkan data dari InputTransaksi.json
             dataGridTransaksi.DataSource = dtTransaksi;
+        }
+
+        private void DummyData()
+        {
+            dtTransaksi.Columns.Add("Tanggal");
+            dtTransaksi.Columns.Add("ID Transaksi");
+            dtTransaksi.Columns.Add("Nama Jasa");
+            dtTransaksi.Columns.Add("Deskripsi");
+            dtTransaksi.Columns.Add("Berat (Kg)");
+            dtTransaksi.Columns.Add("Ongkir");
+            dtTransaksi.Columns.Add("Total Bayar");
+
+            dtTransaksi.Rows.Add(DateTime.Now, "1234", "Test Jasa", "Deskripsi Test Jasa", "2", "5000", "15000");
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -87,7 +93,6 @@ namespace Tubes_KPL
         {
             dtJasa = Config.ReadFromJson<DataTable>(pathDir + pathJasa);
             int harga = Int32.Parse(dtJasa.Rows[comboBoxNamaJasa.SelectedIndex][2].ToString());
-
             return harga;
         }
 
@@ -112,10 +117,8 @@ namespace Tubes_KPL
                 dtJasa.Columns.Add("Harga");
                 dtJasa.Columns.Add("Jumlah Paket");
                 dtJasa.Columns.Add("Deskripsi Jasa");
-
                 Config.SaveToJson<DataTable>(dtJasa, pathDir + pathJasa);
             }
-
             comboBoxNamaJasa.DataSource = dtJasa;
             comboBoxNamaJasa.DisplayMember = "Nama Jasa";
         }
