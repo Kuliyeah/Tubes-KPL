@@ -60,13 +60,13 @@ namespace Tubes_KPL
         {
             penggunaModel = new PenggunaModel("Lovanto", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto2", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Gilang", "087823837566", "Sukabumi", "Gilang@gmail.com", "Gilang123");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto3", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Adam", "087823837566", "Sumedang", "Adam@gmail.com", "Adam123");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto4", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Ramadhan", "087823837566", "Lombok", "Ramadhan@gmail.com", "Ramadhan123");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto5", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Dzakwan", "087823837566", "Lampung", "Dzakwan@gmail.com", "Dzakwan123");
             listPenggunaModel.Add(penggunaModel);
         }
 
