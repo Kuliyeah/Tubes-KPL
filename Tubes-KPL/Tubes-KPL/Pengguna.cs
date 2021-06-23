@@ -42,7 +42,6 @@ namespace Tubes_KPL
             txtKataSandi.Enabled = false;
 
             btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
             btnNew.Enabled = true;
         }
 
@@ -55,7 +54,6 @@ namespace Tubes_KPL
             txtKataSandi.Enabled = true;
 
             btnSave.Enabled = true;
-            btnUpdate.Enabled = true;
             btnNew.Enabled = false;
         }
         private void DummyData()
@@ -105,34 +103,6 @@ namespace Tubes_KPL
             SetDisabled();
         }
 
-        private void btnSave_Click(object sender, System.EventArgs e)
-        {
-            String username = txtUsername.Text;
-            String noHP = txtNoHP.Text;
-            String alamat = txtAlamat.Text;
-            String email = txtEmail.Text;
-            String kataSandi = txtKataSandi.Text;
-
-            Debug.Assert(noHP.Length == 12 || noHP.Length == 13, "Nomor telp minimal 12 digit dan maksimal 13 digit.");
-            Debug.Assert(email.Contains("@") && email.Contains("."), "Email harus mengandung karakter @ dan .");
-            if (((noHP.Length == 12 || noHP.Length == 13) && (email.Contains("@") && email.Contains("."))) == false) ClearTextBox();
-            else
-            {
-                penggunaModel = new PenggunaModel(username, noHP, alamat, email, kataSandi);
-                listPenggunaModel.Add(penggunaModel);
-
-                dataTable.Rows.Add(
-                    listPenggunaModel[listPenggunaModel.Count - 1].getUsername().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getNoHP().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getAlamatPengguna().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getEmail().ToString()
-                );
-
-                listPenggunaModel.Clear();
-                dgvPengguna.DataSource = dataTable;
-            }
-        }
-
         private void btnNew_Click(object sender, System.EventArgs e)
         {
             SetEnabled();
@@ -155,6 +125,35 @@ namespace Tubes_KPL
         {
             this.Hide();
             new Dashboard().Show();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            String username = txtUsername.Text;
+            String noHP = txtNoHP.Text;
+            String alamat = txtAlamat.Text;
+            String email = txtEmail.Text;
+            String kataSandi = txtKataSandi.Text;
+
+            Debug.Assert(noHP.Length == 12 || noHP.Length == 13, "Nomor telp minimal 12 digit dan maksimal 13 digit.");
+            Debug.Assert(email.Contains("@") && email.Contains("."), "Email harus mengandung karakter @ dan .");
+            if (((noHP.Length == 12 || noHP.Length == 13) && (email.Contains("@") && email.Contains("."))) == false) ClearTextBox();
+            else
+            {
+                penggunaModel = new PenggunaModel(username, noHP, alamat, email, kataSandi);
+                listPenggunaModel.Add(penggunaModel);
+
+                dataTable.Rows.Add(
+                    listPenggunaModel[listPenggunaModel.Count - 1].getUsername().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getNoHP().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getAlamatPengguna().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getEmail().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getKataSandi().ToString()
+                );
+
+                listPenggunaModel.Clear();
+                dgvPengguna.DataSource = dataTable;
+            }
         }
     }
 }
