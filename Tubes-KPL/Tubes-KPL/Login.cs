@@ -32,10 +32,6 @@ namespace Tubes_KPL
             tbPassword.PasswordChar = '●';
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Sure?", "Alert", MessageBoxButtons.YesNo);
