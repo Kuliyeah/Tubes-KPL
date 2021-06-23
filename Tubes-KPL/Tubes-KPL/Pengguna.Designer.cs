@@ -31,8 +31,6 @@ namespace Tubes_KPL
         {
             this.dgvPengguna = new System.Windows.Forms.DataGridView();
             this.btnNew = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtKataSandi = new System.Windows.Forms.TextBox();
@@ -68,25 +66,6 @@ namespace Tubes_KPL
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(123, 276);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 35;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(218, 276);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 33;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -189,7 +168,7 @@ namespace Tubes_KPL
             // 
             // btnExportToJSON
             // 
-            this.btnExportToJSON.Location = new System.Drawing.Point(30, 315);
+            this.btnExportToJSON.Location = new System.Drawing.Point(125, 276);
             this.btnExportToJSON.Name = "btnExportToJSON";
             this.btnExportToJSON.Size = new System.Drawing.Size(168, 23);
             this.btnExportToJSON.TabIndex = 39;
@@ -199,9 +178,9 @@ namespace Tubes_KPL
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(218, 315);
+            this.btnBatal.Location = new System.Drawing.Point(30, 315);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(75, 23);
+            this.btnBatal.Size = new System.Drawing.Size(263, 23);
             this.btnBatal.TabIndex = 40;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
@@ -216,8 +195,6 @@ namespace Tubes_KPL
             this.Controls.Add(this.btnExportToJSON);
             this.Controls.Add(this.dgvPengguna);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.txtKataSandi);
@@ -243,8 +220,6 @@ namespace Tubes_KPL
 
         private System.Windows.Forms.DataGridView dgvPengguna;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAlamat;
         private System.Windows.Forms.TextBox txtKataSandi;
