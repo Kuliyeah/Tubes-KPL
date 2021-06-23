@@ -12,7 +12,7 @@ namespace Tubes_KPL
     {
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"\InputJasa.json";
-        String mataUang;
+        public String mataUang;
         public moneyConfig(String mataUang)
         {
             this.mataUang = mataUang;

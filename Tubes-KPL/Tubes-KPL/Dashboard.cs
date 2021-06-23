@@ -46,7 +46,37 @@ namespace Tubes_KPL
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            DataTable dtMoney = new DataTable();
+            dtMoney.Columns.Add("Mata Uang");
+            dtMoney.Rows.Add("Rupiah");
+            dtMoney.Rows.Add("USD");
 
+            comboBoxMoney.DataSource = dtMoney;
+            comboBoxMoney.DisplayMember = "Mata Uang";
+
+
+            moneyConfig money;
+            String path = Environment.CurrentDirectory;
+            String pathMoney = @"\MoneyConfig.json";
+
+            try
+            {
+                money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
+            }
+            catch
+            {
+                money = new moneyConfig("Rupiah");
+                Config.SaveToJson<moneyConfig>(money, path + pathMoney);
+            }
+
+            if (money.getMoneyConfig() == "Rupiah")
+            {
+                comboBoxMoney.Text = "Rupiah";
+            }
+            else
+            {
+                comboBoxMoney.Text = "USD";
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
