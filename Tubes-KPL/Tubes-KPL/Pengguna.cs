@@ -40,6 +40,8 @@ namespace Tubes_KPL
             txtAlamat.Enabled = false;
             txtEmail.Enabled = false;
             txtKataSandi.Enabled = false;
+
+            btnSave.Enabled = false;
             btnNew.Enabled = true;
         }
 
@@ -50,19 +52,21 @@ namespace Tubes_KPL
             txtAlamat.Enabled = true;
             txtEmail.Enabled = true;
             txtKataSandi.Enabled = true;
+
+            btnSave.Enabled = true;
             btnNew.Enabled = false;
         }
         private void DummyData()
         {
             penggunaModel = new PenggunaModel("Lovanto", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto2", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Gilang", "087823837566", "Sukabumi", "Gilang@gmail.com", "Gilang123");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto3", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Adam", "087823837566", "Sumedang", "Adam@gmail.com", "Adam123");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto4", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Ramadhan", "087823837566", "Lombok", "Ramadhan@gmail.com", "Ramadhan123");
             listPenggunaModel.Add(penggunaModel);
-            penggunaModel = new PenggunaModel("Lovanto5", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
+            penggunaModel = new PenggunaModel("Dzakwan", "087823837566", "Lampung", "Dzakwan@gmail.com", "Dzakwan123");
             listPenggunaModel.Add(penggunaModel);
         }
 
@@ -99,34 +103,6 @@ namespace Tubes_KPL
             SetDisabled();
         }
 
-        private void btnSave_Click(object sender, System.EventArgs e)
-        {
-            String username = txtUsername.Text;
-            String noHP = txtNoHP.Text;
-            String alamat = txtAlamat.Text;
-            String email = txtEmail.Text;
-            String kataSandi = txtKataSandi.Text;
-
-            Debug.Assert(noHP.Length == 12 || noHP.Length == 13, "Nomor telp minimal 12 digit dan maksimal 13 digit.");
-            Debug.Assert(email.Contains("@") && email.Contains("."), "Email harus mengandung karakter @ dan .");
-            if (((noHP.Length == 12 || noHP.Length == 13) && (email.Contains("@") && email.Contains("."))) == false) ClearTextBox();
-            else
-            {
-                penggunaModel = new PenggunaModel(username, noHP, alamat, email, kataSandi);
-                listPenggunaModel.Add(penggunaModel);
-
-                dataTable.Rows.Add(
-                    listPenggunaModel[listPenggunaModel.Count - 1].getUsername().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getNoHP().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getAlamatPengguna().ToString(),
-                    listPenggunaModel[listPenggunaModel.Count - 1].getEmail().ToString()
-                );
-
-                listPenggunaModel.Clear();
-                dgvPengguna.DataSource = dataTable;
-            }
-        }
-
         private void btnNew_Click(object sender, System.EventArgs e)
         {
             SetEnabled();
@@ -149,6 +125,35 @@ namespace Tubes_KPL
         {
             this.Hide();
             new Dashboard().Show();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            String username = txtUsername.Text;
+            String noHP = txtNoHP.Text;
+            String alamat = txtAlamat.Text;
+            String email = txtEmail.Text;
+            String kataSandi = txtKataSandi.Text;
+
+            Debug.Assert(noHP.Length == 12 || noHP.Length == 13, "Nomor telp minimal 12 digit dan maksimal 13 digit.");
+            Debug.Assert(email.Contains("@") && email.Contains("."), "Email harus mengandung karakter @ dan .");
+            if (((noHP.Length == 12 || noHP.Length == 13) && (email.Contains("@") && email.Contains("."))) == false) ClearTextBox();
+            else
+            {
+                penggunaModel = new PenggunaModel(username, noHP, alamat, email, kataSandi);
+                listPenggunaModel.Add(penggunaModel);
+
+                dataTable.Rows.Add(
+                    listPenggunaModel[listPenggunaModel.Count - 1].getUsername().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getNoHP().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getAlamatPengguna().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getEmail().ToString(),
+                    listPenggunaModel[listPenggunaModel.Count - 1].getKataSandi().ToString()
+                );
+
+                listPenggunaModel.Clear();
+                dgvPengguna.DataSource = dataTable;
+            }
         }
     }
 }
