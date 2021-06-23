@@ -40,8 +40,9 @@ namespace Tubes_KPL
 
                 Config.SaveToJson<DataTable>(dtJasa, path + pathJSON);
             }
-
+            
             dataGridJasa.DataSource = dtJasa;
+            convertMataUang();
         }
 
         private void cleartTextBox()
@@ -130,6 +131,17 @@ namespace Tubes_KPL
                 Config.SaveToJson<DataTable>(dtJasa, path + pathJSON);
                 btnNew.Enabled = true;
                 btnSimpan.Enabled = false;
+            }
+        }
+        public void convertMataUang()
+        {
+            money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
+            if (money.getMoneyConfig() == "USD")
+            {
+                for (int i = 0; i < dataGridJasa.RowCount; i++)
+                {
+                    dataGridJasa.Rows[i].Cells[2].Value = (int.Parse(dataGridJasa.Rows[0].Cells[2].Value.ToString()) * 14000).ToString();
+                }
             }
         }
     }

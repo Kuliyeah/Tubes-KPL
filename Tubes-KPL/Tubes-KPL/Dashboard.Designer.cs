@@ -105,7 +105,7 @@ namespace Tubes_KPL
             // btnLogout
             // 
             this.btnLogout.Location = new System.Drawing.Point(724, 11);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(56, 26);
             this.btnLogout.TabIndex = 13;
@@ -121,6 +121,7 @@ namespace Tubes_KPL
             this.comboBoxMoney.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMoney.TabIndex = 14;
             this.comboBoxMoney.Text = "Rupiah";
+            this.comboBoxMoney.SelectedIndexChanged += new System.EventHandler(this.comboBoxMoney_SelectedIndexChanged);
             // 
             // label3
             // 

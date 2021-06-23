@@ -49,3 +49,20 @@ E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.Cor
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.dll
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.xml
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csprojAssemblyReference.cache
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Dashboard.resources
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputTransaksi.resources
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Pengguna.resources
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputJasa.resources
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Properties.Resources.resources
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.GenerateResource.cache
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
+F:\SEMESTER 4\KONSTRUKSI PERANGKAT LUNAK\Tubes\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb

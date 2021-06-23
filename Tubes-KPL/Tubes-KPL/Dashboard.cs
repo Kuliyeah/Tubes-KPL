@@ -12,6 +12,7 @@ namespace Tubes_KPL
 {
     public partial class Dashboard : Form
     {
+        moneyConfig money;
         public Dashboard()
         {
             InitializeComponent();
@@ -55,7 +56,7 @@ namespace Tubes_KPL
             comboBoxMoney.DisplayMember = "Mata Uang";
 
 
-            moneyConfig money;
+            
             String path = Environment.CurrentDirectory;
             String pathMoney = @"\MoneyConfig.json";
 
@@ -71,12 +72,13 @@ namespace Tubes_KPL
 
             if (money.getMoneyConfig() == "Rupiah")
             {
-                comboBoxMoney.Text = "Rupiah";
+                comboBoxMoney.SelectedItem = "Rupiah";
             }
             else
             {
-                comboBoxMoney.Text = "USD";
+                comboBoxMoney.SelectedItem = "USD";
             }
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -91,6 +93,12 @@ namespace Tubes_KPL
                 new Login().Show();
             }
             this.Hide();
+        }
+        private string pathMoney = @"\MoneyConfig.json";
+        private string path = Environment.CurrentDirectory;
+        private void comboBoxMoney_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path+pathMoney);
         }
     }
 }
