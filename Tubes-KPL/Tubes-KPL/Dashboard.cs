@@ -12,7 +12,8 @@ namespace Tubes_KPL
 {
     public partial class Dashboard : Form
     {
-        moneyConfig money;
+        String path = Environment.CurrentDirectory;
+        String pathMoney = @"../../../json/MoneyConfig.json";
         public Dashboard()
         {
             InitializeComponent();
@@ -55,11 +56,7 @@ namespace Tubes_KPL
             comboBoxMoney.DataSource = dtMoney;
             comboBoxMoney.DisplayMember = "Mata Uang";
 
-
-            
             moneyConfig money;
-            String path = Environment.CurrentDirectory;
-            String pathMoney = @"../../../json/MoneyConfig.json";
 
             try
             {
@@ -95,11 +92,9 @@ namespace Tubes_KPL
             }
             this.Hide();
         }
-        private string pathMoney = @"\MoneyConfig.json";
-        private string path = Environment.CurrentDirectory;
         private void comboBoxMoney_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path+pathMoney);
+            Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path + pathMoney);
         }
     }
 }
