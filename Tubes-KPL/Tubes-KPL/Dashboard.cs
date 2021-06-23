@@ -54,10 +54,9 @@ namespace Tubes_KPL
             comboBoxMoney.DataSource = dtMoney;
             comboBoxMoney.DisplayMember = "Mata Uang";
 
-
             moneyConfig money;
             String path = Environment.CurrentDirectory;
-            String pathMoney = @"\MoneyConfig.json";
+            String pathMoney = @"../../../json/MoneyConfig.json";
 
             try
             {

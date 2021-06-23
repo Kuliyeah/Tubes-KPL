@@ -14,7 +14,7 @@ namespace Tubes_KPL
         DataTable dataTable = new DataTable();
 
         private string path = Environment.CurrentDirectory;
-        private string pathJSON = @"\Pengguna.json";
+        private string pathJSON = @"../../../json/Pengguna.json";
 
         public Pengguna()
         {
@@ -65,6 +65,7 @@ namespace Tubes_KPL
             btnSave.Enabled = true;
             btnNew.Enabled = false;
         }
+
         private void DummyData()
         {
             dataTable.Columns.Add("Username");
@@ -125,7 +126,6 @@ namespace Tubes_KPL
 
                 for (int i = 0; i < listPenggunaModel.Count; i++)
                 {
-
                     dataTable.Rows.Add(
                         listPenggunaModel[i].getUsername().ToString(),
                         listPenggunaModel[i].getNoHP().ToString(),
@@ -133,7 +133,6 @@ namespace Tubes_KPL
                         listPenggunaModel[i].getEmail().ToString(),
                         listPenggunaModel[i].getKataSandi().ToString()
                         );
-
                 }
 
                 Config.SaveToJson<DataTable>(dataTable, path + pathJSON);

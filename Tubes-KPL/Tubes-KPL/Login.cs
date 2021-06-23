@@ -51,6 +51,11 @@ namespace Tubes_KPL
             
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Enum nm1 = TableDriven.Username.user;

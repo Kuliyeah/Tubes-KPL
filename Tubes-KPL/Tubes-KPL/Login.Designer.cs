@@ -43,7 +43,7 @@ namespace Tubes_KPL
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(439, 354);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(76, 30);
             this.btnCancel.TabIndex = 16;
@@ -54,7 +54,7 @@ namespace Tubes_KPL
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(349, 354);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(76, 30);
             this.btnLogin.TabIndex = 15;
@@ -66,7 +66,7 @@ namespace Tubes_KPL
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(412, 284);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(168, 23);
             this.tbPassword.TabIndex = 14;
@@ -76,7 +76,7 @@ namespace Tubes_KPL
             // 
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.Location = new System.Drawing.Point(412, 247);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(168, 23);
             this.tbUsername.TabIndex = 13;
@@ -138,9 +138,10 @@ namespace Tubes_KPL
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblLoginTitle);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,9 +12,9 @@ namespace Tubes_KPL
         DataTable dtTransaksi, dtJasa;
         DateTime tglSekarang = DateTime.Now;
         private string pathDir = Environment.CurrentDirectory;
-        private string pathTransaksi = @"\InputTransaksi.json";
-        private string pathJasa= @"\InputJasa.json";
-        private string pathMoney = @"\MoneyConfig.json";
+        private string pathTransaksi = @"../../../json/InputTransaksi.json";
+        private string pathJasa= @"../../../json/InputJasa.json";
+        private string pathMoney = @"../../../json/MoneyConfig.json";
         private moneyConfig money;
 
         public InputTransaksi()
