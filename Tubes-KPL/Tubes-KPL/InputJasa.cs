@@ -25,7 +25,7 @@ namespace Tubes_KPL
 
             try
             {
-                dtJasa = ReadFromJson<DataTable>(path + pathJSON);
+                dtJasa = Config.ReadFromJson<DataTable>(path + pathJSON);
             }
             catch
             {
@@ -36,22 +36,10 @@ namespace Tubes_KPL
                 dtJasa.Columns.Add("Jumlah Paket");
                 dtJasa.Columns.Add("Deskripsi Jasa");
 
-                SaveToJson<DataTable>(dtJasa, path + pathJSON);
+                Config.SaveToJson<DataTable>(dtJasa, path + pathJSON);
             }
 
             dataGridJasa.DataSource = dtJasa;
-        }
-        public static T ReadFromJson<T>(string path)
-        {
-            string json = File.ReadAllText(path);
-            T obj = JsonConvert.DeserializeObject<T>(json);
-            return obj;
-        }
-
-        public static void SaveToJson<T>(T obj, string path)
-        {
-            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-            File.WriteAllText(path, json);
         }
 
         private void cleartTextBox()
@@ -127,7 +115,7 @@ namespace Tubes_KPL
 
                 dataGridJasa.DataSource = dtJasa;
 
-                SaveToJson<DataTable>(dtJasa, path + pathJSON);
+                Config.SaveToJson<DataTable>(dtJasa, path + pathJSON);
                 btnNew.Enabled = true;
                 btnSimpan.Enabled = false;
             }

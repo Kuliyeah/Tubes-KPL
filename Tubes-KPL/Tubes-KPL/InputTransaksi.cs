@@ -21,7 +21,7 @@ namespace Tubes_KPL
 
             try //jika file JSON sudah ada maka akan membaca data tersebut
             {
-                dtTransaksi = ReadFromJson<DataTable>(pathDir + pathTransaksi);
+                dtTransaksi = Config.ReadFromJson<DataTable>(pathDir + pathTransaksi);
             }
             catch //jika file JSON belum ada maka akan membuat file JSON
             {
@@ -35,7 +35,7 @@ namespace Tubes_KPL
                 dtTransaksi.Columns.Add("Ongkir (Rp)");
                 dtTransaksi.Columns.Add("Total Bayar (Rp)");
 
-                SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
+                Config.SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
             }
 
             //tampilkan data dari InputTransaksi.json
@@ -73,23 +73,10 @@ namespace Tubes_KPL
 
         private int cariHargaJasa()
         {
-            dtJasa = ReadFromJson<DataTable>(pathDir + pathJasa);
+            dtJasa = Config.ReadFromJson<DataTable>(pathDir + pathJasa);
             int harga = Int32.Parse(dtJasa.Rows[comboBoxNamaJasa.SelectedIndex][2].ToString());
 
             return harga;
-        }
-
-        public static T ReadFromJson<T>(string path)
-        {
-            string json = File.ReadAllText(path);
-            T obj = JsonConvert.DeserializeObject<T>(json);
-            return obj;
-        }
-
-        public static void SaveToJson<T>(T obj, string path)
-        {
-            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-            File.WriteAllText(path, json);
         }
 
         private int hitungTotal(int berat, int harga, int ongkir)
@@ -102,7 +89,7 @@ namespace Tubes_KPL
         {
             try //jika file JSON sudah ada maka akan membaca data tersebut
             {
-                dtJasa = ReadFromJson<DataTable>(pathDir + pathJasa);
+                dtJasa = Config.ReadFromJson<DataTable>(pathDir + pathJasa);
             }
             catch //jika file JSON belum ada maka akan membuat file JSON
             {
@@ -114,7 +101,7 @@ namespace Tubes_KPL
                 dtJasa.Columns.Add("Jumlah Paket");
                 dtJasa.Columns.Add("Deskripsi Jasa");
 
-                SaveToJson<DataTable>(dtJasa, pathDir + pathJasa);
+                Config.SaveToJson<DataTable>(dtJasa, pathDir + pathJasa);
             }
 
             comboBoxNamaJasa.DataSource = dtJasa;
@@ -168,7 +155,7 @@ namespace Tubes_KPL
             dataGridTransaksi.DataSource = dtTransaksi;
 
             //simpan dan update data ke JSON
-            SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
+            Config.SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
