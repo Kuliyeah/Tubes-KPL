@@ -147,7 +147,7 @@ namespace Tubes_KPL
             {
                 for (int i = 0; i < dataGridJasa.RowCount; i++)
                 {
-                    dataGridJasa.Rows[i].Cells[2].Value = (int.Parse(dataGridJasa.Rows[0].Cells[2].Value.ToString()) * 14000).ToString();
+                    dataGridJasa.Rows[i].Cells[2].Value = (Double.Parse(dataGridJasa.Rows[0].Cells[2].Value.ToString())/14000).ToString();
                 }
             }
         }

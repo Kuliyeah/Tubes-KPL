@@ -2,8 +2,22 @@
   {
     "Nama Toko": "Toko Sukses",
     "Nama Jasa": "Test Jasa",
-    "Harga": "5500",
+    "Harga": "15000",
     "Jumlah Paket": "1",
     "Deskripsi Jasa": "Deskripsi Test"
+  },
+  {
+    "Nama Toko": "MaulanaPT",
+    "Nama Jasa": "Akbar",
+    "Harga": "20000",
+    "Jumlah Paket": "3",
+    "Deskripsi Jasa": "asdasd"
+  },
+  {
+    "Nama Toko": "PT Laundry",
+    "Nama Jasa": "Toto",
+    "Harga": "19000",
+    "Jumlah Paket": "5",
+    "Deskripsi Jasa": "setrika dan cuci kering"
   }
 ]
