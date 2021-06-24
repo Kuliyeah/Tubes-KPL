@@ -3,46 +3,79 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
 
 namespace Tubes_KPL
 {
     //Adamnn
     class Automata
     {
-        string[] State = { "Login", "Dashboard", "InputPengguna", "InputJasa", "InputTransaksi", "Logout" };
-        string posisi;
+        public enum State { LOGIN, DASHBOARD, INPUT_PENGGUNA, INPUT_JASA, INPUT_TRANSAKSI, LOGOUT };
+        public static State posisi, nextPosisi;
 
         public Automata() { }
-        public void setPosisi(string pos)
+        public static void setPosisi(State pos, State nextPos)
         {
-            this.posisi = pos;
+            posisi = pos;
+            nextPosisi = nextPos;
         }
 
-        public string getPosisi()
+        public static State getPosisi()
         {
-            return this.posisi;
+            return posisi;
         }
 
-        public void posisiController(string btn)
+        public static void posisiTransition(State nextPos)
         {
-            if (this.posisi == "Login")
+            if (posisi == State.LOGIN)
             {
-                if (btn == "Login")
-                    new Dashboard().Show();
+                if (nextPos == State.DASHBOARD)
+                {
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.Show();
+                }
+            }
+            else if (posisi == State.DASHBOARD)
+            {
+                if (nextPos == State.INPUT_PENGGUNA)
+                {
+                    Pengguna pengguna = new Pengguna();
+                    pengguna.Show();
+                }
+                else if (nextPos == State.INPUT_JASA)
+                {
+                    InputJasa inputJasa = new InputJasa();
+                    inputJasa.Show();
+                }
+                else if (nextPos == State.INPUT_TRANSAKSI)
+                {
+                    InputTransaksi inputTransaksi = new InputTransaksi();
+                    inputTransaksi.Show();
+                }
+                else if (nextPos == State.LOGOUT)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Sure?", " ", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        Application.Exit();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        Login login = new Login();
+                        login.Show();
+                    }
+                }
+            } 
+            else if (State.INPUT_PENGGUNA == posisi || State.INPUT_JASA == posisi || State.INPUT_TRANSAKSI == posisi)
+            {
+                if (nextPos == State.DASHBOARD)
+                {
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.Show();
+                }
+            }
 
-            }
-            else if (this.posisi == "Dashboard")
-            {
-                if (btn == "Data Pengguna")
-                    new Pengguna().Show();
-                else if (btn == "Data Jasa")
-                    new InputJasa().Show();
-                else if (btn == "Data Transaksi")
-                    new InputTransaksi().Show();
-                else if (btn == "Logout")
-                    new Login().Show();
-            }
+            
         }
     }
 }

@@ -17,6 +17,8 @@ namespace Tubes_KPL
         private string pathMoney = @"../../../json/MoneyConfig.json";
         private moneyConfig money;
 
+        Automata.State posisi = Automata.State.INPUT_TRANSAKSI, nextPosisi;
+
         public InputTransaksi()
         {
             InitializeComponent();
@@ -179,7 +181,10 @@ namespace Tubes_KPL
             setEditEnabled(false);
             btnNew.Enabled = true;
             this.Hide();
-            new Dashboard().Show();
+
+            nextPosisi = Automata.State.DASHBOARD;
+            Automata.setPosisi(posisi, nextPosisi);
+            Automata.posisiTransition(nextPosisi);
         }
 
     }

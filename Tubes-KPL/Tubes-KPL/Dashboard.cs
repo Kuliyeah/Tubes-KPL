@@ -14,6 +14,7 @@ namespace Tubes_KPL
     {
         String path = Environment.CurrentDirectory;
         String pathMoney = @"../../../json/MoneyConfig.json";
+        Automata.State posisi = Automata.State.DASHBOARD, nextPosisi;
         public Dashboard()
         {
             InitializeComponent();
@@ -21,28 +22,25 @@ namespace Tubes_KPL
 
         private void btnDataTransaksi_Click(object sender, EventArgs e)
         {
-            InputTransaksi inputTransaksi = new InputTransaksi();
-            inputTransaksi.Show();
+            nextPosisi = Automata.State.INPUT_TRANSAKSI;
+            Automata.setPosisi(posisi, nextPosisi);
+            Automata.posisiTransition(nextPosisi);
             this.Hide();
         }
 
         private void btnDataJasa_Click(object sender, EventArgs e)
         {
-            InputJasa inputJasa = new InputJasa();
-            inputJasa.Show();
+            nextPosisi = Automata.State.INPUT_JASA;
+            Automata.setPosisi(posisi, nextPosisi);
+            Automata.posisiTransition(nextPosisi);
             this.Hide();
         }
 
         private void btnDataPengguna_Click(object sender, EventArgs e)
         {
-            Pengguna pengguna = new Pengguna();
-            pengguna.Show();
-            this.Hide();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            new Login().Show();
+            nextPosisi = Automata.State.INPUT_PENGGUNA;
+            Automata.setPosisi(posisi, nextPosisi);
+            Automata.posisiTransition(nextPosisi);
             this.Hide();
         }
 
@@ -81,15 +79,9 @@ namespace Tubes_KPL
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Sure?", " ", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                new Login().Show();
-            }
+            nextPosisi = Automata.State.LOGOUT;
+            Automata.setPosisi(posisi, nextPosisi);
+            Automata.posisiTransition(nextPosisi);
             this.Hide();
         }
         private void comboBoxMoney_SelectedIndexChanged(object sender, EventArgs e)

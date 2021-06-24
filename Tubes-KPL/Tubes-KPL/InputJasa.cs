@@ -20,6 +20,7 @@ namespace Tubes_KPL
         private string pathMoney = @"../../../json/MoneyConfig.json";
         private moneyConfig money;
         DataTable dtJasa = new DataTable();
+        Automata.State posisi = Automata.State.INPUT_JASA, nextPosisi;
 
         public InputJasa()
         {
@@ -63,7 +64,9 @@ namespace Tubes_KPL
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Dashboard().Show();
+            nextPosisi = Automata.State.DASHBOARD;
+            Automata.setPosisi(posisi, nextPosisi);
+            Automata.posisiTransition(nextPosisi);
         }
 
         private void InputJasa_Load(object sender, EventArgs e)

@@ -14,7 +14,7 @@ namespace Tubes_KPL
     public partial class Login : Form
     {
         string user, pass;
-        
+        Automata.State posisi = Automata.State.LOGIN, nextPosisi;
         Double count = 0;
         public Login()
         {
@@ -69,7 +69,9 @@ namespace Tubes_KPL
             {
                 
                 MessageBox.Show("Welcome User", "Hi");
-                new Dashboard().Show();
+                nextPosisi = Automata.State.DASHBOARD;
+                Automata.setPosisi(posisi, nextPosisi);
+                Automata.posisiTransition(nextPosisi);
                 this.Hide();
             }
             else

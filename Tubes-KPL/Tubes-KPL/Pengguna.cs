@@ -16,6 +16,8 @@ namespace Tubes_KPL
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"../../../json/Pengguna.json";
 
+        Automata.State posisi = Automata.State.INPUT_PENGGUNA, nextPosisi;
+
         public Pengguna()
         {
             InitializeComponent();
@@ -97,7 +99,10 @@ namespace Tubes_KPL
             ClearTextBox();
             SetDisabled();
             this.Hide();
-            new Dashboard().Show();
+
+            nextPosisi = Automata.State.DASHBOARD;
+            Automata.setPosisi(posisi, nextPosisi);
+            Automata.posisiTransition(nextPosisi);
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
