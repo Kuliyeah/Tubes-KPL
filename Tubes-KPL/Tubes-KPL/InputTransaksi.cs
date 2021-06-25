@@ -67,6 +67,7 @@ namespace Tubes_KPL
             {
                 LbMoney.Text = "Mata Uang : USD";
             }
+            convertMataUang();
         }
         private void setEditEnabled(bool stat)
         {
@@ -185,6 +186,19 @@ namespace Tubes_KPL
             nextPosisi = Automata.State.DASHBOARD;
             Automata.setPosisi(posisi, nextPosisi);
             Automata.posisiTransition(nextPosisi);
+        }
+
+        public void convertMataUang()
+        {
+            money = Config.ReadFromJson<moneyConfig>(pathDir + pathMoney);
+            if (money.getMoneyConfig() == "USD")
+            {
+                for (int i = 0; i < dataGridTransaksi.RowCount-1; i++)
+                {
+                    dataGridTransaksi.Rows[i].Cells[5].Value = (Double.Parse(dataGridTransaksi.Rows[0 + i].Cells[5].Value.ToString()) / 14000).ToString().Substring(0, 4);
+                    dataGridTransaksi.Rows[i].Cells[6].Value = (Double.Parse(dataGridTransaksi.Rows[0 + i].Cells[6].Value.ToString()) / 14000).ToString().Substring(0, 4);
+                }
+            }
         }
 
     }

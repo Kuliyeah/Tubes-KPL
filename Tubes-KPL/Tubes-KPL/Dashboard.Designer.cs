@@ -116,11 +116,13 @@ namespace Tubes_KPL
             // comboBoxMoney
             // 
             this.comboBoxMoney.FormattingEnabled = true;
+            this.comboBoxMoney.Items.AddRange(new object[] {
+            "Rupiah",
+            "USD"});
             this.comboBoxMoney.Location = new System.Drawing.Point(12, 36);
             this.comboBoxMoney.Name = "comboBoxMoney";
             this.comboBoxMoney.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMoney.TabIndex = 14;
-            this.comboBoxMoney.Text = "Rupiah";
             this.comboBoxMoney.SelectedIndexChanged += new System.EventHandler(this.comboBoxMoney_SelectedIndexChanged);
             // 
             // label3

@@ -14,9 +14,20 @@ namespace Tubes_KPL
     {
         String path = Environment.CurrentDirectory;
         String pathMoney = @"../../../json/MoneyConfig.json";
+        moneyConfig money;
         Automata.State posisi = Automata.State.DASHBOARD, nextPosisi;
         public Dashboard()
         {
+            try
+            {
+                money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
+            }
+            catch
+            {
+                money = new moneyConfig("Rupiah");
+                Config.SaveToJson<moneyConfig>(money, path + pathMoney);
+            }
+
             InitializeComponent();
         }
 
@@ -46,35 +57,16 @@ namespace Tubes_KPL
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            DataTable dtMoney = new DataTable();
-            dtMoney.Columns.Add("Mata Uang");
-            dtMoney.Rows.Add("Rupiah");
-            dtMoney.Rows.Add("USD");
-
-            comboBoxMoney.DataSource = dtMoney;
-            comboBoxMoney.DisplayMember = "Mata Uang";
-
-            moneyConfig money;
-
-            try
-            {
-                money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
-            }
-            catch
-            {
-                money = new moneyConfig("Rupiah");
-                Config.SaveToJson<moneyConfig>(money, path + pathMoney);
-            }
-
             if (money.getMoneyConfig() == "Rupiah")
             {
                 comboBoxMoney.SelectedItem = "Rupiah";
+                Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path + pathMoney);
             }
             else
             {
                 comboBoxMoney.SelectedItem = "USD";
+                Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path + pathMoney);
             }
-
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -84,9 +76,11 @@ namespace Tubes_KPL
             Automata.posisiTransition(nextPosisi);
             this.Hide();
         }
+
         private void comboBoxMoney_SelectedIndexChanged(object sender, EventArgs e)
         {
             Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path + pathMoney);
         }
+
     }
 }

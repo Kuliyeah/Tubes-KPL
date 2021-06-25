@@ -143,14 +143,15 @@ namespace Tubes_KPL
                 btnSimpan.Enabled = false;
             }
         }
+
         public void convertMataUang()
         {
             money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
             if (money.getMoneyConfig() == "USD")
             {
-                for (int i = 0; i < dataGridJasa.RowCount; i++)
+                for (int i = 0; i < dataGridJasa.RowCount-1; i++)
                 {
-                    dataGridJasa.Rows[i].Cells[2].Value = (Double.Parse(dataGridJasa.Rows[0].Cells[2].Value.ToString())/14000).ToString();
+                    dataGridJasa.Rows[i].Cells[2].Value = (Double.Parse(dataGridJasa.Rows[0 + i].Cells[2].Value.ToString())/14000).ToString().Substring(0, 4);
                 }
             }
         }
