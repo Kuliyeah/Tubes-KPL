@@ -33,20 +33,20 @@ namespace Tubes_KPL
 
         private void ClearTextBox()
         {
-            txtUsername.Text = null;
-            txtNoHP.Text = null;
-            txtAlamat.Text = null;
-            txtEmail.Text = null;
-            txtKataSandi.Text = null;
+            tbUsername.Text = null;
+            tbNoHP.Text = null;
+            tbAlamat.Text = null;
+            tbEmail.Text = null;
+            tbKataSandi.Text = null;
         }
 
         private void SetDisabled()
         {
-            txtUsername.Enabled = false;
-            txtNoHP.Enabled = false;
-            txtAlamat.Enabled = false;
-            txtEmail.Enabled = false;
-            txtKataSandi.Enabled = false;
+            tbUsername.Enabled = false;
+            tbNoHP.Enabled = false;
+            tbAlamat.Enabled = false;
+            tbEmail.Enabled = false;
+            tbKataSandi.Enabled = false;
 
             btnSave.Enabled = false;
             btnNew.Enabled = true;
@@ -54,11 +54,11 @@ namespace Tubes_KPL
 
         private void SetEnabled()
         {
-            txtUsername.Enabled = true;
-            txtNoHP.Enabled = true;
-            txtAlamat.Enabled = true;
-            txtEmail.Enabled = true;
-            txtKataSandi.Enabled = true;
+            tbUsername.Enabled = true;
+            tbNoHP.Enabled = true;
+            tbAlamat.Enabled = true;
+            tbEmail.Enabled = true;
+            tbKataSandi.Enabled = true;
 
             btnSave.Enabled = true;
             btnNew.Enabled = false;
@@ -110,11 +110,11 @@ namespace Tubes_KPL
         private void btnSave_Click_1(object sender, EventArgs e)
         {
             List<PenggunaModel> listPenggunaModel = new List<PenggunaModel>();
-            String username = txtUsername.Text;
-            String noHP = txtNoHP.Text;
-            String alamat = txtAlamat.Text;
-            String email = txtEmail.Text;
-            String kataSandi = txtKataSandi.Text;
+            String username = tbUsername.Text;
+            String noHP = tbNoHP.Text;
+            String alamat = tbAlamat.Text;
+            String email = tbEmail.Text;
+            String kataSandi = tbKataSandi.Text;
 
             Debug.Assert(noHP.Length == 12 || noHP.Length == 13, "Nomor telp minimal 12 digit dan maksimal 13 digit.");
             Debug.Assert(email.Contains("@") && email.Contains("."), "Email harus mengandung karakter @ dan .");

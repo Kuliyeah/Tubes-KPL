@@ -29,7 +29,7 @@ namespace Tubes_KPL
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridJasa = new System.Windows.Forms.DataGridView();
+            this.dgvJasa = new System.Windows.Forms.DataGridView();
             this.tbHarga = new System.Windows.Forms.TextBox();
             this.tbDeskripsi = new System.Windows.Forms.TextBox();
             this.tbNamaJasa = new System.Windows.Forms.TextBox();
@@ -46,98 +46,111 @@ namespace Tubes_KPL
             this.btnBatal = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.LbMoney = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridJasa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJasa)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridJasa
+            // dgvJasa
             // 
-            this.dataGridJasa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridJasa.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridJasa.Location = new System.Drawing.Point(318, 64);
-            this.dataGridJasa.Name = "dataGridJasa";
-            this.dataGridJasa.Size = new System.Drawing.Size(467, 183);
-            this.dataGridJasa.TabIndex = 22;
+            this.dgvJasa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvJasa.BackgroundColor = System.Drawing.Color.White;
+            this.dgvJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJasa.Location = new System.Drawing.Point(424, 79);
+            this.dgvJasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvJasa.Name = "dgvJasa";
+            this.dgvJasa.RowHeadersWidth = 51;
+            this.dgvJasa.Size = new System.Drawing.Size(623, 225);
+            this.dgvJasa.TabIndex = 22;
             // 
             // tbHarga
             // 
-            this.tbHarga.Location = new System.Drawing.Point(100, 140);
+            this.tbHarga.Location = new System.Drawing.Point(133, 172);
+            this.tbHarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbHarga.Name = "tbHarga";
-            this.tbHarga.Size = new System.Drawing.Size(84, 20);
+            this.tbHarga.Size = new System.Drawing.Size(111, 22);
             this.tbHarga.TabIndex = 16;
+            this.tbHarga.TextChanged += new System.EventHandler(this.tbHarga_TextChanged);
             // 
             // tbDeskripsi
             // 
-            this.tbDeskripsi.Location = new System.Drawing.Point(100, 177);
+            this.tbDeskripsi.Location = new System.Drawing.Point(133, 218);
+            this.tbDeskripsi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbDeskripsi.Multiline = true;
             this.tbDeskripsi.Name = "tbDeskripsi";
-            this.tbDeskripsi.Size = new System.Drawing.Size(199, 70);
+            this.tbDeskripsi.Size = new System.Drawing.Size(264, 85);
             this.tbDeskripsi.TabIndex = 17;
             // 
             // tbNamaJasa
             // 
-            this.tbNamaJasa.Location = new System.Drawing.Point(100, 101);
+            this.tbNamaJasa.Location = new System.Drawing.Point(133, 124);
+            this.tbNamaJasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbNamaJasa.Name = "tbNamaJasa";
-            this.tbNamaJasa.Size = new System.Drawing.Size(199, 20);
+            this.tbNamaJasa.Size = new System.Drawing.Size(264, 22);
             this.tbNamaJasa.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 143);
+            this.label4.Location = new System.Drawing.Point(35, 176);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Harga";
             // 
             // tbNamaToko
             // 
-            this.tbNamaToko.Location = new System.Drawing.Point(100, 64);
+            this.tbNamaToko.Location = new System.Drawing.Point(133, 79);
+            this.tbNamaToko.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbNamaToko.Name = "tbNamaToko";
-            this.tbNamaToko.Size = new System.Drawing.Size(199, 20);
+            this.tbNamaToko.Size = new System.Drawing.Size(264, 22);
             this.tbNamaToko.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 180);
+            this.label5.Location = new System.Drawing.Point(35, 222);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Deskripsi";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 104);
+            this.label3.Location = new System.Drawing.Point(35, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(79, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "Nama Jasa";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(315, 48);
+            this.label6.Location = new System.Drawing.Point(420, 59);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.Size = new System.Drawing.Size(46, 17);
             this.label6.TabIndex = 14;
             this.label6.Text = "Data :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 67);
+            this.label2.Location = new System.Drawing.Point(35, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 15;
             this.label2.Text = "Nama Toko";
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(209, 273);
+            this.btnSimpan.Location = new System.Drawing.Point(279, 336);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(75, 23);
+            this.btnSimpan.Size = new System.Drawing.Size(100, 28);
             this.btnSimpan.TabIndex = 9;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = true;
@@ -147,33 +160,37 @@ namespace Tubes_KPL
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 23);
+            this.label1.Location = new System.Drawing.Point(181, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 20);
+            this.label1.Size = new System.Drawing.Size(139, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "INPUT JASA";
             // 
             // tbJlhPaket
             // 
-            this.tbJlhPaket.Location = new System.Drawing.Point(261, 140);
+            this.tbJlhPaket.Location = new System.Drawing.Point(348, 172);
+            this.tbJlhPaket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbJlhPaket.Name = "tbJlhPaket";
-            this.tbJlhPaket.Size = new System.Drawing.Size(38, 20);
+            this.tbJlhPaket.Size = new System.Drawing.Size(49, 22);
             this.tbJlhPaket.TabIndex = 16;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(187, 143);
+            this.label7.Location = new System.Drawing.Point(249, 176);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.Size = new System.Drawing.Size(93, 17);
             this.label7.TabIndex = 11;
             this.label7.Text = "Jumlah Paket";
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(318, 273);
+            this.btnBatal.Location = new System.Drawing.Point(424, 336);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(75, 23);
+            this.btnBatal.Size = new System.Drawing.Size(100, 28);
             this.btnBatal.TabIndex = 10;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
@@ -181,9 +198,10 @@ namespace Tubes_KPL
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(100, 273);
+            this.btnNew.Location = new System.Drawing.Point(133, 336);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.Size = new System.Drawing.Size(100, 28);
             this.btnNew.TabIndex = 23;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -192,20 +210,21 @@ namespace Tubes_KPL
             // LbMoney
             // 
             this.LbMoney.AutoSize = true;
-            this.LbMoney.Location = new System.Drawing.Point(669, 48);
+            this.LbMoney.Location = new System.Drawing.Point(892, 59);
+            this.LbMoney.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LbMoney.Name = "LbMoney";
-            this.LbMoney.Size = new System.Drawing.Size(69, 13);
+            this.LbMoney.Size = new System.Drawing.Size(89, 17);
             this.LbMoney.TabIndex = 24;
             this.LbMoney.Text = "Mata Uang : ";
             // 
             // InputJasa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 321);
+            this.ClientSize = new System.Drawing.Size(1095, 395);
             this.Controls.Add(this.LbMoney);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.dataGridJasa);
+            this.Controls.Add(this.dgvJasa);
             this.Controls.Add(this.tbJlhPaket);
             this.Controls.Add(this.tbHarga);
             this.Controls.Add(this.tbDeskripsi);
@@ -220,10 +239,11 @@ namespace Tubes_KPL
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "InputJasa";
             this.Text = "InputJasa";
             this.Load += new System.EventHandler(this.InputJasa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridJasa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJasa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +251,7 @@ namespace Tubes_KPL
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridJasa;
+        private System.Windows.Forms.DataGridView dgvJasa;
         private System.Windows.Forms.TextBox tbHarga;
         private System.Windows.Forms.TextBox tbDeskripsi;
         private System.Windows.Forms.TextBox tbNamaJasa;

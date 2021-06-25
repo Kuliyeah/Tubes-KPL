@@ -1,20 +1,3 @@
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.dll
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.xml
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.AssemblyReference.cache
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Dashboard.resources
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputTransaksi.resources
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Pengguna.resources
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputJasa.resources
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Properties.Resources.resources
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.GenerateResource.cache
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
-D:\Materi Kuliah SE\SEMESTER 4\KONSTRUKSI PL\github\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
 E:\Gawean Tugas\KPL\Tubes-KPL\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb

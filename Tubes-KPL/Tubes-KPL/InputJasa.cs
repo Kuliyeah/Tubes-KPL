@@ -28,7 +28,7 @@ namespace Tubes_KPL
                 Config.SaveToJson<DataTable>(dtJasa, path + pathJSON);
             }
             
-            dataGridJasa.DataSource = dtJasa;
+            dgvJasa.DataSource = dtJasa;
             convertMataUang();
         }
 
@@ -117,7 +117,7 @@ namespace Tubes_KPL
                         );
                 }
 
-                dataGridJasa.DataSource = dtJasa;
+                dgvJasa.DataSource = dtJasa;
 
                 Config.SaveToJson<DataTable>(dtJasa, path + pathJSON);
                 btnNew.Enabled = true;
@@ -125,14 +125,19 @@ namespace Tubes_KPL
             }
         }
 
+        private void tbHarga_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public void convertMataUang()
         {
             money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
             if (money.getMoneyConfig() == "USD")
             {
-                for (int i = 0; i < dataGridJasa.RowCount-1; i++)
+                for (int i = 0; i < dgvJasa.RowCount-1; i++)
                 {
-                    dataGridJasa.Rows[i].Cells[2].Value = (Double.Parse(dataGridJasa.Rows[0 + i].Cells[2].Value.ToString())/14000).ToString().Substring(0, 4);
+                    dgvJasa.Rows[i].Cells[2].Value = (Double.Parse(dgvJasa.Rows[0 + i].Cells[2].Value.ToString())/14000).ToString().Substring(0, 4);
                 }
             }
         }

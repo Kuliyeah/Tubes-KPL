@@ -53,13 +53,13 @@ namespace Tubes_KPL
         {
             if (money.getMoneyConfig() == "Rupiah")
             {
-                comboBoxMoney.SelectedItem = "Rupiah";
-                Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path + pathMoney);
+                cbMoney.SelectedItem = "Rupiah";
+                Config.SaveToJson<moneyConfig>(new moneyConfig(cbMoney.Text), path + pathMoney);
             }
             else
             {
-                comboBoxMoney.SelectedItem = "USD";
-                Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path + pathMoney);
+                cbMoney.SelectedItem = "USD";
+                Config.SaveToJson<moneyConfig>(new moneyConfig(cbMoney.Text), path + pathMoney);
             }
         }
 
@@ -73,7 +73,7 @@ namespace Tubes_KPL
 
         private void comboBoxMoney_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Config.SaveToJson<moneyConfig>(new moneyConfig(comboBoxMoney.Text), path + pathMoney);
+            Config.SaveToJson<moneyConfig>(new moneyConfig(cbMoney.Text), path + pathMoney);
         }
 
     }

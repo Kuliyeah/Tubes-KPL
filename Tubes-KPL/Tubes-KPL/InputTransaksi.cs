@@ -33,7 +33,7 @@ namespace Tubes_KPL
             }
 
             //tampilkan data dari InputTransaksi.json
-            dataGridTransaksi.DataSource = dtTransaksi;
+            dgvTransaksi.DataSource = dtTransaksi;
         }
 
         private void DummyData()
@@ -52,7 +52,7 @@ namespace Tubes_KPL
         {
             setEditEnabled(false);
             btnNew.Enabled = true;
-            textTanggal.Text = tglSekarang.ToString();
+            tbTanggal.Text = tglSekarang.ToString();
             setComboboxNamaJasa();
 
             money = Config.ReadFromJson<moneyConfig>(pathDir + pathMoney);
@@ -72,29 +72,29 @@ namespace Tubes_KPL
             btnSimpan.Enabled = stat;
             btnBatal.Enabled = true;
             btnNew.Enabled = stat;
-            comboBoxNamaJasa.Enabled = stat;
-            textBerat.Enabled = stat;
-            textDeskripsi.Enabled = stat;
-            textIDTransaksi.Enabled = stat;
-            textOngkir.Enabled = stat;
-            textTotal.Enabled = stat;
-            textTanggal.Enabled = false;
+            cbNamaJasa.Enabled = stat;
+            tbBerat.Enabled = stat;
+            tbDeskripsi.Enabled = stat;
+            tbIDTransaksi.Enabled = stat;
+            tbOngkir.Enabled = stat;
+            tbTotal.Enabled = stat;
+            tbTanggal.Enabled = false;
         }
 
         private void clearText()
         {
-            textIDTransaksi.Text = "";
-            textBerat.Text = "";
-            textOngkir.Text = "";
-            textTotal.Text = "";
-            textDeskripsi.Text = "";
-            comboBoxNamaJasa.Text = "";
+            tbIDTransaksi.Text = "";
+            tbBerat.Text = "";
+            tbOngkir.Text = "";
+            tbTotal.Text = "";
+            tbDeskripsi.Text = "";
+            cbNamaJasa.Text = "";
         }
 
         private int cariHargaJasa()
         {
             dtJasa = Config.ReadFromJson<DataTable>(pathDir + pathJasa);
-            int harga = Int32.Parse(dtJasa.Rows[comboBoxNamaJasa.SelectedIndex][2].ToString());
+            int harga = Int32.Parse(dtJasa.Rows[cbNamaJasa.SelectedIndex][2].ToString());
             return harga;
         }
 
@@ -121,8 +121,8 @@ namespace Tubes_KPL
                 dtJasa.Columns.Add("Deskripsi Jasa");
                 Config.SaveToJson<DataTable>(dtJasa, pathDir + pathJasa);
             }
-            comboBoxNamaJasa.DataSource = dtJasa;
-            comboBoxNamaJasa.DisplayMember = "Nama Jasa";
+            cbNamaJasa.DataSource = dtJasa;
+            cbNamaJasa.DisplayMember = "Nama Jasa";
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace Tubes_KPL
             clearText();
             setEditEnabled(true);
             btnNew.Enabled = false;
-            textTotal.Enabled = false;
+            tbTotal.Enabled = false;
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -142,13 +142,13 @@ namespace Tubes_KPL
             btnNew.Enabled = true;
 
             //set dan ambil nilai dari input user
-            int idTransaksi = Int32.Parse(textIDTransaksi.Text);
-            String namaJasa = comboBoxNamaJasa.Text;
-            String deskripsi = textDeskripsi.Text;
-            int berat = Int32.Parse(textBerat.Text);
-            int ongkir = Int32.Parse(textOngkir.Text);
+            int idTransaksi = Int32.Parse(tbIDTransaksi.Text);
+            String namaJasa = cbNamaJasa.Text;
+            String deskripsi = tbDeskripsi.Text;
+            int berat = Int32.Parse(tbBerat.Text);
+            int ongkir = Int32.Parse(tbOngkir.Text);
             int totalBayar = hitungTotal(berat, cariHargaJasa(), ongkir);
-            textTotal.Text = totalBayar.ToString();
+            tbTotal.Text = totalBayar.ToString();
 
             //masukan data kedalam list
             transaksi.Add(new InputTransaksiModel(tglSekarang, idTransaksi, namaJasa, deskripsi,
@@ -169,7 +169,7 @@ namespace Tubes_KPL
             }
 
             //tampilkan data ke UI
-            dataGridTransaksi.DataSource = dtTransaksi;
+            dgvTransaksi.DataSource = dtTransaksi;
 
             //simpan dan update data ke JSON
             Config.SaveToJson<DataTable>(dtTransaksi, pathDir + pathTransaksi);
@@ -192,10 +192,10 @@ namespace Tubes_KPL
             money = Config.ReadFromJson<moneyConfig>(pathDir + pathMoney);
             if (money.getMoneyConfig() == "USD")
             {
-                for (int i = 0; i < dataGridTransaksi.RowCount-1; i++)
+                for (int i = 0; i < dgvTransaksi.RowCount-1; i++)
                 {
-                    dataGridTransaksi.Rows[i].Cells[5].Value = (Double.Parse(dataGridTransaksi.Rows[0 + i].Cells[5].Value.ToString()) / 14000).ToString().Substring(0, 4);
-                    dataGridTransaksi.Rows[i].Cells[6].Value = (Double.Parse(dataGridTransaksi.Rows[0 + i].Cells[6].Value.ToString()) / 14000).ToString().Substring(0, 4);
+                    dgvTransaksi.Rows[i].Cells[5].Value = (Double.Parse(dgvTransaksi.Rows[0 + i].Cells[5].Value.ToString()) / 14000).ToString().Substring(0, 4);
+                    dgvTransaksi.Rows[i].Cells[6].Value = (Double.Parse(dgvTransaksi.Rows[0 + i].Cells[6].Value.ToString()) / 14000).ToString().Substring(0, 4);
                 }
             }
         }

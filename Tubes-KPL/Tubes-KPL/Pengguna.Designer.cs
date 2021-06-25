@@ -32,16 +32,16 @@ namespace Tubes_KPL
             this.dgvPengguna = new System.Windows.Forms.DataGridView();
             this.btnNew = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtAlamat = new System.Windows.Forms.TextBox();
-            this.txtKataSandi = new System.Windows.Forms.TextBox();
+            this.tbAlamat = new System.Windows.Forms.TextBox();
+            this.tbKataSandi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNoHP = new System.Windows.Forms.TextBox();
+            this.tbNoHP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBatal = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -52,16 +52,19 @@ namespace Tubes_KPL
             // 
             this.dgvPengguna.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPengguna.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPengguna.Location = new System.Drawing.Point(321, 33);
+            this.dgvPengguna.Location = new System.Drawing.Point(428, 41);
+            this.dgvPengguna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPengguna.Name = "dgvPengguna";
-            this.dgvPengguna.Size = new System.Drawing.Size(448, 266);
+            this.dgvPengguna.RowHeadersWidth = 51;
+            this.dgvPengguna.Size = new System.Drawing.Size(597, 327);
             this.dgvPengguna.TabIndex = 38;
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(30, 276);
+            this.btnNew.Location = new System.Drawing.Point(40, 340);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.Size = new System.Drawing.Size(100, 28);
             this.btnNew.TabIndex = 37;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -71,106 +74,119 @@ namespace Tubes_KPL
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(107, 26);
+            this.label7.Location = new System.Drawing.Point(143, 32);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 20);
+            this.label7.Size = new System.Drawing.Size(132, 25);
             this.label7.TabIndex = 32;
             this.label7.Text = "PENGGUNA";
             // 
-            // txtAlamat
+            // tbAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(88, 134);
-            this.txtAlamat.Multiline = true;
-            this.txtAlamat.Name = "txtAlamat";
-            this.txtAlamat.Size = new System.Drawing.Size(205, 56);
-            this.txtAlamat.TabIndex = 31;
+            this.tbAlamat.Location = new System.Drawing.Point(117, 165);
+            this.tbAlamat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAlamat.Multiline = true;
+            this.tbAlamat.Name = "tbAlamat";
+            this.tbAlamat.Size = new System.Drawing.Size(272, 68);
+            this.tbAlamat.TabIndex = 31;
             // 
-            // txtKataSandi
+            // tbKataSandi
             // 
-            this.txtKataSandi.Location = new System.Drawing.Point(88, 241);
-            this.txtKataSandi.Name = "txtKataSandi";
-            this.txtKataSandi.Size = new System.Drawing.Size(205, 20);
-            this.txtKataSandi.TabIndex = 30;
+            this.tbKataSandi.Location = new System.Drawing.Point(117, 297);
+            this.tbKataSandi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbKataSandi.Name = "tbKataSandi";
+            this.tbKataSandi.Size = new System.Drawing.Size(272, 22);
+            this.tbKataSandi.TabIndex = 30;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 244);
+            this.label6.Location = new System.Drawing.Point(36, 300);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.Size = new System.Drawing.Size(77, 17);
             this.label6.TabIndex = 29;
             this.label6.Text = "Kata Sandi";
             // 
-            // txtEmail
+            // tbEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(88, 205);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(205, 20);
-            this.txtEmail.TabIndex = 28;
+            this.tbEmail.Location = new System.Drawing.Point(117, 252);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(272, 22);
+            this.tbEmail.TabIndex = 28;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 208);
+            this.label5.Location = new System.Drawing.Point(36, 256);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 27;
             this.label5.Text = "Email";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 137);
+            this.label4.Location = new System.Drawing.Point(36, 169);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 26;
             this.label4.Text = "Alamat";
             // 
-            // txtNoHP
+            // tbNoHP
             // 
-            this.txtNoHP.Location = new System.Drawing.Point(88, 98);
-            this.txtNoHP.Name = "txtNoHP";
-            this.txtNoHP.Size = new System.Drawing.Size(205, 20);
-            this.txtNoHP.TabIndex = 25;
+            this.tbNoHP.Location = new System.Drawing.Point(117, 121);
+            this.tbNoHP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNoHP.Name = "tbNoHP";
+            this.tbNoHP.Size = new System.Drawing.Size(272, 22);
+            this.tbNoHP.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 101);
+            this.label3.Location = new System.Drawing.Point(36, 124);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 24;
             this.label3.Text = "No. HP";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 33);
+            this.label2.Location = new System.Drawing.Point(172, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 23;
             // 
-            // txtUsername
+            // tbUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(88, 63);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(205, 20);
-            this.txtUsername.TabIndex = 22;
+            this.tbUsername.Location = new System.Drawing.Point(117, 78);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(272, 22);
+            this.tbUsername.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 66);
+            this.label1.Location = new System.Drawing.Point(36, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 21;
             this.label1.Text = "Username";
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(218, 276);
+            this.btnBatal.Location = new System.Drawing.Point(291, 340);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(75, 23);
+            this.btnBatal.Size = new System.Drawing.Size(100, 28);
             this.btnBatal.TabIndex = 40;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
@@ -178,9 +194,10 @@ namespace Tubes_KPL
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(123, 276);
+            this.btnSave.Location = new System.Drawing.Point(164, 340);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -188,25 +205,26 @@ namespace Tubes_KPL
             // 
             // Pengguna
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 329);
+            this.ClientSize = new System.Drawing.Size(1067, 405);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.dgvPengguna);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtAlamat);
-            this.Controls.Add(this.txtKataSandi);
+            this.Controls.Add(this.tbAlamat);
+            this.Controls.Add(this.tbKataSandi);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNoHP);
+            this.Controls.Add(this.tbNoHP);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Pengguna";
             this.Text = "Form Pengguna";
             this.Load += new System.EventHandler(this.Pengguna_Load);
@@ -221,16 +239,16 @@ namespace Tubes_KPL
         private System.Windows.Forms.DataGridView dgvPengguna;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtAlamat;
-        private System.Windows.Forms.TextBox txtKataSandi;
+        private System.Windows.Forms.TextBox tbAlamat;
+        private System.Windows.Forms.TextBox tbKataSandi;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNoHP;
+        private System.Windows.Forms.TextBox tbNoHP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Button btnSave;

@@ -5,7 +5,6 @@ using System.Windows.Forms;
 
 namespace Tubes_KPL
 {
-    //dz
     public partial class Login : Form
     {
         string user, pass;
@@ -15,10 +14,6 @@ namespace Tubes_KPL
         public Login()
         {
             InitializeComponent();
-
-            //Buat cek biar cepet, malas ngetik, ntar kalo udh jadi hapus aja (gilang)
-            tbUsername.Text = "user";
-            tbPassword.Text = "user123";
         }
 
         private void tbPassword_TextChanged(object sender, EventArgs e)
@@ -31,6 +26,7 @@ namespace Tubes_KPL
         private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Sure?", "Alert", MessageBoxButtons.YesNo);
+            // Kondisi message box Yes/No.
             if (dialogResult == DialogResult.Yes)
             {
                 Application.Exit();
@@ -42,6 +38,11 @@ namespace Tubes_KPL
             }
         }
 
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -49,6 +50,7 @@ namespace Tubes_KPL
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            // Init.
             Enum nm1 = TableDriven.Username.user;
             user = nm1.ToString();
             pass = TableDriven.getKodeUser(TableDriven.Username.user);
@@ -56,9 +58,9 @@ namespace Tubes_KPL
             // Untuk cek bahwa username yang dimasukkan tidak boleh lebih kecil sama dengan 3.
             Debug.Assert(tbUsername.Text.Length > 3, "Username terlalu pendek");
 
+            // Kondisi input username dan password.
             if ((tbUsername.Text == user) && (tbPassword.Text == pass))
             {
-                
                 MessageBox.Show("Welcome User", "Hi");
                 nextPosisi = Automata.State.DASHBOARD;
                 Automata.setPosisi(posisi, nextPosisi);
