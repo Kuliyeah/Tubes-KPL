@@ -3,8 +3,6 @@ using System.Data;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using System.IO;
-using Newtonsoft.Json;
 
 namespace Tubes_KPL
 {
@@ -12,10 +10,8 @@ namespace Tubes_KPL
     {
         PenggunaModel penggunaModel = new PenggunaModel();
         DataTable dataTable = new DataTable();
-
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"../../../json/Pengguna.json";
-
         Automata.State posisi = Automata.State.INPUT_PENGGUNA, nextPosisi;
 
         public Pengguna()
@@ -114,7 +110,6 @@ namespace Tubes_KPL
         private void btnSave_Click_1(object sender, EventArgs e)
         {
             List<PenggunaModel> listPenggunaModel = new List<PenggunaModel>();
-
             String username = txtUsername.Text;
             String noHP = txtNoHP.Text;
             String alamat = txtAlamat.Text;
@@ -144,5 +139,6 @@ namespace Tubes_KPL
                 dgvPengguna.DataSource = dataTable;
             }
         }
+
     }
 }

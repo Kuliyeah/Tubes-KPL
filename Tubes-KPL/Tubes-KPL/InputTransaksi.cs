@@ -1,8 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Windows.Forms;
 
 namespace Tubes_KPL
@@ -16,7 +14,6 @@ namespace Tubes_KPL
         private string pathJasa= @"../../../json/InputJasa.json";
         private string pathMoney = @"../../../json/MoneyConfig.json";
         private moneyConfig money;
-
         Automata.State posisi = Automata.State.INPUT_TRANSAKSI, nextPosisi;
 
         public InputTransaksi()
@@ -48,9 +45,9 @@ namespace Tubes_KPL
             dtTransaksi.Columns.Add("Berat (Kg)");
             dtTransaksi.Columns.Add("Ongkir");
             dtTransaksi.Columns.Add("Total Bayar");
-
             dtTransaksi.Rows.Add(DateTime.Now, "1234", "Test Jasa", "Deskripsi Test Jasa", "2", "5000", "15000");
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             setEditEnabled(false);
@@ -69,6 +66,7 @@ namespace Tubes_KPL
             }
             convertMataUang();
         }
+
         private void setEditEnabled(bool stat)
         {
             btnSimpan.Enabled = stat;
@@ -82,6 +80,7 @@ namespace Tubes_KPL
             textTotal.Enabled = stat;
             textTanggal.Enabled = false;
         }
+
         private void clearText()
         {
             textIDTransaksi.Text = "";

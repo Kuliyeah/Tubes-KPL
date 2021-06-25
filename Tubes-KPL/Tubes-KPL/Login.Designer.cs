@@ -80,7 +80,6 @@ namespace Tubes_KPL
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(168, 23);
             this.tbUsername.TabIndex = 13;
-            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // lblPass
             // 

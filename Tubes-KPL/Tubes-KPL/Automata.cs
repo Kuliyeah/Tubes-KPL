@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Tubes_KPL
 {
@@ -14,6 +9,7 @@ namespace Tubes_KPL
         public static State posisi, nextPosisi;
 
         public Automata() { }
+
         public static void setPosisi(State pos, State nextPos)
         {
             posisi = pos;
@@ -74,8 +70,7 @@ namespace Tubes_KPL
                     dashboard.Show();
                 }
             }
-
-            
         }
+
     }
 }

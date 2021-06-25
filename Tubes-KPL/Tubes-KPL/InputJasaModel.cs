@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tubes_KPL
 {
@@ -16,54 +12,11 @@ namespace Tubes_KPL
         private double hargaPerPaket;
         private int jumlahPaket;
 
-        public void setMataUang(string mataUang)
+        public InputJasaModel()
         {
-            this.mataUang = mataUang;
+
         }
-        public String getMataUang()
-        {
-            return this.mataUang;
-        }
-        public void setNamaToko(string namaToko)
-        {
-            this.namaToko = namaToko;
-        }
-        public String getNamaToko()
-        {
-            return this.namaToko;
-        }
-        public void setNamaJasa(string namaJasa)
-        {
-            this.namaJasa = namaJasa;
-        }
-        public String getNamaJasa()
-        {
-            return this.namaJasa;
-        }
-        public void setDeskripsi(string deskripsi)
-        {
-            this.deskripsi = deskripsi;
-        }
-        public String getDeskripsi()
-        {
-            return this.deskripsi;
-        }
-        public void setHargaPerPaket(double hargaPerPaket)
-        {
-            this.hargaPerPaket = hargaPerPaket;
-        }
-        public double getHargaPerPaket()
-        {
-            return this.hargaPerPaket;
-        }
-        public void setJumlahPaket(int jumlahPaket)
-        {
-            this.jumlahPaket = jumlahPaket;
-        }
-        public int getJumlahPaket()
-        {
-            return this.jumlahPaket;
-        }
+
         public InputJasaModel(string mataUang, string namaToko, string namaJasa, double hargaPerPaket, int jumlahPaket, string deskripsi)
         {
             this.mataUang = mataUang;
@@ -76,9 +29,64 @@ namespace Tubes_KPL
             this.jumlahPaket = jumlahPaket;
         }
 
-        public InputJasaModel()
+        public void setMataUang(string mataUang)
         {
+            this.mataUang = mataUang;
+        }
 
+        public String getMataUang()
+        {
+            return this.mataUang;
+        }
+
+        public void setNamaToko(string namaToko)
+        {
+            this.namaToko = namaToko;
+        }
+
+        public String getNamaToko()
+        {
+            return this.namaToko;
+        }
+
+        public void setNamaJasa(string namaJasa)
+        {
+            this.namaJasa = namaJasa;
+        }
+
+        public String getNamaJasa()
+        {
+            return this.namaJasa;
+        }
+
+        public void setDeskripsi(string deskripsi)
+        {
+            this.deskripsi = deskripsi;
+        }
+
+        public String getDeskripsi()
+        {
+            return this.deskripsi;
+        }
+
+        public void setHargaPerPaket(double hargaPerPaket)
+        {
+            this.hargaPerPaket = hargaPerPaket;
+        }
+
+        public double getHargaPerPaket()
+        {
+            return this.hargaPerPaket;
+        }
+
+        public void setJumlahPaket(int jumlahPaket)
+        {
+            this.jumlahPaket = jumlahPaket;
+        }
+
+        public int getJumlahPaket()
+        {
+            return this.jumlahPaket;
         }
 
     }

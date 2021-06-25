@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tubes_KPL
 {
     class InputTransaksiModel
-    {//deklarasi variable
+    {
+        //deklarasi variable
         private String _deskripsiCucian, _namaJasa;
         private int _idTransaksi, _totalBayar, _beratCucian, _ongkir;
         private DateTime _tanggal;
@@ -108,5 +105,6 @@ namespace Tubes_KPL
         {
             this._totalBayar = totalBayar;
         }
+
     }
 }

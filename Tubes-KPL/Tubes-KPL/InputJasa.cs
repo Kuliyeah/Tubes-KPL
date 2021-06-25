@@ -1,14 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tubes_KPL
@@ -48,19 +40,9 @@ namespace Tubes_KPL
             dtJasa.Columns.Add("Jumlah Paket");
             dtJasa.Columns.Add("Deskripsi Jasa");
 
-
-
             dtJasa.Rows.Add("Toko Sukses", "Test Jasa", "5500", "1", "Deskripsi Test");
         }
 
-        private void cleartTextBox()
-        {
-            tbNamaToko.Text = String.Empty;
-            tbNamaJasa.Text = String.Empty;
-            tbHarga.Text = String.Empty;
-            tbJlhPaket.Text = String.Empty;
-            tbDeskripsi.Text = String.Empty;
-        }
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -133,7 +115,6 @@ namespace Tubes_KPL
                         jasa[i].getJumlahPaket().ToString(),
                         jasa[i].getDeskripsi().ToString()
                         );
-
                 }
 
                 dataGridJasa.DataSource = dtJasa;
@@ -155,5 +136,6 @@ namespace Tubes_KPL
                 }
             }
         }
+
     }
 }

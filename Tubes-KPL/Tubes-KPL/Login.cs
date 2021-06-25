@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tubes_KPL
-{//dz
+{
+    //dz
     public partial class Login : Form
     {
         string user, pass;
         Automata.State posisi = Automata.State.LOGIN, nextPosisi;
         Double count = 0;
+
         public Login()
         {
             InitializeComponent();
@@ -44,11 +40,6 @@ namespace Tubes_KPL
                 new Dashboard().Show();
                 this.Hide();
             }
-        }
-
-        private void tbUsername_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -91,5 +82,6 @@ namespace Tubes_KPL
                 }
             }
         }
+
     }
 }
