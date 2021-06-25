@@ -25,7 +25,7 @@ namespace Tubes_KPL
             InitializeComponent();
         }
 
-        private void btnDataTransaksi_Click(object sender, EventArgs e)
+        private void btnDataTransaksi_Click(object sender, EventArgs e) //bottom data transaksi
         {
             nextPosisi = Automata.State.INPUT_TRANSAKSI;
             Automata.setPosisi(posisi, nextPosisi);
@@ -33,7 +33,7 @@ namespace Tubes_KPL
             this.Hide();
         }
 
-        private void btnDataJasa_Click(object sender, EventArgs e)
+        private void btnDataJasa_Click(object sender, EventArgs e) //bottom data jasa
         {
             nextPosisi = Automata.State.INPUT_JASA;
             Automata.setPosisi(posisi, nextPosisi);
@@ -41,7 +41,7 @@ namespace Tubes_KPL
             this.Hide();
         }
 
-        private void btnDataPengguna_Click(object sender, EventArgs e)
+        private void btnDataPengguna_Click(object sender, EventArgs e) //bottom data pengguna
         {
             nextPosisi = Automata.State.INPUT_PENGGUNA;
             Automata.setPosisi(posisi, nextPosisi);
@@ -63,7 +63,7 @@ namespace Tubes_KPL
             }
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e) //bottom logout
         {
             nextPosisi = Automata.State.LOGOUT;
             Automata.setPosisi(posisi, nextPosisi);
