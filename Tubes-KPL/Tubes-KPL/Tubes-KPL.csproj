@@ -56,6 +56,7 @@
     <Compile Include="Config.cs" />
     <Compile Include="moneyConfig.cs" />
     <Compile Include="PenggunaModel.cs" />
+    <Compile Include="SingletonPattern.cs" />
     <Compile Include="TableDriven.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>

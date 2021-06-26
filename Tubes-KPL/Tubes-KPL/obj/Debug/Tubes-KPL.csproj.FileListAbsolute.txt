@@ -66,3 +66,20 @@ C:\Users\LENOVO\Videos\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.
 C:\Users\LENOVO\Videos\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
 C:\Users\LENOVO\Videos\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
 C:\Users\LENOVO\Videos\Tubes-KPL\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe.config
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.exe
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\bin\Debug\Tubes-KPL.pdb
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.dll
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\bin\Debug\Newtonsoft.Json.xml
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csprojAssemblyReference.cache
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Dashboard.resources
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputTransaksi.resources
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Login.resources
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Pengguna.resources
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.InputJasa.resources
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes_KPL.Properties.Resources.resources
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.GenerateResource.cache
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CoreCompileInputs.cache
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.csproj.CopyComplete
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.exe
+E:\Tubes Kpl\Tubes-KPL\Tubes-KPL\obj\Debug\Tubes-KPL.pdb
