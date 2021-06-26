@@ -18,6 +18,6 @@
 -	Parsing (Pengguna, Transaksi)
 -	Runtime configuration (Jasa, Transaksi)
 -	API beserta designnya
--	Design pattern
+-	Design pattern (Dashboard)
 4. Menerapkan unit testing dan performance analysis pada unit yang dibuat
 #### Catatan: Hanya boleh maksimal 1 teknik yang sama dipakai oleh semua anggota kelompok yang dikerjakan pada unit yang berbeda-beda
