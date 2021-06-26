@@ -4,7 +4,7 @@ namespace Tubes_KPL
 {
     class PenggunaModel
     {
-        // Init Variables
+        // Init Var.
         public string username;
         public string noHP;
         public string alamatPengguna;
@@ -13,7 +13,7 @@ namespace Tubes_KPL
 
         public PenggunaModel(){}
 
-        // Membuat data pengguna baru dengan data yang berasal dari parameter
+        // Membuat data pengguna baru dengan data yang berasal dari parameter.
         public PenggunaModel(string username, string noHP, string alamatPengguna, string email, string kataSandi)
         {
             try
@@ -30,61 +30,61 @@ namespace Tubes_KPL
             }
         }
 
-        // Mengembalikan data username
+        // Mengembalikan data username.
         public String getUsername()
         {
             return username;
         }
 
-        // Menyimpan data username dengan data data parameter
+        // Menyimpan data username dengan data data parameter.
         public void setUsername(String username)
         {
             this.username = username;
         }
 
-        // Mengembalikan data noHP
+        // Mengembalikan data noHP.
         public String getNoHP()
         {
             return noHP;
         }
 
-        // Menyimpan data noHP dengan data data parameter
+        // Menyimpan data noHP dengan data data parameter.
         public void setNoHP(String noHP)
         {
             this.noHP = noHP;
         }
 
-        // Mengembalikan data alamatPengguna
+        // Mengembalikan data alamatPengguna.
         public String getAlamatPengguna()
         {
             return alamatPengguna;
         }
 
-        // Menyimpan data alamatPengguna dengan data data parameter
+        // Menyimpan data alamatPengguna dengan data data parameter.
         public void setAlamatPengguna(String alamatPengguna)
         {
             this.alamatPengguna = alamatPengguna;
         }
 
-        // Mengembalikan data email
+        // Mengembalikan data email.
         public String getEmail()
         {
             return email;
         }
 
-        // Menyimpan data email dengan data data parameter
+        // Menyimpan data email dengan data data parameter.
         public void setEmail(String email)
         {
             this.email = email;
         }
 
-        // Mengembalikan data kataSandi
+        // Mengembalikan data kataSandi.
         public String getKataSandi()
         {
             return kataSandi;
         }
 
-        // Menyimpan data kataSandi dengan data data parameter
+        // Menyimpan data kataSandi dengan data data parameter.
         public void setKataSandi(String kataSandi)
         {
             this.kataSandi = kataSandi;

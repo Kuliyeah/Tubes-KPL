@@ -16,9 +16,9 @@ namespace HalamanUtama
                 laundry.inputJasa();
                 laundry.inputTransaksi();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.Write("Oops");
+                Console.Write("Oops: " + e);
             }
 
             Application.EnableVisualStyles();

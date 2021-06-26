@@ -8,16 +8,25 @@ namespace Tubes_KPL
 {
     public partial class Pengguna : Form
     {
+        // Init var.
         PenggunaModel penggunaModel = new PenggunaModel();
         DataTable dataTable = new DataTable();
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"../../../json/Pengguna.json";
         Automata.State posisi = Automata.State.INPUT_PENGGUNA, nextPosisi;
 
+        // Constructor pengguna.
         public Pengguna()
         {
             InitializeComponent();
+            CreateDataTable();
+        }
 
+        // Membaca data yang ada pada file JSON jika terdapat file JSON,
+        // Jika tidak, maka buat file JSON dari method DummyData(),
+        // Lalu tampilkan di dgvPengguna.
+        private void CreateDataTable()
+        {
             try
             {
                 dataTable = Config.ReadFromJson<DataTable>(path + pathJSON);
@@ -31,6 +40,7 @@ namespace Tubes_KPL
             dgvPengguna.DataSource = dataTable;
         }
 
+        // Mengosongkan semua textbox.
         private void ClearTextBox()
         {
             tbUsername.Text = null;
@@ -40,6 +50,7 @@ namespace Tubes_KPL
             tbKataSandi.Text = null;
         }
 
+        // Menonaktifkan sebagian tombol, kecuali btnNew.
         private void SetDisabled()
         {
             tbUsername.Enabled = false;
@@ -52,6 +63,7 @@ namespace Tubes_KPL
             btnNew.Enabled = true;
         }
 
+        // Mengaktifkan sebagian tombol, kecuali btnNew.
         private void SetEnabled()
         {
             tbUsername.Enabled = true;
@@ -64,6 +76,7 @@ namespace Tubes_KPL
             btnNew.Enabled = false;
         }
 
+        // Membuat Data palsu untuk JSON.
         private void DummyData()
         {
             dataTable.Columns.Add("Username");
@@ -72,7 +85,6 @@ namespace Tubes_KPL
             dataTable.Columns.Add("Email");
             dataTable.Columns.Add("Password");
 
-
             dataTable.Rows.Add("Lovanto", "087823837566", "Bandung", "Lovanto@gmail.com", "Lovanto");
             dataTable.Rows.Add("Gilang", "087823837566", "Sukabumi", "Gilang@gmail.com", "Gilang123");
             dataTable.Rows.Add("Adam", "087823837566", "Sumedang", "Adam@gmail.com", "Adam123");
@@ -80,16 +92,21 @@ namespace Tubes_KPL
             dataTable.Rows.Add("Dzakwan", "087823837566", "Lampung", "Dzakwan@gmail.com", "Dzakwan123");
         }
 
+        // Method yang dijalankan ketika Pengguna.cs dalam posisi show.
         private void Pengguna_Load(object sender, System.EventArgs e)
         {
             SetDisabled();
         }
 
+        // Ketika btnNew di klik, maka akan mengaktifkan sebagian tombol, kecuali btnNew.
         private void btnNew_Click(object sender, System.EventArgs e)
         {
             SetEnabled();
         }
 
+        // Ketika btnCancel di klik, maka mengosongkan semua textBox, 
+        // menonaktifkan sebagian tombol, lalu menutup UI pengguna.
+        // dan menampikan UI dashboard.
         private void btnCancel_Click(object sender, System.EventArgs e)
         {
             ClearTextBox();
@@ -101,12 +118,15 @@ namespace Tubes_KPL
             Automata.posisiTransition(nextPosisi);
         }
 
+        // Menyembunyikan UI pengguna dan menampilkan UI dashboard..
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
             new Dashboard().Show();
         }
 
+        // Ketika btnSave di klik, maka akan menyimpan data
+        // yang ada pada textBox ke dgvPengguna dan pengguna.json.
         private void btnSave_Click_1(object sender, EventArgs e)
         {
             List<PenggunaModel> listPenggunaModel = new List<PenggunaModel>();
