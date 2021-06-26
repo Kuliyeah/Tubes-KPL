@@ -9,7 +9,6 @@ namespace Tubes_KPL
         String pathMoney = @"../../../json/MoneyConfig.json";
         moneyConfig money;
         Automata.State posisi = Automata.State.DASHBOARD, nextPosisi;
-
         public Dashboard()
         {
             try
@@ -23,11 +22,6 @@ namespace Tubes_KPL
             }
 
             InitializeComponent();
-        }
-
-        private enum Dashboard
-        {
-            Empty, Pendataan, Pemrosesan, Pembayaran
         }
 
         private void btnDataTransaksi_Click(object sender, EventArgs e) //bottom data transaksi

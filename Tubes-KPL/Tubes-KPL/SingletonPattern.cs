@@ -8,11 +8,15 @@ namespace Tubes_KPL
 {
     class SingletonPattern
     {
+        public enum Status {
+            Empty, Pendataan, Pemrosesan, Pembayaran
+        }
+
         private static readonly Lazy<SingletonPattern> _singleton = new Lazy<SingletonPattern>(() => new SingletonPattern());
 
         public static SingletonPattern GetInstance() => _singleton.Value;
 
-        private Dashboard _homepage;
+        private Status _homepage;
 
         private SingletonPattern()
         {
