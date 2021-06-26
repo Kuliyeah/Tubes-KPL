@@ -21,6 +21,18 @@ namespace Tubes_KPL
                 Config.SaveToJson<moneyConfig>(money, path + pathMoney);
             }
 
+            try
+            {
+                var laundry = SingletonPattern.GetInstance();
+                laundry.inputPengguna();
+                laundry.inputJasa();
+                laundry.inputTransaksi();
+            }
+            catch (Exception)
+            {
+                Console.Write("Oops");
+            }
+
             InitializeComponent();
         }
 

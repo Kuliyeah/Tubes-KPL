@@ -9,6 +9,7 @@ namespace HalamanUtama
         [STAThread]
         static void Main()
         {
+<<<<<<< Updated upstream
             try
             {
                 var laundry = SingletonPattern.GetInstance();
@@ -21,6 +22,8 @@ namespace HalamanUtama
                 Console.Write("Oops: " + e);
             }
 
+=======
+>>>>>>> Stashed changes
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
