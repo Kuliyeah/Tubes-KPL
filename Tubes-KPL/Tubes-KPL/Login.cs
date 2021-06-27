@@ -10,7 +10,6 @@ namespace Tubes_KPL
         string user, pass;
         Automata.State posisi = Automata.State.LOGIN, nextPosisi;
         Double count = 0;
-
         public Login()
         {
             InitializeComponent();
