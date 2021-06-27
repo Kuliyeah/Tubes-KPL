@@ -10,11 +10,11 @@ namespace Tubes_KPL
         // Init var.
         DataTable dtTransaksi = new DataTable(), dtJasa;
         DateTime tglSekarang = DateTime.Now;
-        private string pathDir = Environment.CurrentDirectory;
-        private string pathTransaksi = @"../../../json/InputTransaksi.json";
-        private string pathJasa = @"../../../json/InputJasa.json";
-        private string pathMoney = @"../../../json/MoneyConfig.json";
-        private moneyConfig money;
+        string pathDir = Environment.CurrentDirectory;
+        string pathTransaksi = @"../../../json/InputTransaksi.json";
+        string pathJasa = @"../../../json/InputJasa.json";
+        string pathMoney = @"../../../json/MoneyConfig.json";
+        moneyConfig money;
         Automata.State posisi = Automata.State.INPUT_TRANSAKSI, nextPosisi;
 
         public InputTransaksi()
