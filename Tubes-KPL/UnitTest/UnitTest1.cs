@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using Tubes_KPL;
 
 namespace UnitTest
@@ -26,6 +27,15 @@ namespace UnitTest
             ClassTestExitingFile isExitingFile = new ClassTestExitingFile();
             var result = isExitingFile.isExitingFileJson();
             Assert.AreEqual(true, result);
+        }
+
+        public void TestAddTransaksi()
+        {
+            InputTransaksiModel transaksi;
+            transaksi = new InputTransaksiModel(
+                DateTime.Now, 1, "Jasa1", "Desk1", 5, 5000, 30000
+                );
+            Assert.IsNotNull(transaksi);
         }
     }
 }
