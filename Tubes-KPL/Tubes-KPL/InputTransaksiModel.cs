@@ -2,7 +2,7 @@
 
 namespace Tubes_KPL
 {
-    class InputTransaksiModel
+    public class InputTransaksiModel
     {
         // Init var.
         private String deskripsiCucian, namaJasa;
