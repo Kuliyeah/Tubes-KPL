@@ -2,9 +2,11 @@
 
 namespace Tubes_KPL
 {
+    //Adamnn.
     class SingletonPattern
     {
-        public enum Status { // komponen pada enum status
+        // Komponen pada enum status.
+        public enum Status { 
             Empty, Pendataan, Pemrosesan, Pembayaran
         }
 
@@ -12,29 +14,34 @@ namespace Tubes_KPL
 
         public static SingletonPattern GetInstance() => _singleton.Value;
 
-        private Status _homepage; //method homepage
+        // Method homepage.
+        private Status _homepage;
 
-        private SingletonPattern() // kondisi dimana pada tampilan masih kosong
+        // Kondisi dimana pada tampilan masih kosong.
+        private SingletonPattern() 
         {
             Console.WriteLine("login");
             _homepage = Status.Empty;
         }
 
-        public void inputPengguna() // kondisi dimana pada tampilan input pengguna status sebagai pendataan
+        // Kondisi dimana pada tampilan input pengguna status sebagai pendataan.
+        public void inputPengguna() 
         {
             if (!IsEmpty) return;
             Console.WriteLine("isi data");
             _homepage = Status.Pendataan;
         }
 
-        public void inputJasa() // kondisi dimana pada tampilan input jasa status sebagai pemrosesan
+        // Kondisi dimana pada tampilan input jasa status sebagai pemrosesan.
+        public void inputJasa() 
         {
             if (!IsEmpty) return;
             Console.WriteLine("isi jasa");
             _homepage = Status.Pemrosesan;
         }
 
-        public void inputTransaksi() // kondisi dimana pada tampilan input transaksi status sebagai pembayaran
+        // Kondisi dimana pada tampilan input transaksi status sebagai pembayaran.
+        public void inputTransaksi() 
         {
             if (IsPembayaran || IsEmpty) return;
             Console.WriteLine("bayar");

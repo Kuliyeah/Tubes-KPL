@@ -2,28 +2,32 @@
 
 namespace Tubes_KPL
 {
-    //Adamnn
+    //Adamnn.
     class Automata
     {
-        public enum State { LOGIN, DASHBOARD, INPUT_PENGGUNA, INPUT_JASA, INPUT_TRANSAKSI, LOGOUT }; //attribut pada state
+        // Attribut pada state.
+        public enum State { LOGIN, DASHBOARD, INPUT_PENGGUNA, INPUT_JASA, INPUT_TRANSAKSI, LOGOUT }; 
         public static State posisi, nextPosisi; 
 
         public Automata() { }
 
-        public static void setPosisi(State pos, State nextPos) //mensetter keadaan posisi pada automata
+        // Mensetter keadaan posisi pada automata.
+        public static void setPosisi(State pos, State nextPos) 
         {
             posisi = pos;
             nextPosisi = nextPos;
         }
 
-        public static State getPosisi() //mengambil data posisi
+        // Mengambil data posisi.
+        public static State getPosisi() 
         {
             return posisi;
         }
 
         public static void posisiTransition(State nextPos)
         {
-            if (posisi == State.LOGIN) //jika keadaan pada posisi masuk pada login
+            // Jika keadaan pada posisi masuk pada login.
+            if (posisi == State.LOGIN) 
             {
                 if (nextPos == State.DASHBOARD)
                 {
@@ -31,24 +35,28 @@ namespace Tubes_KPL
                     dashboard.Show();
                 }
             }
-            else if (posisi == State.DASHBOARD) //kemudian jika tidak masuk posisi dashboard masuk ke tampilan input transaksi 
+            // Kemudian jika tidak masuk posisi dashboard masuk ke tampilan input transaksi.
+            else if (posisi == State.DASHBOARD) 
             {
                 if (nextPos == State.INPUT_PENGGUNA)
                 {
                     Pengguna pengguna = new Pengguna();
                     pengguna.Show();
                 }
-                else if (nextPos == State.INPUT_JASA) //kemudian jika tidak masuk posisi dashboard masuk ke tampilan input jasa
+                // Kemudian jika tidak masuk posisi dashboard masuk ke tampilan input jasa.
+                else if (nextPos == State.INPUT_JASA) 
                 {
                     InputJasa inputJasa = new InputJasa();
                     inputJasa.Show();
                 }
-                else if (nextPos == State.INPUT_TRANSAKSI) //kemudian jika tidak masuk posisi dashboard masuk ke tampilan input transaksi 
+                // Kemudian jika tidak masuk posisi dashboard masuk ke tampilan input transaksi.
+                else if (nextPos == State.INPUT_TRANSAKSI) 
                 {
                     InputTransaksi inputTransaksi = new InputTransaksi();
                     inputTransaksi.Show();
                 }
-                else if (nextPos == State.LOGOUT) //maka jika tidak posisi dashboard masuk ke tampilan logout 
+                // Maka jika tidak posisi dashboard masuk ke tampilan logout.
+                else if (nextPos == State.LOGOUT) 
                 {
                     DialogResult dialogResult = MessageBox.Show("Sure?", " ", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -61,8 +69,9 @@ namespace Tubes_KPL
                         login.Show();
                     }
                 }
-            } 
-            else if (State.INPUT_PENGGUNA == posisi || State.INPUT_JASA == posisi || State.INPUT_TRANSAKSI == posisi) // kedaan jika posisi semua tampilan akan kembali pada tampilan dashboard
+            }
+            // Keadaan jika posisi semua tampilan akan kembali pada tampilan dashboard.
+            else if (State.INPUT_PENGGUNA == posisi || State.INPUT_JASA == posisi || State.INPUT_TRANSAKSI == posisi) 
             {
                 if (nextPos == State.DASHBOARD)
                 {
