@@ -4,12 +4,12 @@ namespace Tubes_KPL
 {
     class InputTransaksiModel
     {
-        //deklarasi variable
+        // Init var.
         private String _deskripsiCucian, _namaJasa;
         private int _idTransaksi, _totalBayar, _beratCucian, _ongkir;
         private DateTime _tanggal;
 
-        //constructor: membuat data transaksi baru
+        // Constructor, membuat data transaksi baru.
         public InputTransaksiModel(DateTime tanggal, int idTransaksi, String namaJasa,
             String deskripsiCucian, int beratCucian, int ongkir, int totalBayar)
         {
@@ -22,85 +22,85 @@ namespace Tubes_KPL
             this._totalBayar = totalBayar;
         }
 
-        //(getter)ambil value dari tanggal
+        // Ambil value dari tanggal.
         public DateTime getTanggal()
         {
             return _tanggal;
         }
 
-        //(getter)ambil value dari idtoko
+        // Ambil value dari idTransaksi.
         public int getIdTransaksi()
         {
             return _idTransaksi;
         }
 
-        //(getter) ambil value dari idJasa
+        // Ambil value dari namaJasa.
         public String getNamaJasa()
         {
             return _namaJasa;
         }
 
-        //(getter) ambil value dari deskripsiCucian
+        // Ambil value dari deskripsiCucian.
         public String getDeskripsiCucian()
         {
             return _deskripsiCucian;
         }
 
-        //(getter) ambil value dari _beratCucian
+        // Ambil value dari beratCucian.
         public int getBeratCucian()
         {
             return _beratCucian;
         }
 
-        //(getter) ambil value dari ongkir
+        // Ambil value dari ongkir.
         public int getOngkir()
         {
             return _ongkir;
         }
 
-        //(getter) ambil value dari totalBayar
+        // Ambil value dari totalBayar.
         public int getTotalBayar()
         {
             return _totalBayar;
         }
 
-        //(setter) setting tanggal
+        // Setting tanggal.
         public void setTanggal(DateTime tanggal)
         {
             this._tanggal = tanggal;
         }
 
-        //(setter) setting idTransaksi
+        // Setting idTransaksi.
         public void setIdTransaksi(int idTransaksi)
         {
             this._idTransaksi = idTransaksi;
         }
 
-        //(setter) setting idJasa
+        // Setting namaJasa.
         public void setNamaJasa(String namaJasa)
         {
             this._namaJasa = namaJasa;
         }
 
-        //(setter) setting deskripsiCucian
+        // Setting deskripsiCucian.
         public void setDeskripsiCucian(String deskripsiCucian)
         {
             this._deskripsiCucian = deskripsiCucian;
         }
 
-        //(setter) setting beratCucian
+        // Setting beratCucian.
         public void setBeratCucian(int beratCucian)
         {
             this._beratCucian = beratCucian;
         }
 
-        //(setter) setting ongkir
+        // Setting ongkir.
         public void setOngkir(int ongkir)
         {
             this._ongkir = ongkir;
         }
 
-        //(setter) setting idTotalBayar
+        // Setting idTotalBayar.
         public void setTotalBayar(int totalBayar)
         {
             this._totalBayar = totalBayar;
