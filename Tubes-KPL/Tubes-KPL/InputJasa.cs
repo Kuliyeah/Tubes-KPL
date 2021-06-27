@@ -7,7 +7,7 @@ namespace Tubes_KPL
 {
     public partial class InputJasa : Form
     {
-        // Inisialisasi variabel dan memberikan value pada variabel tertentu
+        // Inisialisasi variabel dan memberikan value pada variabel tertentu.
         private string path = Environment.CurrentDirectory;
         private string pathJSON = @"../../../json/InputJasa.json";
         private string pathMoney = @"../../../json/MoneyConfig.json";
@@ -19,7 +19,7 @@ namespace Tubes_KPL
         {
             InitializeComponent();
 
-            // Memanggil data dari json (Deserialisasi) untuk ditampilkan pada tabrl data grid view
+            // Memanggil data dari json (Deserialisasi) untuk ditampilkan pada tabrl data grid view.
             try
             {
                 dtJasa = Config.ReadFromJson<DataTable>(path + pathJSON);
@@ -34,7 +34,7 @@ namespace Tubes_KPL
             convertMataUang();
         }
 
-        // Menggunakan dummy data untuk menampilkan data jika tidak ada file export (Serialisasi)
+        // Menggunakan dummy data untuk menampilkan data jika tidak ada file export (Serialisasi).
         private void DummyData()
         {
             dtJasa.Columns.Add("Nama Toko");
@@ -46,7 +46,7 @@ namespace Tubes_KPL
             dtJasa.Rows.Add("Toko Sukses", "Test Jasa", "5500", "1", "Deskripsi Test");
         }
 
-        // Action pada button batal untuk membatalkan inputan jasa dan kembali ke dashboard
+        // Action pada button batal untuk membatalkan inputan jasa dan kembali ke dashboard.
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -55,7 +55,7 @@ namespace Tubes_KPL
             Automata.posisiTransition(nextPosisi);
         }
 
-        // Memberikan Enablization pada button yang diperlukan ketika menginput data jasa
+        // Memberikan Enablization pada button yang diperlukan ketika menginput data jasa.
         private void InputJasa_Load(object sender, EventArgs e)
         {
             btnBatal.Enabled = true;
@@ -77,7 +77,7 @@ namespace Tubes_KPL
             }
         }
 
-        // Memberikan Enablization pada button tertentu jika mengklik button new
+        // Memberikan Enablization pada button tertentu jika mengklik button new.
         private void btnNew_Click(object sender, EventArgs e)
         {
             btnBatal.Enabled = true;
@@ -90,8 +90,8 @@ namespace Tubes_KPL
             btnNew.Enabled = false;
         }
 
-        // Memberikan action menyimpan data yang telah terisi pada form untuk diserialisasi (Export)
-        // Kedalam bentuk json dan menampilkan data dari form ke table data grid view
+        // Memberikan action menyimpan data yang telah terisi pada form untuk diserialisasi (Export).
+        // Kedalam bentuk json dan menampilkan data dari form ke table data grid view.
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             List<InputJasaModel> jasa = new List<InputJasaModel>();
@@ -110,7 +110,7 @@ namespace Tubes_KPL
             }
             else
             {
-                // Masukan data kedalam list
+                // Masukan data kedalam list.
                 jasa.Add(new InputJasaModel("Rupiah", namaToko, namaJasa, harga, jumlahPaket, deskripsi));
 
                 for (int i = 0; i < jasa.Count; i++)
@@ -138,7 +138,7 @@ namespace Tubes_KPL
 
         }
 
-        // Mengonversi nilai atau value dari data number menjadi USD yang secara default adalah rupiah
+        // Mengonversi nilai atau value dari data number menjadi USD yang secara default adalah rupiah.
         public void convertMataUang()
         {
             money = Config.ReadFromJson<moneyConfig>(path + pathMoney);
