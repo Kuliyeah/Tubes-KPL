@@ -16,7 +16,7 @@ namespace UnitTest
         {
             ClassTestExitingFile isExitingFile = new ClassTestExitingFile();
             var result = isExitingFile.isExitingFileJson();
-            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, result);
         }
     }
 }
