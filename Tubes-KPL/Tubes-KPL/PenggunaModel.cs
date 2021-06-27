@@ -2,7 +2,7 @@
 
 namespace Tubes_KPL
 {
-    class PenggunaModel
+    public class PenggunaModel
     {
         // Init Var.
         public string username;

@@ -12,7 +12,7 @@ namespace Tubes_KPL
         // Unit Testing untuk mengecek apakah terdapat file MoneyConfig.json pada projek ini
         public bool isExitingFileJson()
         {
-            if (File.Exists("../../../json/MoneyConfig.json"))
+            if (File.Exists("../../../../Tubes-KPL/json/MoneyConfig.json"))
             {
                 return true;
             }

@@ -7,8 +7,17 @@ namespace UnitTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestAddDataPengguna()
         {
+            PenggunaModel penggunaModel;
+            penggunaModel = new PenggunaModel(
+                "Rifky",
+                "087823837566",
+                "Di bandung pokonya",
+                "Rifky@gmail.com",
+                "lovanto"
+                );
+            Assert.IsNotNull(penggunaModel);
         }
 
         [TestMethod]
@@ -16,7 +25,7 @@ namespace UnitTest
         {
             ClassTestExitingFile isExitingFile = new ClassTestExitingFile();
             var result = isExitingFile.isExitingFileJson();
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(true, result);
         }
     }
 }
