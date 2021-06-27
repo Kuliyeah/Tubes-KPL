@@ -2,36 +2,43 @@
   {
     "Nama Toko": "Toko Sukses",
     "Nama Jasa": "Test Jasa",
-    "Harga": "15000",
+    "Harga": "1.07",
     "Jumlah Paket": "1",
     "Deskripsi Jasa": "Deskripsi Test"
   },
   {
     "Nama Toko": "MaulanaPT",
     "Nama Jasa": "Akbar",
-    "Harga": "20000",
+    "Harga": "1.42",
     "Jumlah Paket": "3",
     "Deskripsi Jasa": "asdasd"
   },
   {
     "Nama Toko": "PT Laundry",
     "Nama Jasa": "Toto",
-    "Harga": "19000",
+    "Harga": "1.35",
     "Jumlah Paket": "5",
     "Deskripsi Jasa": "setrika dan cuci kering"
   },
   {
     "Nama Toko": "wadad",
     "Nama Jasa": "wadwad",
-    "Harga": "5555",
+    "Harga": "0.39",
     "Jumlah Paket": "5",
     "Deskripsi Jasa": "yhf hfth fhtf fg"
   },
   {
     "Nama Toko": "sukses",
     "Nama Jasa": "suksesj",
-    "Harga": "20000",
+    "Harga": "1.42",
     "Jumlah Paket": "2",
     "Deskripsi Jasa": "apaajaboleh"
+  },
+  {
+    "Nama Toko": "toko a",
+    "Nama Jasa": "a jasa",
+    "Harga": "5000000",
+    "Jumlah Paket": "2",
+    "Deskripsi Jasa": "absasaedasa"
   }
 ]

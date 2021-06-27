@@ -7,6 +7,7 @@ namespace UnitTest
     [TestClass]
     public class UnitTest1
     {
+        // Tes input pengguna.
         [TestMethod]
         public void TestAddDataPengguna()
         {
@@ -21,14 +22,16 @@ namespace UnitTest
             Assert.IsNotNull(penggunaModel);
         }
 
+        // Tes keberadaan file json.
         [TestMethod]
-        public void isLessThanMinHargaPaket()
+        public void isExistingFile()
         {
-            ClassTestExitingFile isExitingFile = new ClassTestExitingFile();
-            var result = isExitingFile.isExitingFileJson();
+            ClassTestExistingFile isExistingFile = new ClassTestExistingFile();
+            var result = isExistingFile.isExistingFileJson();
             Assert.AreEqual(true, result);
         }
 
+        // Tes input transaksi.
         [TestMethod]
         public void TestAddTransaksi()
         {

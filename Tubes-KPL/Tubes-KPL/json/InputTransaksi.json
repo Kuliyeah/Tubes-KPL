@@ -5,8 +5,8 @@
     "Nama Jasa": "Test Jasa",
     "Deskripsi": "Deskripsi Test Jasa",
     "Berat (Kg)": "2",
-    "Ongkir": "5000",
-    "Total Bayar": "16000"
+    "Ongkir": "0.35",
+    "Total Bayar": "1.14"
   },
   {
     "Tanggal": "6/25/2021 8:45:14 PM",
@@ -14,8 +14,8 @@
     "Nama Jasa": "Toto",
     "Deskripsi": "rgr gdr rgd gdr drr",
     "Berat (Kg)": "3",
-    "Ongkir": "6000",
-    "Total Bayar": "63050"
+    "Ongkir": "0.42",
+    "Total Bayar": "4.50"
   },
   {
     "Tanggal": "6/25/2021 9:42:25 PM",
@@ -23,7 +23,16 @@
     "Nama Jasa": "suksesj",
     "Deskripsi": "done",
     "Berat (Kg)": "3",
-    "Ongkir": "8000",
-    "Total Bayar": "68000"
+    "Ongkir": "0.57",
+    "Total Bayar": "4.85"
+  },
+  {
+    "Tanggal": "6/27/2021 10:50:31 PM",
+    "ID Transaksi": "99",
+    "Nama Jasa": "a jasa",
+    "Deskripsi": "qwerrt",
+    "Berat (Kg)": "5",
+    "Ongkir": "600000",
+    "Total Bayar": "25600000"
   }
 ]

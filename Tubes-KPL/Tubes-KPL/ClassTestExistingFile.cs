@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Tubes_KPL
 {
-    public class ClassTestExitingFile
+    public class ClassTestExistingFile
     {
         // Unit Testing untuk mengecek apakah terdapat file MoneyConfig.json pada projek ini
-        public bool isExitingFileJson()
+        public bool isExistingFileJson()
         {
             if (File.Exists("../../../../Tubes-KPL/json/MoneyConfig.json"))
             {

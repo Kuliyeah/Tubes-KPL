@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Automata.cs" />
-    <Compile Include="ClassTestExitingFile.cs" />
+    <Compile Include="ClassTestExistingFile.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="moneyConfig.cs" />
     <Compile Include="PenggunaModel.cs" />
