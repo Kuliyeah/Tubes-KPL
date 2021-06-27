@@ -15,13 +15,13 @@ namespace Tubes_KPL
         public static SingletonPattern GetInstance() => _singleton.Value;
 
         // Method homepage.
-        private Status _homepage;
+        private Status homepage;
 
         // Kondisi dimana pada tampilan masih kosong.
         private SingletonPattern() 
         {
             Console.WriteLine("login");
-            _homepage = Status.Empty;
+            homepage = Status.Empty;
         }
 
         // Kondisi dimana pada tampilan input pengguna status sebagai pendataan.
@@ -29,7 +29,7 @@ namespace Tubes_KPL
         {
             if (!IsEmpty) return;
             Console.WriteLine("isi data");
-            _homepage = Status.Pendataan;
+            homepage = Status.Pendataan;
         }
 
         // Kondisi dimana pada tampilan input jasa status sebagai pemrosesan.
@@ -37,7 +37,7 @@ namespace Tubes_KPL
         {
             if (!IsEmpty) return;
             Console.WriteLine("isi jasa");
-            _homepage = Status.Pemrosesan;
+            homepage = Status.Pemrosesan;
         }
 
         // Kondisi dimana pada tampilan input transaksi status sebagai pembayaran.
@@ -45,12 +45,12 @@ namespace Tubes_KPL
         {
             if (IsPembayaran || IsEmpty) return;
             Console.WriteLine("bayar");
-            _homepage = Status.Pembayaran;
+            homepage = Status.Pembayaran;
         }
 
-        private bool IsEmpty => (_homepage == Status.Empty);
+        private bool IsEmpty => (homepage == Status.Empty);
 
-        private bool IsPembayaran => (_homepage == Status.Pembayaran);
+        private bool IsPembayaran => (homepage == Status.Pembayaran);
     }
 }
 
