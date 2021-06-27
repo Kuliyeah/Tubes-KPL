@@ -5,6 +5,7 @@ namespace Tubes_KPL
 {
     class InputJasaModel
     {
+        // Inisialisasi variabel yang dibutuhkan pada atribut jasa
         private String mataUang;
         private String namaToko;
         private String namaJasa;
@@ -12,11 +13,13 @@ namespace Tubes_KPL
         private double hargaPerPaket;
         private int jumlahPaket;
 
+        // Constructor kosong
         public InputJasaModel()
         {
 
         }
 
+        // Constructor yang berisi nilai dari parameter input dan akan disimpan pada variabel sebelumnya
         public InputJasaModel(string mataUang, string namaToko, string namaJasa, double hargaPerPaket, int jumlahPaket, string deskripsi)
         {
             this.mataUang = mataUang;
@@ -29,6 +32,7 @@ namespace Tubes_KPL
             this.jumlahPaket = jumlahPaket;
         }
 
+        // Getter dan Setter dari value variabel yang dibutuhkan sebelumnya
         public void setMataUang(string mataUang)
         {
             this.mataUang = mataUang;
@@ -71,6 +75,7 @@ namespace Tubes_KPL
 
         public void setHargaPerPaket(double hargaPerPaket)
         {
+            Debug.Assert(hargaPerPaket >= 5000, "Harga barang harus lebih dari 5000");
             this.hargaPerPaket = hargaPerPaket;
         }
 
@@ -81,6 +86,7 @@ namespace Tubes_KPL
 
         public void setJumlahPaket(int jumlahPaket)
         {
+            Debug.Assert(jumlahPaket >= 2, "Jumlah Paket harus lebih dari 2");
             this.jumlahPaket = jumlahPaket;
         }
 
@@ -88,6 +94,8 @@ namespace Tubes_KPL
         {
             return this.jumlahPaket;
         }
+
+        // End Getter dan Setter
 
     }
 }
