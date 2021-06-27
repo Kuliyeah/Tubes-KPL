@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
 
 namespace Tubes_KPL
 {
@@ -98,14 +97,6 @@ namespace Tubes_KPL
 
         // End Getter dan Setter.
 
-        // Unit Testing untuk mengecek apakah terdapat file MoneyConfig.json pada projek ini
-        public bool isExitingFileJson()
-        {
-            if (File.Exists("../../../json/MoneyConfig.json"))
-            {
-                return true;
-            }
-            return false;
-        }
+        
     }
 }

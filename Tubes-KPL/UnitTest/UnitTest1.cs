@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tubes_KPL;
 
 namespace UnitTest
 {
@@ -8,6 +9,14 @@ namespace UnitTest
         [TestMethod]
         public void TestMethod1()
         {
+        }
+
+        [TestMethod]
+        public void isLessThanMinHargaPaket()
+        {
+            ClassTestExitingFile isExitingFile = new ClassTestExitingFile();
+            var result = isExitingFile.isExitingFileJson();
+            Assert.AreEqual(true, result);
         }
     }
 }
