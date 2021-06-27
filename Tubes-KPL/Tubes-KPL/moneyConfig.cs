@@ -2,7 +2,7 @@
 
 namespace Tubes_KPL
 {
-    
+    // Menentukan nama atau mata uang.
     class moneyConfig
     {
         public String mataUang;

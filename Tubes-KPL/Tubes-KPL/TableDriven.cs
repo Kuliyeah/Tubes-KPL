@@ -9,6 +9,5 @@
         {
             return password[(int)username];
         }
-
     }
 }
