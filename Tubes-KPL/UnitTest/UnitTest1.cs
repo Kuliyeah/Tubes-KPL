@@ -29,6 +29,7 @@ namespace UnitTest
             Assert.AreEqual(true, result);
         }
 
+        [TestMethod]
         public void TestAddTransaksi()
         {
             InputTransaksiModel transaksi;
