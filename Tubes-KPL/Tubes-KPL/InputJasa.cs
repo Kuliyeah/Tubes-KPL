@@ -146,7 +146,7 @@ namespace Tubes_KPL
             {
                 for (int i = 0; i < dgvJasa.RowCount-1; i++)
                 {
-                    dgvJasa.Rows[i].Cells[2].Value = (Double.Parse(dgvJasa.Rows[0 + i].Cells[2].Value.ToString())/14000).ToString().Substring(0, 4);
+                    dgvJasa.Rows[i].Cells[2].Value = (Double.Parse(dgvJasa.Rows[0+i].Cells[2].Value.ToString())/14000).ToString().Substring(0, 4);
                 }
             }
         }
